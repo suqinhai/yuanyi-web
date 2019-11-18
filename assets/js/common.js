@@ -34,6 +34,7 @@ function ajaxGet(url, fn) {
         url: baseUrl + url,
         contentType: 'application/json',
         dataType: 'json',
+        async: false,
         success: function(res) {
             if (res.code == 0) {
                 fn(res.data)
@@ -47,6 +48,7 @@ function ajaxPost(url, data, fn) {
         url: baseUrl + url,
         type: 'post',
         contentType: 'application/json',
+        async: false,
         data: JSON.stringify(data),
         dataType: 'json',
         success: function(res) {
