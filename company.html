@@ -16,51 +16,106 @@
 
 <body>
     <div class="layout">
-        <!--===========layout-header================-->
-        <div class="layout-header am-hide-sm-only">
-            <div class="header-box1" data-am-sticky>
-                <!--header start-->
-                <div class="container">
-                    <div class="am-g">
-                        <div class="am-u-lg-2 am-u-sm-12">
-                            <div class="logo">
-                                <a href=""><img src="assets/images/logo.png" alt="" class="logoimg" /></a>
-                            </div>
-                        </div>
-                        <div class="am-u-md-10">
-                            <div class="clear-style">
-                                <ul class="fy-nav">
-                                    <li class=""><a href="./index.html">Home</a></li>
-                                    <li>
-                                        <a href="#">Products</a>
-                                    </li>
-                                    <li><a href="html/solution.html">Company</a>
-                                        <!-- sub-menu start-->
-                                        <ul class="sub-menu">
-                                            <li class="menu-item"><a href="html/product1.html">About OrientalGardening</a></li>
-                                            <li class="menu-item"><a href="html/product2.html">News</a></li>
-                                            <li class="menu-item"><a href="html/product3.html">Contact us</a></li>
-                                        </ul>
-                                        <!-- sub-menu end-->
-                                    </li>
-                                    <li>
-                                        <a href="html/news.html">Solution</a>
-                                        <!-- sub-menu start-->
-                                        <ul class="sub-menu">
-                                            <li class="menu-item"><a href="html/product1.html">solution 1</a></li>
-                                            <li class="menu-item"><a href="html/product2.html">solution 2</a></li>
-                                            <li class="menu-item"><a href="html/product3.html">solution 3</a></li>
-                                        </ul>
-                                        <!-- sub-menu end-->
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--header end-->
+    <!--===========layout-header================-->
+    <div class="layout-header am-hide-sm-only">
+      <div class="header-box1" data-am-sticky>
+        <!--header start-->
+        <div class="container">
+          <div class="am-g">
+            <div class="am-u-lg-2 am-u-sm-12">
+              <div class="logo">
+                <a href=""><img src="assets/images/logo.png" alt="" class="logoimg"/></a>
+              </div>
             </div>
+            <div class="am-u-md-10">
+              <div class="clear-style">
+                <ul class="fy-nav">
+                  <li class=""><a href="./index.html">Home</a></li>
+                  <li>
+                    <a href="./products.html">Product</a>
+                  </li>
+                  <li><a href="./company.html">Company</a>
+                    <!-- sub-menu start-->
+                    <ul class="sub-menu">
+                      <li class="menu-item"><a href="./company.html">About OrientalGardening</a></li>
+                      <li class="menu-item"><a href="./newsLister.html">News</a></li>
+                      <li class="menu-item"><a href="./contactUs.html">Contact us</a></li>
+                    </ul>
+                    <!-- sub-menu end-->
+                  </li>
+                  <li>
+                    <a href="./solution.html">Solution</a>
+                    <!-- sub-menu start-->
+                    <ul class="sub-menu">
+                      <li class="menu-item"><a href="./solution.html">solution 1</a></li>
+                      <li class="menu-item"><a href="./solution.html">solution 2</a></li>
+                    </ul>
+                    <!-- sub-menu end-->
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
+        <!--header end-->
+      </div>
+    </div>
+    <!--mobile header start-->
+    <div class="m-header">
+      <div class="am-g am-show-sm-only">
+        <div class="am-u-sm-2">
+          <div class="menu-bars">
+            <a href="#doc-oc-demo1" data-am-offcanvas="{effect: 'push'}"><i class="am-menu-toggle-icon am-icon-bars"></i></a>
+            <!-- 侧边栏内容 -->
+            <nav data-am-widget="menu" class="am-menu am-menu-offcanvas1" data-am-menu-offcanvas>
+              <a href="javascript: void(0)" class="am-menu-toggle"></a>
+              <div class="am-offcanvas">
+                <div class="am-offcanvas-bar">
+                  <ul class="am-menu-nav am-avg-sm-1">
+                    <li><a href="./index.html" class="">Home</a></li>
+                    <li class=""><a href="./products.html" class="">Products</a></li>
+                    <li class="am-parent">
+                      <a href="./company.html" class="">Company</a>
+                      <ul class="am-menu-sub am-collapse ">
+                        <li class="">
+                          <a href="./company.html" class="">About OrientalGardening</a>
+                        </li>
+                        <li class="">
+                          <a href="./newsLister.html" class="">News</a>
+                        </li>
+                        <li class="">
+                          <a href="./contactUs.html" class="">Contact us</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="am-parent">
+                      <a href="./solution.html" class="">Solution</a>
+                      <ul class="am-menu-sub am-collapse ">
+                        <li class="">
+                          <a href="./solution.html" class="">sulotion1</a>
+                        </li>
+                        <li class="">
+                          <a href="./solution.html" class="">sulotion1</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <div class="am-u-sm-5 am-u-end">
+          <div class="m-logo">
+            <a href=""><img src="assets/images/logo.png" alt=""></a>
+          </div>
+        </div>
+      </div>
+      <!--mobile header end-->
+    </div>
+
+
+
         <div class="layout-container">
             <div class="page-header">
                 <div class="am-container">
@@ -378,62 +433,7 @@
                 </div>
             </div>
         </div>
-        <!--mobile header start-->
-        <div class="m-header">
-            <div class="am-g am-show-sm-only">
-                <div class="am-u-sm-2">
-                    <div class="menu-bars">
-                        <a href="#doc-oc-demo1" data-am-offcanvas="{effect: 'push'}"><i class="am-menu-toggle-icon am-icon-bars"></i></a>
-                        <!-- 侧边栏内容 -->
-                        <nav data-am-widget="menu" class="am-menu  am-menu-offcanvas1" data-am-menu-offcanvas>
-                            <a href="javascript: void(0)" class="am-menu-toggle"></a>
-                            <div class="am-offcanvas">
-                                <div class="am-offcanvas-bar">
-                                    <ul class="am-menu-nav am-avg-sm-1">
-                                        <li><a href="./index.html" class="">Home</a></li>
-                                        <li class=""><a href="html/example.html" class="">Products</a></li>
-                                        <li class="am-parent">
-                                            <a href="#" class="">Company</a>
-                                            <ul class="am-menu-sub am-collapse ">
-                                                <li class="">
-                                                    <a href="html/product1.html" class="">About OrientalGardening</a>
-                                                </li>
-                                                <li class="">
-                                                    <a href="html/product2.html" class="">News</a>
-                                                </li>
-                                                <li class="">
-                                                    <a href="html/product3.html" class="">Contact us</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="am-parent">
-                                            <a href="html/news.html" class="">Solution</a>
-                                            <ul class="am-menu-sub am-collapse  ">
-                                                <li class="">
-                                                    <a href="html/news-content.html" class="">sulotion1</a>
-                                                </li>
-                                                <li class="">
-                                                    <a href="html/404-dark.html" class="">sulotion1</a>
-                                                </li>
-                                                <li class="">
-                                                    <a href="html/404-light.html" class="">sulotion1</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-                <div class="am-u-sm-5 am-u-end">
-                    <div class="m-logo">
-                        <a href=""><img src="assets/images/logo.png" alt=""></a>
-                    </div>
-                </div>
-            </div>
-            <!--mobile header end-->
-        </div>
+
         <!-- todo 这里增加页面的内容 -->
         <!--===========layout-footer================-->
         <div class="layout-footer">
@@ -495,6 +495,6 @@
         <script src="assets/js/jquery-2.1.0.js" charset="utf-8"></script>
         <script src="assets/js/amazeui.js" charset="utf-8"></script>
         <script src="assets/js/common.js" charset="utf-8"></script>
-</body>
+    </body>
 
-</html>
+    </html>
