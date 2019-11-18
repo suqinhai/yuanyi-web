@@ -445,15 +445,14 @@
 
 </html>
 <style type="text/css">
-    .banner{
-        display: block;
-        height: 400px;
-       
-        background-size: 1920px auto;
-    }
+.banner {
+    display: block;
+    height: 400px;
+
+    background-size: 1920px auto;
+}
 </style>
 <script type="text/javascript">
-
 /**
  * 获取banner数据
  * @type {String}
@@ -471,11 +470,43 @@ ajaxPost(url, data, function(data) {
     var len = ad.length
     for (var i = 0; i < len; i++) {
         html += '<li>' +
-            '<a class="banner" target="_blank" href="' + ad[i].ad_link + '" style="background:url('+ ad[i].pic_url +') center top no-repeat;"></a>'
+            '<a class="banner" target="_blank" href="' + ad[i].ad_link + '" style="background:url(' + ad[i].pic_url + ') center top no-repeat;"></a>'
         '</li>'
     }
     $('.am-slider .am-slides').html(html)
     $('.am-slider').flexslider();
+})
+
+
+
+/**
+ * 获取推荐商品
+ * @type {String}
+ */
+var url = '/product/list'
+var data = {
+    "page": {
+        "page_index": 1,
+        "page_size": 100
+    }
+}
+ajaxPost(url, data, function(data) {
+    var html = ''
+    var ps = data.ps
+    var len = ps.length
+    for (var i = 0; i < len; i++) {
+        html += '<div class="am-u-md-3">' + 
+                    '<div class="service_item">' +  
+                        '<img src="'+ ps[i].cover_url +'" alt="" class="products-img">' +
+                        '<h3 class="service_item--title">'+ ps[i].name +'</h3>' +
+                        '<div class="service_item--text">' + 
+                            '<p>'+ ps[i].intro +'</p>' +
+                        '</div>' +
+                        ' <footer class="service_item--footer"><a href="./productsDetial.html?id='+ ps[i].id +'" class="link -blue_light">Learn More&gt;&gt;</a></footer>' +
+                    '</div>' +
+                '</div>'
+    }
+    $('.index-container .am-g').html(html)
 })
 
 let get_web_setting_url = '/index/Setting/get'
