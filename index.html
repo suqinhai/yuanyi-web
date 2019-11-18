@@ -391,10 +391,10 @@
                             <div class="am-g">
                                 <div class="am-u-md-3 ">
                                     <div class="footer_main--column">
-                                        <strong class="footer_main--column_title">OrientalGardening</strong>
+                                        <strong class="footer_main--column_title" id="name">OrientalGardening</strong>
                                         <div class="footer_about">
                                             <div>
-                                                <img src="assets/images/index/f01.jpg" alt="" class="footer-logo-img">
+                                                <img id="square_logo" src="assets/images/index/f01.jpg" alt="" class="footer-logo-img">
                                             </div>
                                             <p class="footer_about--text">
                                                 这里是一段简介，需要客户提供
@@ -425,10 +425,10 @@
                                     <div class="footer_main--column">
                                         <strong class="footer_main--column_title">联系详情</strong>
                                         <ul class="footer_contact_info">
-                                            <li class="footer_contact_info--item"><i class="am-icon-phone"></i><span>服务专线：400 069 0309</span></li>
-                                            <li class="footer_contact_info--item"><i class="am-icon-envelope-o"></i><span>yunshipei.com</span></li>
-                                            <li class="footer_contact_info--item"><i class="am-icon-map-marker"></i><span>北京市海淀区海淀大街27号天使大厦（原亿景大厦）三层</span></li>
-                                            <li class="footer_contact_info--item"><i class="am-icon-clock-o"></i><span>Monday - Friday, 9am - 6 pm; </span></li>
+                                            <li class="footer_contact_info--item"><i class="am-icon-phone"></i><span id="hotline">服务专线：400 069 0309</span></li>
+                                            <li class="footer_contact_info--item"><i class="am-icon-envelope-o"></i><span id="enterprise_email">yunshipei.com</span></li>
+                                            <li class="footer_contact_info--item"><i class="am-icon-map-marker"></i><span id="address">北京市海淀区海淀大街27号天使大厦（原亿景大厦）三层</span></li>
+<!--                                        <li class="footer_contact_info&#45;&#45;item"><i class="am-icon-clock-o"></i><span >Monday - Friday, 9am - 6 pm; </span></li>-->
                                         </ul>
                                     </div>
                                 </div>
@@ -476,5 +476,14 @@ ajaxPost(url, data, function(data) {
     }
     $('.am-slider .am-slides').html(html)
     $('.am-slider').flexslider();
+})
+
+let get_web_setting_url = '/index/Setting/get'
+ajaxPost(get_web_setting_url, "",function (data) {
+    $("#square_logo").attr('src',data.setting.square_logo);
+    $("#name").text(data.setting.name)
+    $("#hotline").text("服务专线: "+data.setting.hotline)
+    $("#enterprise_email").text(data.setting.enterprise_email)
+    $("#address").text(data.setting.address)
 })
 </script>
