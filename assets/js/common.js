@@ -34,8 +34,10 @@ function ajaxGet(url, fn) {
         url: baseUrl + url,
         contentType: 'application/json',
         dataType: 'json',
-        success: function(data) {
-            fn(data)
+        success: function(res) {
+            if (res.code == 0) {
+                fn(res.data)
+            }
         }
     });
 }
@@ -47,8 +49,10 @@ function ajaxPost(url, data, fn) {
         contentType: 'application/json',
         data: JSON.stringify(data),
         dataType: 'json',
-        success: function(data) {
-            fn(data)
+        success: function(res) {
+            if (res.code == 0) {
+                fn(res.data)
+            }
         }
     })
 }

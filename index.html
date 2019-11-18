@@ -456,14 +456,15 @@
 
 </html>
 <script type="text/javascript">
-var url = '/product/list'
+var url = '/index/ad/list'
 var data = {
     "page": {
         "page_index": 1,
-        "page_size": 19
+        "page_size": 100
     }
 }
 ajaxPost(url, data, function(data) {
     console.log(data)
+    $('.am-slider').flexslider();
 })
 </script>
