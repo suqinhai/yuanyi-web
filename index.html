@@ -22,7 +22,7 @@
                     <div class="am-g">
                         <div class="am-u-lg-2 am-u-sm-12">
                             <div class="logo">
-                                <a href=""><img src="assets/images/logo.png" alt="" class="logoimg" /></a>
+                                <a href=""><img id="rectangle_logo" src="assets/images/logo.png" alt="" class="logoimg" /></a>
                             </div>
                         </div>
                         <div class="am-u-md-10">
@@ -105,7 +105,7 @@
                 </div>
                 <div class="am-u-sm-5 am-u-end">
                     <div class="m-logo">
-                        <a href=""><img src="assets/images/logo.png" alt=""></a>
+                        <a href=""><img id="m-logo" src="assets/images/logo.png" alt=""></a>
                     </div>
                 </div>
             </div>
@@ -512,6 +512,8 @@ ajaxPost(url, data, function(data) {
 
 let get_web_setting_url = '/index/Setting/get'
 ajaxPost(get_web_setting_url, "",function (data) {
+    $("#rectangle_logo").attr('src',data.setting.rectangle_logo);
+    $("#m-logo").attr('src',data.setting.rectangle_logo);
     $("#square_logo").attr('src',data.setting.square_logo);
     $("#name").text(data.setting.name)
     $("#hotline").text("服务专线: "+data.setting.hotline)
