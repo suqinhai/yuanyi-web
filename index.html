@@ -116,7 +116,6 @@
             <div class="index-page">
                 <div data-am-widget="slider" class="am-slider am-slider-a1" data-am-slider='{&quot;directionNav&quot;:false}' style="max-height: 400px;">
                     <ul class="am-slides">
-
                     </ul>
                 </div>
             </div>
@@ -428,7 +427,7 @@
                                             <li class="footer_contact_info--item"><i class="am-icon-phone"></i><span id="hotline"></span></li>
                                             <li class="footer_contact_info--item"><i class="am-icon-envelope-o"></i><span id="enterprise_email"></span></li>
                                             <li class="footer_contact_info--item"><i class="am-icon-map-marker"></i><span id="address"></span></li>
-<!--                                        <li class="footer_contact_info&#45;&#45;item"><i class="am-icon-clock-o"></i><span >Monday - Friday, 9am - 6 pm; </span></li>-->
+                                            <!--                                        <li class="footer_contact_info&#45;&#45;item"><i class="am-icon-clock-o"></i><span >Monday - Friday, 9am - 6 pm; </span></li>-->
                                         </ul>
                                     </div>
                                 </div>
@@ -439,9 +438,9 @@
             </div>
         </div>
     </div>
-        <script src="assets/js/jquery-2.1.0.js" charset="utf-8"></script>
-        <script src="assets/js/amazeui.js" charset="utf-8"></script>
-        <script src="assets/js/common.js" charset="utf-8"></script>
+    <script src="assets/js/jquery-2.1.0.js" charset="utf-8"></script>
+    <script src="assets/js/amazeui.js" charset="utf-8"></script>
+    <script src="assets/js/common.js" charset="utf-8"></script>
 </body>
 
 </html>
@@ -497,26 +496,49 @@ ajaxPost(url, data, function(data) {
     var len = ps.length
     for (var i = 0; i < len; i++) {
         html += '<div class="am-u-md-3">' +
-                    '<div class="service_item">' +
-                        '<img src="'+ ps[i].cover_url +'" alt="" class="products-img">' +
-                        '<h3 class="service_item--title">'+ ps[i].name +'</h3>' +
-                        '<div class="service_item--text">' +
-                            '<p>'+ ps[i].intro +'</p>' +
-                        '</div>' +
-                        ' <footer class="service_item--footer"><a href="./productsDetial.html?id='+ ps[i].id +'" class="link -blue_light">Learn More&gt;&gt;</a></footer>' +
-                    '</div>' +
-                '</div>'
+            '<div class="service_item">' +
+            '<img src="' + ps[i].cover_url + '" alt="" class="products-img">' +
+            '<h3 class="service_item--title">' + ps[i].name + '</h3>' +
+            '<div class="service_item--text">' +
+            '<p>' + ps[i].intro + '</p>' +
+            '</div>' +
+            ' <footer class="service_item--footer"><a href="./productsDetial.html?id=' + ps[i].id + '" class="link -blue_light">Learn More&gt;&gt;</a></footer>' +
+            '</div>' +
+            '</div>'
     }
     $('.index-container .products-recommend').html(html)
 })
 
+
+var url = '/index/business/partners/list'
+var data = {
+    "page": {
+        "page_index": 1,
+        "page_size": 100
+    }
+}
+ajaxPost(url, data, function(data) {
+    var html = ''
+    var bps = data.bps
+    var len = bps.length
+    for (var i = 0; i < len; i++) {
+        html += '<div class="am-u-md-2 am-u-sm-4 customer-box">' + 
+                    '<a href="javascript:;">' + 
+                        '<img class="normal-logo" src="'+ bps[i].logo+'" alt="" style="display: inline;">' +
+                        '<img class="am-active" alt="" src="'+ bps[i].logo+'" style="display: none;">' +
+                    '</a>' + 
+                '</div>'
+    }
+    $('.customer-logo .am-g').html(html)
+})
+
 let get_web_setting_url = '/index/Setting/get'
-ajaxPost(get_web_setting_url, "",function (data) {
-    $("#rectangle_logo").attr('src',data.setting.rectangle_logo);
-    $("#m-logo").attr('src',data.setting.rectangle_logo);
-    $("#square_logo").attr('src',data.setting.square_logo);
+ajaxPost(get_web_setting_url, "", function(data) {
+    $("#rectangle_logo").attr('src', data.setting.rectangle_logo);
+    $("#m-logo").attr('src', data.setting.rectangle_logo);
+    $("#square_logo").attr('src', data.setting.square_logo);
     $("#name").text(data.setting.name)
-    $("#hotline").text("服务专线: "+data.setting.hotline)
+    $("#hotline").text("服务专线: " + data.setting.hotline)
     $("#enterprise_email").text(data.setting.enterprise_email)
     $("#address").text(data.setting.address)
 })
