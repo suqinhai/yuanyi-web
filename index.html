@@ -116,7 +116,7 @@
             <div class="index-page">
                 <div data-am-widget="slider" class="am-slider am-slider-a1" data-am-slider='{&quot;directionNav&quot;:false}' style="max-height: 400px;">
                     <ul class="am-slides">
-                        
+
                     </ul>
                 </div>
             </div>
@@ -425,9 +425,9 @@
                                     <div class="footer_main--column">
                                         <strong class="footer_main--column_title">联系详情</strong>
                                         <ul class="footer_contact_info">
-                                            <li class="footer_contact_info--item"><i class="am-icon-phone"></i><span id="hotline">服务专线：400 069 0309</span></li>
-                                            <li class="footer_contact_info--item"><i class="am-icon-envelope-o"></i><span id="enterprise_email">yunshipei.com</span></li>
-                                            <li class="footer_contact_info--item"><i class="am-icon-map-marker"></i><span id="address">北京市海淀区海淀大街27号天使大厦（原亿景大厦）三层</span></li>
+                                            <li class="footer_contact_info--item"><i class="am-icon-phone"></i><span id="hotline"></span></li>
+                                            <li class="footer_contact_info--item"><i class="am-icon-envelope-o"></i><span id="enterprise_email"></span></li>
+                                            <li class="footer_contact_info--item"><i class="am-icon-map-marker"></i><span id="address"></span></li>
 <!--                                        <li class="footer_contact_info&#45;&#45;item"><i class="am-icon-clock-o"></i><span >Monday - Friday, 9am - 6 pm; </span></li>-->
                                         </ul>
                                     </div>
@@ -438,6 +438,7 @@
                 </div>
             </div>
         </div>
+    </div>
         <script src="assets/js/jquery-2.1.0.js" charset="utf-8"></script>
         <script src="assets/js/amazeui.js" charset="utf-8"></script>
         <script src="assets/js/common.js" charset="utf-8"></script>
@@ -495,11 +496,11 @@ ajaxPost(url, data, function(data) {
     var ps = data.ps
     var len = ps.length
     for (var i = 0; i < len; i++) {
-        html += '<div class="am-u-md-3">' + 
-                    '<div class="service_item">' +  
+        html += '<div class="am-u-md-3">' +
+                    '<div class="service_item">' +
                         '<img src="'+ ps[i].cover_url +'" alt="" class="products-img">' +
                         '<h3 class="service_item--title">'+ ps[i].name +'</h3>' +
-                        '<div class="service_item--text">' + 
+                        '<div class="service_item--text">' +
                             '<p>'+ ps[i].intro +'</p>' +
                         '</div>' +
                         ' <footer class="service_item--footer"><a href="./productsDetial.html?id='+ ps[i].id +'" class="link -blue_light">Learn More&gt;&gt;</a></footer>' +
