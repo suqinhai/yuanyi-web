@@ -271,7 +271,7 @@ ajaxPost(url, data, function(data) {
     }
 
     $('.categories').html(html)
-    jqPaginator(categories)
+    getList(categories)
 })
 
 
@@ -300,7 +300,7 @@ function getList(categories) {
         var ps = data.ps
         var len = ps.length
         for (var i = 0; i < len; i++) {
-            html += '<div class="am-u-md-3" style="margin-top: 30px;">' +
+            html += '<div class="am-u-md-3 product-item" data-id="'+ ps[i].id +'" style="margin-top: 30px;">' +
                 '<div class="o2o-box" style="border: 1px solid #e4e4e4;padding:0">' +
                 '<img src="' + ps[i].cover_url + '" alt="" width="100%">' +
                 '<div class="o2o-content">' +
@@ -311,30 +311,36 @@ function getList(categories) {
                 '</div>'
         }
         $('.o2o-container>.am-g').html(html)
+        if(data.page.total){
+            $('#paging').jqPaginator({
+                totalPages: data.page.total,
+                pageSize: page_size,
+                totalCounts: page_size,
+                visiblePages: 4,
+                currentPage: page_index,
+                first: '<li class="first"><a href="javascript:void(0);">首页<\/a><\/li>',
+                prev: '<li class="prev"><a href="javascript:void(0);"><i class="arrow arrow2"><\/i>上一页<\/a><\/li>',
+                next: '<li class="next"><a href="javascript:void(0);">下一页<i class="arrow arrow3"><\/i><\/a><\/li>',
+                last: '<li class="last"><a href="javascript:void(0);">末页<\/a><\/li>',
+                page: '<li class="page"><a href="javascript:void(0);">{{page}}<\/a><\/li>',
+                onPageChange: function(n,type) {
+                    if(type == 'init'){
+
+                    }else{
+                        page_index = n
+                        getList()
+                    }
+
+                }
+            });
+        }else{
+             $('#paging').jqPaginator('destroy');
+        }
+        
+
+       
     })
 }
-
-
-
-function jqPaginator(categories) {
-    $('#paging').jqPaginator({
-        totalPages: 100,
-        visiblePages: 4,
-        currentPage: 1,
-        first: '<li class="first"><a href="javascript:void(0);">首页<\/a><\/li>',
-        prev: '<li class="prev"><a href="javascript:void(0);"><i class="arrow arrow2"><\/i>上一页<\/a><\/li>',
-        next: '<li class="next"><a href="javascript:void(0);">下一页<i class="arrow arrow3"><\/i><\/a><\/li>',
-        last: '<li class="last"><a href="javascript:void(0);">末页<\/a><\/li>',
-        page: '<li class="page"><a href="javascript:void(0);">{{page}}<\/a><\/li>',
-        onPageChange: function(n) {
-            page_index = n
-            getList(categories)
-        }
-    });
-}
-
-
-
 
 
 $('.categories li').on('click', function() {
@@ -342,7 +348,7 @@ $('.categories li').on('click', function() {
     page_size = 10
     $('.categories li').removeClass('am-active')
     $(this).addClass('am-active')
-    jqPaginator()
+    getList()
 
     
 })
@@ -353,6 +359,12 @@ $('.recommend li').on('click', function() {
     page_size = 10
     $('.recommend li').removeClass('am-active')
     $(this).addClass('am-active')
-    jqPaginator()
+    getList()
+})
+
+
+$('.o2o-container').on('click','.product-item',function(){
+    var id = $(this).attr('data-id')
+    window.location.href = './productsDetial?id=' + id
 })
 </script>
