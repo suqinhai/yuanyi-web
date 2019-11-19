@@ -1,328 +1,358 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>盆栽网站</title>
-  <link rel="stylesheet" href="assets/css/amazeui.css" />
-  <link rel="stylesheet" href="assets/css/common.min.css" />
-  <link rel="stylesheet" href="assets/css/index.min.css" />
-  <link rel="stylesheet" href="assets/css/common.css" />
-  <link rel="stylesheet" href="assets/css/solution.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>盆栽网站</title>
+    <link rel="stylesheet" href="assets/css/amazeui.css" />
+    <link rel="stylesheet" href="assets/css/common.min.css" />
+    <link rel="stylesheet" href="assets/css/index.min.css" />
+    <link rel="stylesheet" href="assets/css/common.css" />
+    <link rel="stylesheet" href="assets/css/solution.min.css" />
+    <link type="text/css" rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.1.1/css/bootstrap.min.css" />
 </head>
 
 <body>
-  <div class="layout">
-    <!--===========layout-header================-->
-    <div class="layout-header am-hide-sm-only">
-      <div class="header-box1" data-am-sticky>
-        <!--header start-->
-        <div class="container">
-          <div class="am-g">
-            <div class="am-u-lg-2 am-u-sm-12">
-              <div class="logo">
-                <a href=""><img src="assets/images/logo.png" alt="" class="logoimg"/></a>
-              </div>
+    <div class="layout">
+        <!--===========layout-header================-->
+        <div class="layout-header am-hide-sm-only">
+            <div class="header-box1" data-am-sticky>
+                <!--header start-->
+                <div class="container">
+                    <div class="am-g">
+                        <div class="am-u-lg-2 am-u-sm-12">
+                            <div class="logo">
+                                <a href=""><img src="assets/images/logo.png" alt="" class="logoimg" /></a>
+                            </div>
+                        </div>
+                        <div class="am-u-md-10">
+                            <div class="clear-style">
+                                <ul class="fy-nav">
+                                    <li class=""><a href="./index.html">Home</a></li>
+                                    <li>
+                                        <a href="./products.html">Product</a>
+                                    </li>
+                                    <li><a href="./company.html">Company</a>
+                                        <!-- sub-menu start-->
+                                        <ul class="sub-menu">
+                                            <li class="menu-item"><a href="./company.html">About OrientalGardening</a></li>
+                                            <li class="menu-item"><a href="./newsLister.html">News</a></li>
+                                            <li class="menu-item"><a href="./contactUs.html">Contact us</a></li>
+                                        </ul>
+                                        <!-- sub-menu end-->
+                                    </li>
+                                    <li>
+                                        <a href="./solution.html">Solution</a>
+                                        <!-- sub-menu start-->
+                                        <ul class="sub-menu">
+                                            <li class="menu-item"><a href="./solution.html">solution 1</a></li>
+                                            <li class="menu-item"><a href="./solution.html">solution 2</a></li>
+                                        </ul>
+                                        <!-- sub-menu end-->
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--header end-->
             </div>
-            <div class="am-u-md-10">
-              <div class="clear-style">
-                <ul class="fy-nav">
-                  <li class=""><a href="./index.html">Home</a></li>
-                  <li>
-                    <a href="./products.html">Product</a>
-                  </li>
-                  <li><a href="./company.html">Company</a>
-                    <!-- sub-menu start-->
-                    <ul class="sub-menu">
-                      <li class="menu-item"><a href="./company.html">About OrientalGardening</a></li>
-                      <li class="menu-item"><a href="./newsLister.html">News</a></li>
-                      <li class="menu-item"><a href="./contactUs.html">Contact us</a></li>
-                    </ul>
-                    <!-- sub-menu end-->
-                  </li>
-                  <li>
-                    <a href="./solution.html">Solution</a>
-                    <!-- sub-menu start-->
-                    <ul class="sub-menu">
-                      <li class="menu-item"><a href="./solution.html">solution 1</a></li>
-                      <li class="menu-item"><a href="./solution.html">solution 2</a></li>
-                    </ul>
-                    <!-- sub-menu end-->
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
         </div>
-        <!--header end-->
-      </div>
-    </div>
-    <!--mobile header start-->
-    <div class="m-header">
-      <div class="am-g am-show-sm-only">
-        <div class="am-u-sm-2">
-          <div class="menu-bars">
-            <a href="#doc-oc-demo1" data-am-offcanvas="{effect: 'push'}"><i class="am-menu-toggle-icon am-icon-bars"></i></a>
-            <!-- 侧边栏内容 -->
-            <nav data-am-widget="menu" class="am-menu am-menu-offcanvas1" data-am-menu-offcanvas>
-              <a href="javascript: void(0)" class="am-menu-toggle"></a>
-              <div class="am-offcanvas">
-                <div class="am-offcanvas-bar">
-                  <ul class="am-menu-nav am-avg-sm-1">
-                    <li><a href="./index.html" class="">Home</a></li>
-                    <li class=""><a href="./products.html" class="">Products</a></li>
-                    <li class="am-parent">
-                      <a href="./company.html" class="">Company</a>
-                      <ul class="am-menu-sub am-collapse ">
-                        <li class="">
-                          <a href="./company.html" class="">About OrientalGardening</a>
-                        </li>
-                        <li class="">
-                          <a href="./newsLister.html" class="">News</a>
-                        </li>
-                        <li class="">
-                          <a href="./contactUs.html" class="">Contact us</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="am-parent">
-                      <a href="./solution.html" class="">Solution</a>
-                      <ul class="am-menu-sub am-collapse ">
-                        <li class="">
-                          <a href="./solution.html" class="">sulotion1</a>
-                        </li>
-                        <li class="">
-                          <a href="./solution.html" class="">sulotion1</a>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
+        <!--mobile header start-->
+        <div class="m-header">
+            <div class="am-g am-show-sm-only">
+                <div class="am-u-sm-2">
+                    <div class="menu-bars">
+                        <a href="#doc-oc-demo1" data-am-offcanvas="{effect: 'push'}"><i class="am-menu-toggle-icon am-icon-bars"></i></a>
+                        <!-- 侧边栏内容 -->
+                        <nav data-am-widget="menu" class="am-menu am-menu-offcanvas1" data-am-menu-offcanvas>
+                            <a href="javascript: void(0)" class="am-menu-toggle"></a>
+                            <div class="am-offcanvas">
+                                <div class="am-offcanvas-bar">
+                                    <ul class="am-menu-nav am-avg-sm-1">
+                                        <li><a href="./index.html" class="">Home</a></li>
+                                        <li class=""><a href="./products.html" class="">Products</a></li>
+                                        <li class="am-parent">
+                                            <a href="./company.html" class="">Company</a>
+                                            <ul class="am-menu-sub am-collapse ">
+                                                <li class="">
+                                                    <a href="./company.html" class="">About OrientalGardening</a>
+                                                </li>
+                                                <li class="">
+                                                    <a href="./newsLister.html" class="">News</a>
+                                                </li>
+                                                <li class="">
+                                                    <a href="./contactUs.html" class="">Contact us</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="am-parent">
+                                            <a href="./solution.html" class="">Solution</a>
+                                            <ul class="am-menu-sub am-collapse ">
+                                                <li class="">
+                                                    <a href="./solution.html" class="">sulotion1</a>
+                                                </li>
+                                                <li class="">
+                                                    <a href="./solution.html" class="">sulotion1</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
                 </div>
-              </div>
-            </nav>
-          </div>
+                <div class="am-u-sm-5 am-u-end">
+                    <div class="m-logo">
+                        <a href=""><img src="assets/images/logo.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <!--mobile header end-->
         </div>
-        <div class="am-u-sm-5 am-u-end">
-          <div class="m-logo">
-            <a href=""><img src="assets/images/logo.png" alt=""></a>
-          </div>
+        <style type="text/css">
+        .f3f4f4 {
+            background: #f3f4f4 !important;
+        }
+
+        .mt10 {
+            margin-top: 10px !important;
+        }
+
+        .mt20 {
+            margin-top: 20px !important;
+        }
+
+        .block {
+            width: 100% !important;
+            display: block !important;
+        }
+
+        .fl {
+            float: left !important;
+        }
+
+        .padtb {
+            padding: 0 9px !important;
+        }
+
+        .botton {
+            max-width: 100px !important;
+            border: 1px solid #ccc !important;
+            margin-right: 20px !important;
+            border-radius: 4px !important;
+            float: left !important;
+            padding: 2px 15px !important;
+        }
+
+        .o2o-content {
+            padding: 10px;
+        }
+
+        .page {
+            width: 1170px;
+            margin: 0 auto;
+            text-align: right;
+        }
+        [class*="am-u-"] + [class*="am-u-"]:last-child{
+          float: left !important;
+        }
+        .o2o-box img{
+          height: 253px !important;
+        }
+        </style>
+        <div class="section">
+            <div class="container">
+                <div class="solution-container mt10">
+                    <div class="am-tabs  am-no-layout block">
+                        <ul class="am-tabs-nav am-cf block categories">
+                        </ul>
+                    </div>
+                </div>
+                <div class="solution-container mt20">
+                    <div class="am-tabs  am-no-layout block">
+                        <ul class="am-tabs-nav am-cf block recommend">
+                            <li class="am-active botton" is-active="recommend"><a href="javascript:;">推荐</a></li>
+                            <li class="botton" is-active="newest"><a href="javascript:;">最新</a></li>
+                            <li class="botton" is-active="hot"><a href="javascript:;">热门</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="o2o-container">
+                    <div class="am-g" style="width: 100%">
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <!--mobile header end-->
-    </div>
-
-<style type="text/css">
-  .f3f4f4{
-    background:#f3f4f4 !important;
-  }
-  .mt10{
-    margin-top: 10px !important;
-  }
-  .mt20{
-    margin-top: 20px !important;
-  }
-  .block{
-    width: 100% !important;
-    display: block !important;
-  }
-  .fl{
-    float: left !important;
-  }
-  .padtb{
-    padding:0 9px !important;
-  }
-  .botton{
-    max-width: 100px !important;
-    border: 1px solid #ccc !important;
-    margin-right: 20px !important;
-    border-radius: 4px !important;
-    float: left !important;
-    padding:2px 15px !important;
-  }
-  .o2o-content{
-    padding: 10px;
-  }
-</style>
-
-<div class="section">
-      <div class="container">
-        <div class="solution-container mt10">
-          <div data-am-widget="tabs" class="am-tabs  am-no-layout block">
-              <ul class="am-tabs-nav am-cf block">
-                  <span class="fl">所属类目：</span>
-                  <li class="fl padtb am-active"><a href="[data-tab-panel-0]">全部</a></li>
-                  <li class="fl padtb"><a href="[data-tab-panel-1]">类目一</a></li>
-                  <li class="fl padtb"><a href="[data-tab-panel-2]">类目二</a></li>
-                  <li class="fl padtb"><a href="[data-tab-panel-3]">类目二</a></li>
-                  <li class="fl padtb"><a href="[data-tab-panel-2]">类目三</a></li>
-                  <li class="fl padtb"><a href="[data-tab-panel-2]">类目四</a></li>
-                  <li class="fl padtb"><a href="[data-tab-panel-2]">类目五</a></li>
-              </ul>
-          </div>
+        <div class="page">
+            <div id="paging" class="pagination"></div>
         </div>
-        <div class="solution-container mt20">
-         <div data-am-widget="tabs" class="am-tabs  am-no-layout block">
-              <ul class="am-tabs-nav am-cf block">
-                  <li class="am-active botton"><a href="[data-tab-panel-0]">最热</a></li>
-                  <li class="botton"><a href="[data-tab-panel-1]">最新</a></li>
-                  <li class="botton"><a href="[data-tab-panel-2]">热门</a></li>
-              </ul>
-          </div>
+        <!-- todo 这里增加页面的内容 -->
+        <!--===========layout-footer================-->
+        <div class="layout-footer">
+            <div class="footer">
+                <div style="background-color:#383d61" class="footer--bg"></div>
+                <div class="footer--inner">
+                    <div class="container">
+                        <div class="footer_main">
+                            <div class="am-g">
+                                <div class="am-u-md-3 ">
+                                    <div class="footer_main--column">
+                                        <strong class="footer_main--column_title">OrientalGardening</strong>
+                                        <div class="footer_about">
+                                            <div>
+                                                <img src="assets/images/index/f01.jpg" alt="" class="footer-logo-img">
+                                            </div>
+                                            <p class="footer_about--text">
+                                                这里是一段简介，需要客户提供
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="am-u-md-3 ">
+                                    <div class="footer_main--column">
+                                        <strong class="footer_main--column_title">company</strong>
+                                        <ul class="footer_navigation">
+                                            <li class="footer_navigation--item"><a href="#" class="footer_navigation--link">about OrientalGardening </a></li>
+                                            <li class="footer_navigation--item"><a href="#" class="footer_navigation--link">News</a></li>
+                                            <li class="footer_navigation--item"><a href="#" class="footer_navigation--link">contact us</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="am-u-md-3 ">
+                                    <div class="footer_main--column">
+                                        <strong class="footer_main--column_title">solution</strong>
+                                        <ul class="footer_navigation">
+                                            <li class="footer_navigation--item"><a href="#" class="footer_navigation--link">Planting</a></li>
+                                            <li class="footer_navigation--item"><a href="#" class="footer_navigation--link">Transportantion</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="am-u-md-3 ">
+                                    <div class="footer_main--column">
+                                        <strong class="footer_main--column_title">联系详情</strong>
+                                        <ul class="footer_contact_info">
+                                            <li class="footer_contact_info--item"><i class="am-icon-phone"></i><span>服务专线：400 069 0309</span></li>
+                                            <li class="footer_contact_info--item"><i class="am-icon-envelope-o"></i><span>yunshipei.com</span></li>
+                                            <li class="footer_contact_info--item"><i class="am-icon-map-marker"></i><span>北京市海淀区海淀大街27号天使大厦（原亿景大厦）三层</span></li>
+                                            <li class="footer_contact_info--item"><i class="am-icon-clock-o"></i><span>Monday - Friday, 9am - 6 pm; </span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="o2o-container">
-          <div class="am-g" style="width: 100%">
-            <div class="am-u-md-3" style="margin-top: 30px;">
-              <div class="o2o-box" style="border: 1px solid #e4e4e4;padding:0">
-                <img src="assets/images/solution/o2o-img-1.png" alt="" width="100%">
-                <div class="o2o-content">
-                  <h3>遭遇黑客攻击</h3>
-                  <p>安全意识很重要，要提前做好预防工作，保障系统安全。推荐使用大禹分布式防御</p>
-                </div>
-              </div>
-            </div>
-            <div class="am-u-md-3" style="margin-top: 30px;">
-              <div class="o2o-box" style="border: 1px solid #e4e4e4;padding:0">
-                <img src="assets/images/solution/o2o-img-1.png" alt="" width="100%">
-                <div class="o2o-content">
-                  <h3>遭遇黑客攻击</h3>
-                  <p>安全意识很重要，要提前做好预防工作，保障系统安全。推荐使用大禹分布式防御</p>
-                </div>
-              </div>
-            </div>
-            <div class="am-u-md-3" style="margin-top: 30px;">
-              <div class="o2o-box" style="border: 1px solid #e4e4e4;padding:0">
-                <img src="assets/images/solution/o2o-img-1.png" alt="" width="100%">
-                <div class="o2o-content">
-                  <h3>遭遇黑客攻击</h3>
-                  <p>安全意识很重要，要提前做好预防工作，保障系统安全。推荐使用大禹分布式防御</p>
-                </div>
-              </div>
-            </div>
-           <div class="am-u-md-3" style="margin-top: 30px;">
-              <div class="o2o-box" style="border: 1px solid #e4e4e4;padding:0">
-                <img src="assets/images/solution/o2o-img-1.png" alt="" width="100%">
-                <div class="o2o-content">
-                  <h3>遭遇黑客攻击</h3>
-                  <p>安全意识很重要，要提前做好预防工作，保障系统安全。推荐使用大禹分布式防御</p>
-                </div>
-              </div>
-            </div>
-            <div class="am-u-md-3" style="margin-top: 30px;">
-              <div class="o2o-box" style="border: 1px solid #e4e4e4;padding:0">
-                <img src="assets/images/solution/o2o-img-1.png" alt="" width="100%">
-                <div class="o2o-content">
-                  <h3>遭遇黑客攻击</h3>
-                  <p>安全意识很重要，要提前做好预防工作，保障系统安全。推荐使用大禹分布式防御</p>
-                </div>
-              </div>
-            </div>
-           <div class="am-u-md-3" style="margin-top: 30px;">
-              <div class="o2o-box" style="border: 1px solid #e4e4e4;padding:0">
-                <img src="assets/images/solution/o2o-img-1.png" alt="" width="100%">
-                <div class="o2o-content">
-                  <h3>遭遇黑客攻击</h3>
-                  <p>安全意识很重要，要提前做好预防工作，保障系统安全。推荐使用大禹分布式防御</p>
-                </div>
-              </div>
-            </div>
-            <div class="am-u-md-3" style="margin-top: 30px;">
-              <div class="o2o-box" style="border: 1px solid #e4e4e4;padding:0">
-                <img src="assets/images/solution/o2o-img-1.png" alt="" width="100%">
-                <div class="o2o-content">
-                  <h3>遭遇黑客攻击</h3>
-                  <p>安全意识很重要，要提前做好预防工作，保障系统安全。推荐使用大禹分布式防御</p>
-                </div>
-              </div>
-            </div>
-            <div class="am-u-md-3" style="margin-top: 30px;">
-              <div class="o2o-box" style="border: 1px solid #e4e4e4;padding:0">
-                <img src="assets/images/solution/o2o-img-1.png" alt="" width="100%">
-                <div class="o2o-content">
-                  <h3>遭遇黑客攻击</h3>
-                  <p>安全意识很重要，要提前做好预防工作，保障系统安全。推荐使用大禹分布式防御</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-
-
-<!-- todo 这里增加页面的内容 -->
-
-
-
- <!--===========layout-footer================-->
- <div class="layout-footer">
-  <div class="footer">
-    <div style="background-color:#383d61" class="footer--bg"></div>
-    <div class="footer--inner">
-      <div class="container">
-        <div class="footer_main">
-          <div class="am-g">
-            <div class="am-u-md-3 ">
-
-              <div class="footer_main--column">
-                <strong class="footer_main--column_title">OrientalGardening</strong>
-                <div class="footer_about">
-                  <div>
-                    <img src="assets/images/index/f01.jpg" alt="" class="footer-logo-img">
-                  </div>
-                  <p class="footer_about--text">
-                   这里是一段简介，需要客户提供
-                 </p>
-                 
-               </div>
-             </div>
-           </div>
-
-           <div class="am-u-md-3 ">
-            <div class="footer_main--column">
-              <strong class="footer_main--column_title">company</strong>
-              <ul class="footer_navigation">
-                <li class="footer_navigation--item"><a href="#" class="footer_navigation--link">about OrientalGardening </a></li>
-                <li class="footer_navigation--item"><a href="#" class="footer_navigation--link">News</a></li>
-                <li class="footer_navigation--item"><a href="#" class="footer_navigation--link">contact us</a></li>              
-              </ul>
-            </div>
-          </div>
-
-          <div class="am-u-md-3 ">
-            <div class="footer_main--column">
-              <strong class="footer_main--column_title">solution</strong>
-              <ul class="footer_navigation">
-                <li class="footer_navigation--item"><a href="#" class="footer_navigation--link">Planting</a></li>
-                <li class="footer_navigation--item"><a href="#" class="footer_navigation--link">Transportantion</a></li>
-
-              </ul>
-            </div>
-          </div>
-
-          <div class="am-u-md-3 ">
-            <div class="footer_main--column">
-              <strong class="footer_main--column_title">联系详情</strong>
-              <ul class="footer_contact_info">
-                <li class="footer_contact_info--item"><i class="am-icon-phone"></i><span>服务专线：400 069 0309</span></li>
-                <li class="footer_contact_info--item"><i class="am-icon-envelope-o"></i><span>yunshipei.com</span></li>
-                <li class="footer_contact_info--item"><i class="am-icon-map-marker"></i><span>北京市海淀区海淀大街27号天使大厦（原亿景大厦）三层</span></li>
-                <li class="footer_contact_info--item"><i class="am-icon-clock-o"></i><span>Monday - Friday, 9am - 6 pm; </span></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-<script src="assets/js/jquery-2.1.0.js" charset="utf-8"></script>
-<script src="assets/js/amazeui.js" charset="utf-8"></script>
-<script src="assets/js/common.js" charset="utf-8"></script>
+        <script src="assets/js/jquery-2.1.0.js" charset="utf-8"></script>
+        <script src="assets/js/amazeui.js" charset="utf-8"></script>
+        <script src="assets/js/common.js" charset="utf-8"></script>
+        <script src="assets/js/jq-paginator.js" charset="utf-8"></script>
 </body>
 
 </html>
+<script type="text/javascript">
+/**
+ * 获取banner数据
+ * @type {String}
+ */
+var url = '/product/category/list'
+var data = {}
+ajaxPost(url, data, function(data) {
+    var html = '<span class="fl">所属类目：</span>'
+    var categories = data.categories
+    var len = categories.length
+    for (var i = 0; i < len; i++) {
+        html += '<li class="fl padtb '+ (i > 0 ? '' : 'am-active')+'" categoryid="' + categories[i].id + '"><a href="javascript:;">' + categories[i].name + '</a></li>'
+    }
+
+    $('.categories').html(html)
+    jqPaginator(categories)
+})
+
+
+/**
+ * 获取banner数据
+ * @type {String}
+ */
+
+var page_index = 1
+var page_size = 10
+
+function getList(categories) {
+    var url = '/product/list'
+    var data = {
+        "page": {
+            "page_index": page_index,
+            "page_size": page_size
+        },
+        "category_id": categories && categories.length ? categories[0].id :parseInt( $('.categories li.am-active').attr('categoryid')),
+        "is_index_show": $('.recommend li.am-active').attr('is-active') == 'recommend' ? true : false,
+        "is_new": $('.recommend li.am-active').attr('is-active') == 'newest' ? true : false,
+        "is_hot": $('.recommend li.am-active').attr('is-active') == 'hot' ? true : false,
+    }
+    ajaxPost(url, data, function(data) {
+        var html = ''
+        var ps = data.ps
+        var len = ps.length
+        for (var i = 0; i < len; i++) {
+            html += '<div class="am-u-md-3" style="margin-top: 30px;">' +
+                '<div class="o2o-box" style="border: 1px solid #e4e4e4;padding:0">' +
+                '<img src="' + ps[i].cover_url + '" alt="" width="100%">' +
+                '<div class="o2o-content">' +
+                '<h3>' + ps[i].name + '</h3>' +
+                '<p>' + ps[i].intro + '</p>' +
+                '</div>' +
+                '</div>' +
+                '</div>'
+        }
+        $('.o2o-container>.am-g').html(html)
+    })
+}
+
+
+
+function jqPaginator(categories) {
+    $('#paging').jqPaginator({
+        totalPages: 100,
+        visiblePages: 4,
+        currentPage: 1,
+        first: '<li class="first"><a href="javascript:void(0);">首页<\/a><\/li>',
+        prev: '<li class="prev"><a href="javascript:void(0);"><i class="arrow arrow2"><\/i>上一页<\/a><\/li>',
+        next: '<li class="next"><a href="javascript:void(0);">下一页<i class="arrow arrow3"><\/i><\/a><\/li>',
+        last: '<li class="last"><a href="javascript:void(0);">末页<\/a><\/li>',
+        page: '<li class="page"><a href="javascript:void(0);">{{page}}<\/a><\/li>',
+        onPageChange: function(n) {
+            page_index = n
+            getList(categories)
+        }
+    });
+}
+
+
+
+
+
+$('.categories li').on('click', function() {
+    page_index = 1
+    page_size = 10
+    $('.categories li').removeClass('am-active')
+    $(this).addClass('am-active')
+    jqPaginator()
+
+    
+})
+
+
+$('.recommend li').on('click', function() {
+    page_index = 1
+    page_size = 10
+    $('.recommend li').removeClass('am-active')
+    $(this).addClass('am-active')
+    jqPaginator()
+})
+</script>
