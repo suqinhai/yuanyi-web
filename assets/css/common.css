@@ -163,7 +163,7 @@
     -webkit-box-flex: 0;
     -ms-flex: 0 0 260px;
     flex: 0 0 260px;
-}
+  }
 }
 
 .press-archive__inner-item-details {
@@ -188,3 +188,9 @@
 }
 .press-archive__inner-item-title:link, .press-archive__inner-item-title:visited {
   color: #2a2a2e;
+}
+.features_item img{
+  width: 262px;
+  height: 198px;
+  background-size: cover;
+}
