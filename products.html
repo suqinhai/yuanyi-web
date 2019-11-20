@@ -255,6 +255,8 @@
 
 </html>
 <script type="text/javascript">
+var page_index = 1
+var page_size = 10
 /**
  * 获取banner数据
  * @type {String}
@@ -263,6 +265,7 @@ var url = '/product/category/list'
 var data = {}
 ajaxPost(url, data, function(data) {
     var html = '<span class="fl">所属类目：</span>'
+    data.categories.unshift({id:null,name:'全部'})
     var categories = data.categories
     var len = categories.length
     for (var i = 0; i < len; i++) {
@@ -279,8 +282,7 @@ ajaxPost(url, data, function(data) {
  * @type {String}
  */
 
-var page_index = 1
-var page_size = 10
+
 
 function getList(categories) {
     var url = '/product/list'
@@ -364,6 +366,6 @@ $('.recommend li').on('click', function() {
 
 $('.o2o-container').on('click','.product-item',function(){
     var id = $(this).attr('data-id')
-    window.location.href = './productsDetial?id=' + id
+    window.location.href = './productsDetial.html?id=' + id
 })
 </script>
