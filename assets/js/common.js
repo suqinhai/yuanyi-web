@@ -62,7 +62,7 @@ function ajaxPost(url, data, fn) {
 
 
 /**
- * 获取浏览器参数
+ * 首页 获取浏览器参数
  */
 function getQueryString(name) {
     var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
@@ -73,3 +73,43 @@ function getQueryString(name) {
         return null;
     }
 }
+
+/**
+ * 合作伙伴logo
+ */
+
+var url = '/index/business/partners/list'
+var data = {
+    "page": {
+        "page_index": 1,
+        "page_size": 100
+    }
+}
+ajaxPost(url, data, function(data) {
+    var html = ''
+    var bps = data.bps
+    var len = bps.length
+    for (var i = 0; i < len; i++) {
+        html += '<div class="am-u-md-2 am-u-sm-4 customer-box">' + 
+                    '<a href="javascript:;">' + 
+                        '<img class="normal-logo" src="'+ bps[i].logo+'" alt="" style="display: inline;">' +
+                        '<img class="am-active" alt="" src="'+ bps[i].logo+'" style="display: none;">' +
+                    '</a>' + 
+                '</div>'
+    }
+    $('.customer-logo .am-g').html(html)
+})
+
+/**
+ * 页脚
+ */
+let get_web_setting_url = '/index/Setting/get'
+ajaxPost(get_web_setting_url, "", function(data) {
+    $("#rectangle_logo").attr('src', data.setting.rectangle_logo);
+    $("#m-logo").attr('src', data.setting.rectangle_logo);
+    $("#square_logo").attr('src', data.setting.square_logo);
+    $("#name").text(data.setting.name)
+    $("#hotline").text("服务专线: " + data.setting.hotline)
+    $("#enterprise_email").text(data.setting.enterprise_email)
+    $("#address").text(data.setting.address)
+})
