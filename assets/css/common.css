@@ -226,9 +226,32 @@
   -webkit-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);*/
-
 }
 .section .contact-form .math-submit-button{
  width: 30%;
  margin: 10px auto;
+}
+
+/*product-detail*/
+.products-detial-top-img{
+  height: 360px;
+  position: relative;
+  /*margin-top: 16px;*/
+}
+.SquareOverlay, .SquareOverlay__Content{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.SquareOverlay__Content{
+  background-color: rgba(0,0,0,.58);
+}
+.SquareImage{
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  font-family: "object-fit:cover",object-fit\:cover;
+  object-fit: cover;
 }

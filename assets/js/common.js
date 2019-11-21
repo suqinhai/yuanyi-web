@@ -110,6 +110,9 @@ ajaxPost(get_web_setting_url, "", function(data) {
     $("#square_logo").attr('src', data.setting.square_logo);
     $("#name").text(data.setting.name)
     $("#hotline").text("服务专线: " + data.setting.hotline)
+    $("#callUs").html("服务专线: <strong>" + data.setting.hotline+"</strong>, <br> Monday - Friday, 8am - 7pm")
     $("#enterprise_email").text(data.setting.enterprise_email)
+    $("#sendMessage").html(data.setting.enterprise_email+",<br>期待您的来信...")  
     $("#address").text(data.setting.address)
+    $("#visitUS").text(data.setting.address)
 })
