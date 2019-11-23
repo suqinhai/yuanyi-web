@@ -234,18 +234,18 @@ ajaxPost(url, data, function(data) {
     var len = data.length
     for (var i = 0; i < len; i++) {
         html += '<div class="am-panel am-panel-default">' +
-            '<div class="am-panel-hd">' +
-            '<div class="panel-title" data-am-collapse=\'{parent: "#accordion", target: "#do-not-say-' + i + '"}\' data-time="' + data[i].time + '" data-id="#do-not-say-' + i + '">' + data[i].time + '(' + data[i].count + ')' + '</div>' +
-            '</div>' +
-            '<div id="do-not-say-' + i + '" class="am-panel-collapse am-collapse">' +
-            '<div class="am-panel-bd">' +
-            '<div class="am-panel am-panel-default">' +
-            '<div class="am-panel-hd">' +
-            '</div>' +
-            '</div>' +
-            '</div>' +
-            '</div>' +
-            '</div>'
+        '<div class="am-panel-hd">' +
+        '<div class="panel-title" data-am-collapse=\'{parent: "#accordion", target: "#do-not-say-' + i + '"}\' data-time="' + data[i].time + '" data-id="#do-not-say-' + i + '">' + data[i].time + '(' + data[i].count + ')' + '</div>' +
+        '</div>' +
+        '<div id="do-not-say-' + i + '" class="am-panel-collapse am-collapse">' +
+        '<div class="am-panel-bd">' +
+        '<div class="am-panel am-panel-default">' +
+        '<div class="am-panel-hd">' +
+        '</div>' +
+        '</div>' +
+        '</div>' +
+        '</div>' +
+        '</div>'
     }
     $('.careers--vacancies').html(html)
 })
@@ -295,7 +295,7 @@ function getList(){
         var len = list.length
         for (var i = 0; i < len; i++) {
             html += '<div class="press-archive__inner-item" data-id="'+ list[i].id +'">' +
-                                '<a href="https://www.agoda.com/press/no-credit-card-payments?cid=-1" class="press-archive__inner-item-thumbnail-container" style="background-image: url(\'https://i1.wp.com/www.agoda.com/wp-content/uploads/2019/10/Screen-Shot-2562-10-11-at-15.10.16.png?resize=526%2C320&amp;ssl=1\')"><img src="'+ list[i].preview +'" alt="" scale="1.25"></a>' +
+                                '<a href="#" class="press-archive__inner-item-thumbnail-container" style="background-image: url(\''+list[i].preview +'\')"><div class="press-archive__inner-item-thumbnail-container-img" style="background-image: url(\''+list[i].preview +'\')"></div></a>' +
                                 '<div class="press-archive__inner-item-details">' +
                                     '<a href="#" class="press-archive__inner-item-title">'+ list[i].title +'</a>' + 
                                     '<div class="press-archive__inner-item-excerpt">' + list[i].summary +

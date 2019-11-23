@@ -340,3 +340,12 @@
   width: 100%;
   display: inline-block;
 }
+.press-archive__inner-item-thumbnail-container-img{
+  width: 310px;
+  height: 187px;
+  background-size: cover;
+  padding: 10px;
+  background-position: center;
+}
+
+    /* box-shadow: 0 0 5px #888;
