@@ -118,19 +118,20 @@
                <!-- SquareImage start -->
                <div class="am-g products-detial-top-img spotlight-group">
                  <div class="am-u-md-8" style="height: 100%;">
-                    <img src="assets/images/index/f01.jpg" alt="" class="SquareImage spotlight">
+                    <img id="pic_1" src="assets/images/index/f01.jpg" alt="" class="SquareImage spotlight">
                 </div>
                 <div class="am-u-md-4" style="height: 226px;">
                     <div class="am-g" style="height: 226px;">
-                        <img src="assets/images/index/f02.jpg" alt="" class="SquareImage spotlight">                        
+                        <img id="pic_2" src="assets/images/index/f02.jpg" alt="" class="SquareImage spotlight">
                     </div>
                     <div class="am-g">
                         <div class="am-u-md-6" style="height: 134px;padding: 2px 2px 0 0;">
-                            <img src="assets/images/index/f01.jpg" alt="" class="SquareImage spotlight">                            
+                            <img id="pic_3" src="assets/images/index/f01.jpg" alt="" class="SquareImage spotlight">
                         </div>
-                        <div class="am-u-md-6" style="height: 134px;padding: 2px 0 0 2px;">
-                            <img src="assets/images/index/f01.jpg" alt="" class="SquareImage spotlight">  
-                            <div></div>           
+                        <div class="am-u-md-6" style="height: 134px;padding: 2px 0 0 2px;text-align: center;">
+                            <img id="pic_4" src="assets/images/index/f01.jpg" alt="" class="SquareImage spotlight">
+                        </div>
+                        <div id="pic_more" style="display: none">
                         </div>
                     </div>
 
@@ -140,7 +141,7 @@
             <div class="am-u-md-12 products-detial-content">
                 <div class="am-u-md-3 pd0">
                     <div class="title">抢手产品</div>
-                    <div class="lists"></div>            
+                    <div class="lists"></div>
                 </div>
                 <div class="am-u-md-9">
                     <div class="container">
@@ -160,14 +161,14 @@
 
                                     </div>
                                 </div>
-                                <div class="imgList"></div>
+                                <!--<div class="imgList"></div>-->
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    
+
         <!--===========layout-footer================-->
         <div class="layout-footer">
             <div class="footer">
@@ -224,6 +225,7 @@
                 </div>
             </div>
         </div>
+    </div>
         <script src="assets/js/jquery-2.1.0.js" charset="utf-8"></script>
         <script src="assets/js/amazeui.js" charset="utf-8"></script>
         <script src="assets/js/common.js" charset="utf-8"></script>
@@ -243,15 +245,25 @@
 }
 ajaxPost(url, data, function(data) {
     if(data.product.details_pic_url){
-        var html = ''
+        // var html = ''
         var details_pic_urls = data.product.details_pic_url.split(',')
         var len = details_pic_urls.length
+        var picMore = ''
+
         for(var i = 0; i < len; i++){
-            html += '<img src="'+ details_pic_urls[i] +'">'
+            // html += '<img src="'+ details_pic_urls[i] +'">
+            $("#pic_"+(i+1)).attr("src", details_pic_urls[i])
+            if(i === 3){
+                $("#pic_4").attr("title", "查看全部"+len+"张图片")
+            }
+            if(i>3){
+                picMore += '<img src="'+details_pic_urls[i]+'" alt="" class="SquareImage spotlight">'
+            }
         }
-        $('.imgList').html(html)
+        $('#pic_more').html(picMore)
+        // $('.imgList').html(html)
     }
-    
+
     $('.article--meta_item span').html(data.product.heat)
     $('.article--title').html(data.product.name)
     $('.article--content').html(data.product.intro)
@@ -285,7 +297,7 @@ ajaxPost(url, data, function(data) {
         '</div>'
     }
     $('.lists').html(html)
-    
+
 })
 
 
