@@ -10,6 +10,24 @@
     <link rel="stylesheet" href="assets/css/common.min.css" />
     <link rel="stylesheet" href="assets/css/index.min.css" />
     <link rel="stylesheet" href="assets/css/common.css" />
+    <style>
+        .over_hide{
+            overflow : hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            height: 9.8rem;
+        }
+        .over_title{
+            overflow : hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            height: 4rem;
+        }
+    </style>
 </head>
 
 <body>
@@ -439,6 +457,7 @@
             </div>
         </div>
     </div>
+    </div>
     <script src="assets/js/jquery-2.1.0.js" charset="utf-8"></script>
     <script src="assets/js/amazeui.js" charset="utf-8"></script>
     <script src="assets/js/common.js" charset="utf-8"></script>
@@ -498,8 +517,8 @@ ajaxPost(url, data, function(data) {
         html += '<div class="am-u-md-3">' +
             '<div class="service_item">' +
             '<img src="' + ps[i].cover_url + '" alt="" class="products-img">' +
-            '<h3 class="service_item--title">' + ps[i].name + '</h3>' +
-            '<div class="service_item--text">' +
+            '<h3 class="service_item--title over_title" title="'+ps[i].name+'">' + ps[i].name + '</h3>' +
+            '<div class="service_item--text over_hide">' +
             '<p>' + ps[i].intro + '</p>' +
             '</div>' +
             ' <footer class="service_item--footer"><a href="./productsDetial.html?id=' + ps[i].id + '" class="link -blue_light">Learn More&gt;&gt;</a></footer>' +
