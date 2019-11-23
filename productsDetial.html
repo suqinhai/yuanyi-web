@@ -128,8 +128,9 @@
                         <div class="am-u-md-6" style="height: 134px;padding: 2px 2px 0 0;">
                             <img id="pic_3" src="assets/images/index/f01.jpg" alt="" class="SquareImage spotlight">
                         </div>
-                        <div class="am-u-md-6" style="height: 134px;padding: 2px 0 0 2px;text-align: center;">
+                        <div class="am-u-md-6" style="height: 134px;padding: 2px 0 0 2px;text-align: center;position: relative">
                             <img id="pic_4" src="assets/images/index/f01.jpg" alt="" class="SquareImage spotlight">
+                            <p style="position: relative; bottom: 95px;color: #000; pointer-events:none" id="tips"></p>
                         </div>
                         <div id="pic_more" style="display: none">
                         </div>
@@ -255,6 +256,7 @@ ajaxPost(url, data, function(data) {
             $("#pic_"+(i+1)).attr("src", details_pic_urls[i])
             if(i === 3){
                 $("#pic_4").attr("title", "查看全部"+len+"张图片")
+                $("#tips").html( "查看全部"+len+"张图片")
             }
             if(i>3){
                 picMore += '<img src="'+details_pic_urls[i]+'" alt="" class="SquareImage spotlight">'
