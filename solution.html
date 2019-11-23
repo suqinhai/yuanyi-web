@@ -45,7 +45,7 @@
                                     <li>
                                         <a href="./solution.html">Solution</a>
                                         <!-- sub-menu start-->
-                                        <ul class="sub-menu">
+                                        <ul class="sub-menu solution-category">
                                             <li class="menu-item"><a href="./solution.html">solution 1</a></li>
                                             <li class="menu-item"><a href="./solution.html">solution 2</a></li>
                                         </ul>
@@ -89,12 +89,12 @@
                                         </li>
                                         <li class="am-parent">
                                             <a href="./solution.html" class="">Solution</a>
-                                            <ul class="am-menu-sub am-collapse ">
+                                            <ul class="am-menu-sub am-collapse solution-category">
                                                 <li class="">
-                                                    <a href="./solution.html" class="">sulotion1</a>
+                                                    <a href="./solution.html" class="">solution</a>
                                                 </li>
                                                 <li class="">
-                                                    <a href="./solution.html" class="">sulotion1</a>
+                                                    <a href="./solution.html" class="">solution</a>
                                                 </li>
                                             </ul>
                                         </li>
@@ -128,8 +128,6 @@
                         <ul class="am-tabs-nav am-cf">
                             <li class="am-active"><a href="javascript:;">青春</a></li>
                             <li class=""><a href="javascript:;">彩虹</a></li>
-                            <li class=""><a href="javascript:;">歌唱</a></li>
-                            <li class=""><a href="javascript:;">歌唱</a></li>
                         </ul>
                         <div class="am-tabs-bd" style="touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
                             <div data-tab-panel-0="" class="am-tab-panel am-active">
@@ -235,15 +233,15 @@ ajaxPost(url, data, function(data) {
     var html = ''
     var categories = data.categories
     var len = categories.length
-    for (var i = 0; i < len; i++) {
-        html += '<li data-id="' + categories[i].id + '"><a href="javascript:;">' + categories[i].type_name + '</a></li>'
+    for (var i = 1; i < len; i++) {
+        html += '<li data-id="' + categories[i].id +'"'+'class="'+(i > 1 ? '' : 'am-active') +'"'+'><a href="javascript:;">' + categories[i].type_name + '</a></li>'
     }
-    $('.am-tabs-nav').html(html)
+    $('.am-tabs .am-tabs-nav').html(html)
     
 })
 
-$('.am-tabs-nav').on('click', 'li', function() {
-    $('.am-tabs-nav li').removeClass('am-active')
+$('.am-tabs .am-tabs-nav').on('click', 'li', function() {
+    $('.am-tabs .am-tabs-nav li').removeClass('am-active')
     $(this).addClass('am-active')
     type_id = $(this).attr('data-id')
     $('.am-tab-panel .am-g').html('')
