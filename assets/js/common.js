@@ -134,3 +134,13 @@ ajaxPost(get_web_setting_url, "", function(data) {
     $("#address").text(data.setting.address)
     $("#visitUS").text(data.setting.address)
 })
+
+let get_solution_catagory='/article/category/list'
+ajaxPost(get_solution_catagory,"",function(data){
+    var sulution_menu_item=""
+    var categories=data.categories
+    for (var i = 1;i<categories.length ;i++) {
+        sulution_menu_item += '<li data-id="' + categories[i].id + '" class="menu-item"><a href="./solution.html">'+categories[i].type_name+'</a></li>'
+    }
+    $('.solution-category').html(sulution_menu_item)
+})
