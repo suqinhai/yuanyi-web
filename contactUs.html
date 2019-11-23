@@ -119,15 +119,15 @@
                     <form class="am-form crm_form" id="crm-form">
                         <div class="am-g">
                             <div class="am-u-md-6">
-                                <input type="text" class="" id="doc-ipt-email-1" placeholder="Fiest Name" name="name">
+                                <input type="text" class="" id="doc-ipt-email-1" placeholder="*Fiest Name" name="name">
                             </div>
                             <div class="am-u-md-6">
-                                <input type="email" class="" id="doc-ipt-email-2" placeholder="Email" name="email">
+                                <input type="email" class="" id="doc-ipt-email-2" placeholder="*Email" name="email">
                             </div>
                         </div>
                         <div class="am-g">
                             <div class="am-u-md-6">
-                                <input type="tel" class="" id="doc-ipt-email-3" placeholder="Phone" name="phone">
+                                <input type="tel" class="" id="doc-ipt-email-3" placeholder="*Phone" name="phone">
                             </div>
                             <div class="am-u-md-6">
                                 <input type="text" class="" id="doc-ipt-email-4" placeholder="Webside" name="offical_web">
@@ -259,6 +259,7 @@
                 </div>
             </div>
         </div>
+    </div>
         <script src="assets/js/jquery-2.1.0.js" charset="utf-8"></script>
         <script src="assets/js/amazeui.js" charset="utf-8"></script>
         <script src="assets/js/common.js" charset="utf-8"></script>
@@ -276,20 +277,52 @@ $('#save').click(function(){
         "official_web": $('input[name="offical_web"]').val(),
         "company": $('input[name="company"]').val(),
         "message": $('textarea[name="message"]').val(),
-        "vertify_code": $('input[name="vertify_code"]').val(),
+        "verify_value": $('input[name="vertify_code"]').val(),
         "id": id,
     }
-    ajaxPost(url, data, function(data) {
-        alert('提交成功')
-    })
+
+  if (data.id === "" || data.verify_value === "") {
+    alert("code can not blank")
+    return
+  }
+  if (data.email === "") {
+    alert("email can not blank")
+    return
+  }
+  if (data.name === "") {
+    alert("fiest name can not blank")
+    return
+  }
+  if (data.phone === "") {
+    alert("phone can not blank")
+    return
+  }
+
+  ajaxPostV2(url, data, function (data) {
+    alert("success")
+    window.location.reload()
+  }, function (code, msg) {
+    alert(msg)
+    if(code === -1001){
+      loadCaptcha()
+    }
+  });
 })
 
 
 var url = '/captcha'
-ajaxGet(url, function(data) {
-   $('.section-math-function').html('<img src="'+ data.base_64_png +'" />')
-   id = data.id
-})
+loadCaptcha()
+
+function loadCaptcha() {
+  ajaxGet(url, function(data) {
+    $('.section-math-function').html('<img src="'+ data.base_64_png +'" onclick="refresh()" />')
+    id = data.id
+  })
+}
+
+function refresh() {
+  loadCaptcha()
+}
 
 
 </script>
