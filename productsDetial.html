@@ -118,18 +118,18 @@
                <!-- SquareImage start -->
                <div class="am-g products-detial-top-img spotlight-group">
                  <div class="am-u-md-8" style="height: 100%;">
-                    <img id="pic_1" src="assets/images/index/f01.jpg" alt="" class="SquareImage spotlight">
+                    <img id="pic_1" src="assets/images/index/f01.jpg" alt="" class="SquareImage img_border spotlight">
                 </div>
                 <div class="am-u-md-4" style="height: 226px;">
                     <div class="am-g" style="height: 226px;">
-                        <img id="pic_2" src="assets/images/index/f02.jpg" alt="" class="SquareImage spotlight">
+                        <img id="pic_2" src="assets/images/index/f02.jpg" alt="" class="SquareImage img_border spotlight">
                     </div>
                     <div class="am-g">
                         <div class="am-u-md-6" style="height: 134px;padding: 2px 2px 0 0;">
-                            <img id="pic_3" src="assets/images/index/f01.jpg" alt="" class="SquareImage spotlight">
+                            <img id="pic_3" src="assets/images/index/f01.jpg" alt="" class="SquareImage img_border spotlight">
                         </div>
                         <div class="am-u-md-6" style="height: 134px;padding: 2px 0 0 2px;text-align: center;position: relative">
-                            <img id="pic_4" src="assets/images/index/f01.jpg" alt="" class="SquareImage spotlight">
+                            <img id="pic_4" src="assets/images/index/f01.jpg" alt="" class="SquareImage img_border spotlight">
                             <p style="position: relative; bottom: 95px;color: #000; pointer-events:none" id="tips"></p>
                         </div>
                         <div id="pic_more" style="display: none">
@@ -143,6 +143,9 @@
                 <div class="am-u-md-3 pd0">
                     <div class="title">抢手产品</div>
                     <div class="lists"></div>
+                    <div style="float: left;width: 1rem;height: 1rem;background-color: #333333;margin-left: 7.5vw;border-radius: 50%;display: none;" onclick="changePage(1)" id="page_1"></div>
+                    <div style="float: left;width: 1rem;height: 1rem;background-color: #333333;margin-left: 1rem;border-radius: 50%;display: none" onclick="changePage(2)" id="page_2"></div>
+                    <div style="float: left;width: 1rem;height: 1rem;background-color: #333333;margin-left: 1rem;border-radius: 50%;display: none" onclick="changePage(3)" id="page_3"></div>
                 </div>
                 <div class="am-u-md-9">
                     <div class="container">
@@ -272,7 +275,7 @@ ajaxPost(url, data, function(data) {
 })
 
 var page_index = 1
-var page_size = 10
+var page_size = 4
 var url = '/product/list'
 var data = {
     "page": {
@@ -283,25 +286,43 @@ var data = {
     "is_index_show": false,
     "is_new": false
 }
-ajaxPost(url, data, function(data) {
-    var html = ''
-    var ps = data.ps
-    var len = ps.length
-    for (var i = 0; i < len; i++) {
-        html += '<div class="list am-u-md-12 pd0 product-item" data-id="'+ ps[i].id +'">' +
-        '<div class="am-u-md-4 pd0">' +
-        '<img src="'+ ps[i].cover_url +'">' +
-        '</div>' +
-        '<div class="am-u-md-8">' +
-        '<div class="list-content-title">'+ ps[i].name +'</div>' +
-        '<div class="list-content-content">'+ ps[i].intro +'</div>' +
-        '</div>' +
-        '</div>'
-    }
-    $('.lists').html(html)
 
-})
+loadHotProduct()
 
+function loadHotProduct(){
+    ajaxPost(url, data, function(data) {
+        var html = ''
+        var ps = data.ps
+        var len = ps.length
+        for (var i = 0; i < len; i++) {
+            html += '<div class="list am-u-md-12 pd0 product-item" style="border-bottom: 1px solid #9b9b9b;  box-shadow: 0px 0px 8px #ddd;" data-id="'+ ps[i].id +'">' +
+                '<div class="am-u-md-4 pd0">' +
+                '<img src="'+ ps[i].cover_url +'">' +
+                '</div>' +
+                '<div class="am-u-md-8">' +
+                '<div class="list-content-title">'+ ps[i].name +'</div>' +
+                '<div class="list-content-content">'+ ps[i].intro +'</div>' +
+                '</div>' +
+                '</div>'
+        }
+        $('.lists').html(html)
+        let pageNum = data.page.total%4
+        if(pageNum>0){
+            for(let i=1;i<=pageNum;i++){
+                $("#page_"+i).css("display","block").css("opacity","1")
+                if(data.page.page_index==i){
+                    $("#page_"+i).css("opacity","0.5")
+                }
+            }
+        }
+    })
+}
+
+
+function changePage(id){
+    data.page.page_index = id
+    loadHotProduct()
+}
 
 $('.lists').on('click','.product-item',function(){
     var id = $(this).attr('data-id')
