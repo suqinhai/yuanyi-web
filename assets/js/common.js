@@ -59,6 +59,24 @@ function ajaxPost(url, data, fn) {
     })
 }
 
+function ajaxPostV2(url, data, success, fail) {
+    $.ajax({
+        url: baseUrl + url,
+        type: 'post',
+        contentType: 'application/json',
+        async: false,
+        data: JSON.stringify(data),
+        dataType: 'json',
+        success: function(res) {
+            if (res.code == 0) {
+                success(res.data)
+            }else{
+                fail(res.code, res.msg)
+            }
+        }
+    })
+}
+
 
 
 /**
@@ -90,11 +108,11 @@ ajaxPost(url, data, function(data) {
     var bps = data.bps
     var len = bps.length
     for (var i = 0; i < len; i++) {
-        html += '<div class="am-u-md-2 am-u-sm-4 customer-box">' + 
-                    '<a href="javascript:;">' + 
+        html += '<div class="am-u-md-2 am-u-sm-4 customer-box">' +
+                    '<a href="javascript:;">' +
                         '<img class="normal-logo" src="'+ bps[i].logo+'" alt="" style="display: inline;">' +
                         '<img class="am-active" alt="" src="'+ bps[i].logo+'" style="display: none;">' +
-                    '</a>' + 
+                    '</a>' +
                 '</div>'
     }
     $('.customer-logo .am-g').html(html)
@@ -112,7 +130,7 @@ ajaxPost(get_web_setting_url, "", function(data) {
     $("#hotline").text("服务专线: " + data.setting.hotline)
     $("#callUs").html("服务专线: <strong>" + data.setting.hotline+"</strong>, <br> Monday - Friday, 8am - 7pm")
     $("#enterprise_email").text(data.setting.enterprise_email)
-    $("#sendMessage").html(data.setting.enterprise_email+",<br>期待您的来信...")  
+    $("#sendMessage").html(data.setting.enterprise_email+",<br>期待您的来信...")
     $("#address").text(data.setting.address)
     $("#visitUS").text(data.setting.address)
 })
