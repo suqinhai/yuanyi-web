@@ -262,7 +262,7 @@
 </html>
 <script type="text/javascript">
 var page_index = 1
-var page_size = 4
+var page_size = 12
 /**
  * 获取banner数据
  * @type {String}
@@ -287,9 +287,6 @@ ajaxPost(url, data, function(data) {
  * 获取banner数据
  * @type {String}
  */
-
-
-
 function getList(categories) {
     var url = '/product/list'
     var data = {
@@ -320,10 +317,8 @@ function getList(categories) {
         $('.o2o-container>.am-g').html(html)
         if(data.page.total){
             $('#paging').jqPaginator({
-                totalPages: data.page.total,
                 pageSize: page_size,
-                totalCounts: page_size,
-                visiblePages: 4,
+                totalCounts: data.page.total,
                 currentPage: page_index,
                 first: '<li class="first"><a href="javascript:void(0);">首页<\/a><\/li>',
                 prev: '<li class="prev"><a href="javascript:void(0);"><i class="arrow arrow2"><\/i>上一页<\/a><\/li>',
@@ -352,7 +347,7 @@ function getList(categories) {
 
 $('.categories li').on('click', function() {
     page_index = 1
-    page_size = 10
+    page_size = 12
     $('.categories li').removeClass('am-active')
     $(this).addClass('am-active')
     getList()
@@ -362,7 +357,7 @@ $('.categories li').on('click', function() {
 
 $('.recommend li').on('click', function() {
     page_index = 1
-    page_size = 10
+    page_size = 12
     $('.recommend li').removeClass('am-active')
     $(this).addClass('am-active')
     getList()

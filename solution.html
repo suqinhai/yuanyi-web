@@ -135,7 +135,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="more">加载更多</div>
+                        <div class="more">more</div>
+                        <div class="nomore">no more</div>
                     </div>
                 </div>
             </div>
@@ -214,9 +215,15 @@
     padding: 5px 20px !important;
 }
 .more{
-    font-size: 30px;
+    font-size: 24px;
     text-align: center;
     cursor: pointer;
+}
+.nomore{
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    display: none;
 }
 </style>
 <script type="text/javascript">
@@ -286,6 +293,10 @@ function getList(){
                     '</div>'
         }
         $('.am-tab-panel .am-g').append(html)
+        if(!len){
+            $('.more').hide()
+            $('.nomore').show()
+        }
     })
 }
 
