@@ -123,6 +123,7 @@ ajaxPost(url, data, function(data) {
  */
 let get_web_setting_url = '/index/Setting/get'
 ajaxPost(get_web_setting_url, "", function(data) {
+    var companyIntro='OrientalGardening" one-stop service platform'
     $("#rectangle_logo").attr('src', data.setting.rectangle_logo);
     $("#m-logo").attr('src', data.setting.rectangle_logo);
     $("#square_logo").attr('src', data.setting.square_logo);
@@ -133,14 +134,19 @@ ajaxPost(get_web_setting_url, "", function(data) {
     $("#sendMessage").html(data.setting.enterprise_email+",<br>期待您的来信...")
     $("#address").text(data.setting.address)
     $("#visitUS").text(data.setting.address)
+    $(".footer_about--text").text(companyIntro)
 })
 
 let get_solution_catagory='/article/category/list'
 ajaxPost(get_solution_catagory,"",function(data){
+    // data.categories.unshift({id:1111,name:'全部'},{id:1112,name:'ceshi'},{id:1113,name:'ceshi'},{id:11134,name:'ceshi'})
     var sulution_menu_item=""
+    var footer_solution=""
     var categories=data.categories
     for (var i = 1;i<categories.length ;i++) {
         sulution_menu_item += '<li data-id="' + categories[i].id + '" class="menu-item"><a href="./solution.html">'+categories[i].type_name+'</a></li>'
+        footer_solution+='<li data-id="' + categories[i].id + '" class="footer_navigation--item"><a href="./solution.html" class="footer_navigation--link">' +categories[i].type_name+'</a></li>'
     }
     $('.solution-category').html(sulution_menu_item)
+    $('.footer_solution').html(footer_solution)
 })

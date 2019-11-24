@@ -387,3 +387,12 @@
   background-position: center;
 }
 
+/*company style*/
+.section-company-description{
+  font-size: 20px;
+    line-height: 30px;
+    color: #9b9b9b;
+    text-align: left;
+    margin: 10px 0 0;
+    text-indent: 2rem;
+}
