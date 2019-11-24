@@ -252,6 +252,7 @@
                 </div>
             </div>
         </div>
+    </div>
         <script src="assets/js/jquery-2.1.0.js" charset="utf-8"></script>
         <script src="assets/js/amazeui.js" charset="utf-8"></script>
         <script src="assets/js/common.js" charset="utf-8"></script>
@@ -261,7 +262,7 @@
 </html>
 <script type="text/javascript">
 var page_index = 1
-var page_size = 10
+var page_size = 4
 /**
  * 获取banner数据
  * @type {String}
@@ -308,10 +309,10 @@ function getList(categories) {
         for (var i = 0; i < len; i++) {
             html += '<div class="am-u-md-3 product-item" data-id="'+ ps[i].id +'" style="margin-top: 30px;">' +
                 '<div class="o2o-box" style="border: 1px solid #e4e4e4;padding:0">' +
-                '<img src="' + ps[i].cover_url + '" alt="" width="100%">' +
+                '<img src="' + ps[i].cover_url + '" alt="" width="100%" >' +
                 '<div class="o2o-content">' +
-                '<h3>' + ps[i].name + '</h3>' +
-                '<p>' + ps[i].intro + '</p>' +
+                '<h3 class="over_title">' + ps[i].name + '</h3>' +
+                '<p class="over_hide">' + ps[i].intro + '</p>' +
                 '</div>' +
                 '</div>' +
                 '</div>'
@@ -330,7 +331,7 @@ function getList(categories) {
                 last: '<li class="last"><a href="javascript:void(0);">末页<\/a><\/li>',
                 page: '<li class="page"><a href="javascript:void(0);">{{page}}<\/a><\/li>',
                 onPageChange: function(n,type) {
-                    if(type == 'init'){
+                    if(type === 'init'){
 
                     }else{
                         page_index = n
@@ -342,9 +343,9 @@ function getList(categories) {
         }else{
              $('#paging').jqPaginator('destroy');
         }
-        
 
-       
+
+
     })
 }
 
@@ -355,7 +356,7 @@ $('.categories li').on('click', function() {
     $('.categories li').removeClass('am-active')
     $(this).addClass('am-active')
     getList()
-    
+
 })
 
 

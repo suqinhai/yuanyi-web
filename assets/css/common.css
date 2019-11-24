@@ -280,6 +280,24 @@
   position: relative;
 }
 
+ .over_hide{
+   overflow : hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 4;
+   -webkit-box-orient: vertical;
+   height: 8.4rem;
+ }
+
+ .over_title{
+   overflow : hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 1;
+   -webkit-box-orient: vertical;
+   height: 3rem;
+ }
+
 .img-1 {
   width: 100%;
   /* max-height: 320px;*/
