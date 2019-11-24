@@ -346,11 +346,15 @@
              let html = ''
              let len = data.length
              for (let i = 0; i < len; i++) {
-                 html += '<div class="l-nav-3">'+data[i].title+'</div>'
+                 html += '<div class="l-nav-3" onclick="goToDetail('+data[i].id+')">'+data[i].title+'</div>'
              }
             $("#"+mId).find("div").html(html)
 
         })
+    }
+
+    function goToDetail(id){
+        window.location.href = './detail.html?id=' + id
     }
 
     /**
