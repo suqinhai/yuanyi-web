@@ -140,7 +140,7 @@ ajaxPost(get_web_setting_url, "", function(data) {
 let get_solution_catagory='/article/category/list'
 ajaxPost(get_solution_catagory,"",function(data){
     // data.categories.unshift({id:1111,name:'全部'},{id:1112,name:'ceshi'},{id:1113,name:'ceshi'},{id:11134,name:'ceshi'})
-    var sulution_menu_item='<li data-id="0" class="menu-item"><a href="./solution.html?id=0">全部</a></li>'
+    var sulution_menu_item=""
     var footer_solution=""
     var categories=data.categories
     for (var i = 0;i<categories.length ;i++) {
