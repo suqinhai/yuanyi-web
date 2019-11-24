@@ -314,7 +314,13 @@ function loadHotProduct(){
                 '</div>'
         }
         $('.lists').html(html)
-        let pageNum = data.page.total%4
+        if(data.page.total > 12){
+            data.page.total = 12
+        }
+        let pageNum = data.page.total/4
+        if(data.page.total%4>0 ){
+            pageNum += 1
+        }
         if(pageNum>0){
             for(let i=1;i<=pageNum;i++){
                 $("#page_"+i).css("display","block").css("opacity","1")

@@ -3,202 +3,231 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
     <title>盆栽网站</title>
-    <link rel="stylesheet" href="assets/css/amazeui.css" />
-    <link rel="stylesheet" href="assets/css/common.min.css" />
-    <link rel="stylesheet" href="assets/css/index.min.css" />
-    <link rel="stylesheet" href="assets/css/common.css" />
+    <link href="assets/css/amazeui.css" rel="stylesheet"/>
+    <link href="assets/css/common.min.css" rel="stylesheet"/>
+    <link href="assets/css/index.min.css" rel="stylesheet"/>
+    <link href="assets/css/common.css" rel="stylesheet"/>
+    <style>
+        .l-nav {
+            font-family: Consolas;
+            font-size: 2.4rem;
+            cursor: pointer;
+            padding-left: 2.4rem;
+        }
+
+        .l-nav-2 {
+            font-size: 2.2rem;
+            padding-top: 1.5rem;
+            opacity: 0.85;
+            display: none;
+        }
+
+        .l-nav-3 {
+            font-size: 1.8rem;
+            opacity: 0.65;
+            padding-top: 1.2rem;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="layout">
-        <!--===========layout-header================-->
-        <div class="layout-header am-hide-sm-only">
-            <div class="header-box1" data-am-sticky>
-                <!--header start-->
-                <div class="container">
-                    <div class="am-g">
-                        <div class="am-u-lg-2 am-u-sm-12">
-                            <div class="logo">
-                                <a href=""><img src="assets/images/logo.png" alt="" class="logoimg" /></a>
-                            </div>
+<div class="layout">
+    <!--===========layout-header================-->
+    <div class="layout-header am-hide-sm-only">
+        <div class="header-box1" data-am-sticky>
+            <!--header start-->
+            <div class="container">
+                <div class="am-g">
+                    <div class="am-u-lg-2 am-u-sm-12">
+                        <div class="logo">
+                            <a href=""><img alt="" class="logoimg" src="assets/images/logo.png"/></a>
                         </div>
-                        <div class="am-u-md-10">
-                            <div class="clear-style">
-                                <ul class="fy-nav">
-                                    <li class=""><a href="./index.html">Home</a></li>
-                                    <li>
-                                        <a href="./products.html">Product</a>
-                                    </li>
-                                    <li><a href="./company.html">Company</a>
-                                        <!-- sub-menu start-->
-                                        <ul class="sub-menu">
-                                            <li class="menu-item"><a href="./company.html">About OrientalGardening</a></li>
-                                            <li class="menu-item"><a href="./newsLister.html">News</a></li>
-                                            <li class="menu-item"><a href="./contactUs.html">Contact us</a></li>
+                    </div>
+                    <div class="am-u-md-10">
+                        <div class="clear-style">
+                            <ul class="fy-nav">
+                                <li class=""><a href="./index.html">Home</a></li>
+                                <li>
+                                    <a href="./products.html">Product</a>
+                                </li>
+                                <li><a href="./company.html">Company</a>
+                                    <!-- sub-menu start-->
+                                    <ul class="sub-menu">
+                                        <li class="menu-item"><a href="./company.html">About OrientalGardening</a></li>
+                                        <li class="menu-item"><a href="./newsLister.html">News</a></li>
+                                        <li class="menu-item"><a href="./contactUs.html">Contact us</a></li>
+                                    </ul>
+                                    <!-- sub-menu end-->
+                                </li>
+                                <li>
+                                    <a href="./solution.html">Solution</a>
+                                    <!-- sub-menu start-->
+                                    <ul class="sub-menu solution-category">
+                                        <li class="menu-item"><a href="./solution.html">solution 1</a></li>
+                                        <li class="menu-item"><a href="./solution.html">solution 2</a></li>
+                                    </ul>
+                                    <!-- sub-menu end-->
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--header end-->
+        </div>
+    </div>
+    <!--mobile header start-->
+    <div class="m-header">
+        <div class="am-g am-show-sm-only">
+            <div class="am-u-sm-2">
+                <div class="menu-bars">
+                    <a data-am-offcanvas="{effect: 'push'}" href="#doc-oc-demo1"><i
+                            class="am-menu-toggle-icon am-icon-bars"></i></a>
+                    <!-- 侧边栏内容 -->
+                    <nav class="am-menu am-menu-offcanvas1" data-am-menu-offcanvas data-am-widget="menu">
+                        <a class="am-menu-toggle" href="javascript: void(0)"></a>
+                        <div class="am-offcanvas">
+                            <div class="am-offcanvas-bar">
+                                <ul class="am-menu-nav am-avg-sm-1">
+                                    <li><a class="" href="./index.html">Home</a></li>
+                                    <li class=""><a class="" href="./products.html">Products</a></li>
+                                    <li class="am-parent">
+                                        <a class="" href="./company.html">Company</a>
+                                        <ul class="am-menu-sub am-collapse ">
+                                            <li class="">
+                                                <a class="" href="./company.html">About OrientalGardening</a>
+                                            </li>
+                                            <li class="">
+                                                <a class="" href="./newsLister.html">News</a>
+                                            </li>
+                                            <li class="">
+                                                <a class="" href="./contactUs.html">Contact us</a>
+                                            </li>
                                         </ul>
-                                        <!-- sub-menu end-->
                                     </li>
-                                    <li>
-                                        <a href="./solution.html">Solution</a>
-                                        <!-- sub-menu start-->
-                                        <ul class="sub-menu solution-category">
-                                            <li class="menu-item"><a href="./solution.html">solution 1</a></li>
-                                            <li class="menu-item"><a href="./solution.html">solution 2</a></li>
+                                    <li class="am-parent">
+                                        <a class="" href="./solution.html">Solution</a>
+                                        <ul class="am-menu-sub am-collapse solution-category">
+                                            <li class="">
+                                                <a class="" href="./solution.html">solution</a>
+                                            </li>
+                                            <li class="">
+                                                <a class="" href="./solution.html">solution</a>
+                                            </li>
                                         </ul>
-                                        <!-- sub-menu end-->
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                    </div>
+                    </nav>
                 </div>
-                <!--header end-->
+            </div>
+            <div class="am-u-sm-5 am-u-end">
+                <div class="m-logo">
+                    <a href=""><img alt="" src="assets/images/logo.png"></a>
+                </div>
             </div>
         </div>
-        <!--mobile header start-->
-        <div class="m-header">
-            <div class="am-g am-show-sm-only">
-                <div class="am-u-sm-2">
-                    <div class="menu-bars">
-                        <a href="#doc-oc-demo1" data-am-offcanvas="{effect: 'push'}"><i class="am-menu-toggle-icon am-icon-bars"></i></a>
-                        <!-- 侧边栏内容 -->
-                        <nav data-am-widget="menu" class="am-menu am-menu-offcanvas1" data-am-menu-offcanvas>
-                            <a href="javascript: void(0)" class="am-menu-toggle"></a>
-                            <div class="am-offcanvas">
-                                <div class="am-offcanvas-bar">
-                                    <ul class="am-menu-nav am-avg-sm-1">
-                                        <li><a href="./index.html" class="">Home</a></li>
-                                        <li class=""><a href="./products.html" class="">Products</a></li>
-                                        <li class="am-parent">
-                                            <a href="./company.html" class="">Company</a>
-                                            <ul class="am-menu-sub am-collapse ">
-                                                <li class="">
-                                                    <a href="./company.html" class="">About OrientalGardening</a>
-                                                </li>
-                                                <li class="">
-                                                    <a href="./newsLister.html" class="">News</a>
-                                                </li>
-                                                <li class="">
-                                                    <a href="./contactUs.html" class="">Contact us</a>
-                                                </li>
-                                            </ul>
+        <!--mobile header end-->
+    </div>
+    <div class="layout-container">
+        <div class="page-header">
+            <div class="am-container">
+                <h1 class="page-header-title">NEWS</h1>
+                <h2>新鲜事简单报，掌握最近咨询</h2>
+            </div>
+        </div>
+        <!--<div class="breadcrumb-box">-->
+        <!--<div class="am-container">-->
+        <!--<ol class="am-breadcrumb">-->
+        <!--<li><a href="../index.html">首页</a></li>-->
+        <!--<li class="am-active">新闻列表</li>-->
+        <!--</ol>-->
+        <!--</div>-->
+        <!--</div>-->
+    </div>
+    <div class="section">
+        <div class="container">
+            <div class="am-g">
+                <div class="am-u-md-3">
+                    <div class="am-container" style="background-color: #F8F7F9;" id="leftNav">
+                    </div>
+                        <!-- todo://year lister start -->
+                        <!-- ======indexof[1]====== -->
+                        <!-- year lister end -->
+                </div>
+                <div class="am-u-md-9">
+                    <!-- press-archive__inner-lister strat -->
+                    <div class="press-archive__inner-lister">
+
+                    </div>
+                    <div class="more">加载更多</div>
+                    <!-- press-archive__inner-lister end -->
+                </div>
+                <!-- am-u-9 end -->
+            </div>
+        </div>
+    </div>
+    <!--===========layout-footer================-->
+    <div class="layout-footer">
+        <div class="footer">
+            <div class="footer--bg" style="background-color:#383d61">
+            </div>
+            <div class="footer--inner">
+                <div class="container">
+                    <div class="footer_main">
+                        <div class="am-g">
+                            <div class="am-u-md-3 ">
+                                <div class="footer_main--column">
+                                    <strong class="footer_main--column_title">OrientalGardening</strong>
+                                    <div class="footer_about">
+                                        <div>
+                                            <img alt="" class="footer-logo-img" src="assets/images/index/f01.jpg">
+                                        </div>
+                                        <p class="footer_about--text">
+                                            这里是一段简介，需要客户提供
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="am-u-md-3 ">
+                                <div class="footer_main--column">
+                                    <strong class="footer_main--column_title">company</strong>
+                                    <ul class="footer_navigation">
+                                        <li class="footer_navigation--item"><a class="footer_navigation--link" href="#">about
+                                            OrientalGardening </a></li>
+                                        <li class="footer_navigation--item"><a class="footer_navigation--link" href="#">News</a>
                                         </li>
-                                        <li class="am-parent">
-                                            <a href="./solution.html" class="">Solution</a>
-                                            <ul class="am-menu-sub am-collapse solution-category">
-                                                <li class="">
-                                                    <a href="./solution.html" class="">solution</a>
-                                                </li>
-                                                <li class="">
-                                                    <a href="./solution.html" class="">solution</a>
-                                                </li>
-                                            </ul>
+                                        <li class="footer_navigation--item"><a class="footer_navigation--link" href="#">contact
+                                            us</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="am-u-md-3 ">
+                                <div class="footer_main--column">
+                                    <strong class="footer_main--column_title">solution</strong>
+                                    <ul class="footer_navigation">
+                                        <li class="footer_navigation--item"><a class="footer_navigation--link" href="#">Planting</a>
+                                        </li>
+                                        <li class="footer_navigation--item"><a class="footer_navigation--link" href="#">Transportantion</a>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
-                        </nav>
-                    </div>
-                </div>
-                <div class="am-u-sm-5 am-u-end">
-                    <div class="m-logo">
-                        <a href=""><img src="assets/images/logo.png" alt=""></a>
-                    </div>
-                </div>
-            </div>
-            <!--mobile header end-->
-        </div>
-        <div class="layout-container">
-            <div class="page-header">
-                <div class="am-container">
-                    <h1 class="page-header-title">NEWS</h1>
-                    <h2>新鲜事简单报，掌握最近咨询</h2>
-                </div>
-            </div>
-            <div class="breadcrumb-box">
-                <div class="am-container">
-                    <ol class="am-breadcrumb">
-                        <li><a href="../index.html">首页</a></li>
-                        <li class="am-active">加入我们</li>
-                    </ol>
-                </div>
-            </div>
-        </div>
-        <div class="section">
-            <div class="container">
-                <div class="am-g">
-                    <div class="am-u-md-3">
-                        <div class="careers--vacancies">
-                            <!-- todo://year lister start -->
-                            <!-- ======indexof[1]====== -->
-                            <!-- year lister end -->
-                        </div>
-                    </div>
-                    <div class="am-u-md-9">
-                        <!-- press-archive__inner-lister strat -->
-                        <div class="press-archive__inner-lister">
-                           
-                        </div>
-                         <div class="more">加载更多</div>
-                        <!-- press-archive__inner-lister end -->
-                    </div>
-                    <!-- am-u-9 end -->
-                </div>
-            </div>
-        </div>
-        <!--===========layout-footer================-->
-        <div class="layout-footer">
-            <div class="footer">
-                <div style="background-color:#383d61" class="footer--bg">
-                </div>
-                <div class="footer--inner">
-                    <div class="container">
-                        <div class="footer_main">
-                            <div class="am-g">
-                                <div class="am-u-md-3 ">
-                                    <div class="footer_main--column">
-                                        <strong class="footer_main--column_title">OrientalGardening</strong>
-                                        <div class="footer_about">
-                                            <div>
-                                                <img src="assets/images/index/f01.jpg" alt="" class="footer-logo-img">
-                                            </div>
-                                            <p class="footer_about--text">
-                                                这里是一段简介，需要客户提供
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="am-u-md-3 ">
-                                    <div class="footer_main--column">
-                                        <strong class="footer_main--column_title">company</strong>
-                                        <ul class="footer_navigation">
-                                            <li class="footer_navigation--item"><a href="#" class="footer_navigation--link">about OrientalGardening </a></li>
-                                            <li class="footer_navigation--item"><a href="#" class="footer_navigation--link">News</a></li>
-                                            <li class="footer_navigation--item"><a href="#" class="footer_navigation--link">contact us</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="am-u-md-3 ">
-                                    <div class="footer_main--column">
-                                        <strong class="footer_main--column_title">solution</strong>
-                                        <ul class="footer_navigation">
-                                            <li class="footer_navigation--item"><a href="#" class="footer_navigation--link">Planting</a></li>
-                                            <li class="footer_navigation--item"><a href="#" class="footer_navigation--link">Transportantion</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="am-u-md-3 ">
-                                    <div class="footer_main--column">
-                                        <strong class="footer_main--column_title">联系详情</strong>
-                                        <ul class="footer_contact_info">
-                                            <li class="footer_contact_info--item"><i class="am-icon-phone"></i><span id="hotline">服务专线：400 069 8888</span></li>
-                                            <li class="footer_contact_info--item"><i class="am-icon-envelope-o"></i><span id="enterprise_email">forrily.com</span></li>
-                                            <li class="footer_contact_info--item"><i class="am-icon-map-marker"></i><span id="address">深圳市南山区粤海街道软件产业基地4b</span></li>
-                                        </ul>
-                                    </div>
+                            <div class="am-u-md-3 ">
+                                <div class="footer_main--column">
+                                    <strong class="footer_main--column_title">联系详情</strong>
+                                    <ul class="footer_contact_info">
+                                        <li class="footer_contact_info--item"><i class="am-icon-phone"></i><span
+                                                id="hotline">服务专线：400 069 8888</span></li>
+                                        <li class="footer_contact_info--item"><i class="am-icon-envelope-o"></i><span
+                                                id="enterprise_email">forrily.com</span></li>
+                                        <li class="footer_contact_info--item"><i class="am-icon-map-marker"></i><span
+                                                id="address">深圳市南山区粤海街道软件产业基地4b</span></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -206,121 +235,194 @@
                 </div>
             </div>
         </div>
-        <script src="assets/js/jquery-2.1.0.js" charset="utf-8"></script>
-        <script src="assets/js/amazeui.js" charset="utf-8"></script>
-        <script src="assets/js/common.js" charset="utf-8"></script>
+    </div>
+</div>
+<script charset="utf-8" src="assets/js/jquery-2.1.0.js"></script>
+<script charset="utf-8" src="assets/js/amazeui.js"></script>
+<script charset="utf-8" src="assets/js/amui.widget.helper.js"></script>
+<script charset="utf-8" src="assets/js/common.js"></script>
 </body>
 
 </html>
 <style type="text/css">
-    .more{
-    font-size: 30px;
-    text-align: center;
-    cursor: pointer;
-}
+    .more {
+        font-size: 30px;
+        text-align: center;
+        cursor: pointer;
+    }
 </style>
 <script type="text/javascript">
-var page_index = 1
-var page_size = 10
-var type_id = 0
-/**
- * 获取文章分类
- * @type {String}
- */
-var url = '/news/nav'
-var data = {}
-ajaxPost(url, data, function(data) {
-    var html = ''
-    var len = data.length
-    for (var i = 0; i < len; i++) {
-        html += '<div class="am-panel am-panel-default">' +
-        '<div class="am-panel-hd">' +
-        '<div class="panel-title" data-am-collapse=\'{parent: "#accordion", target: "#do-not-say-' + i + '"}\' data-time="' + data[i].time + '" data-id="#do-not-say-' + i + '">' + data[i].time + '(' + data[i].count + ')' + '</div>' +
-        '</div>' +
-        '<div id="do-not-say-' + i + '" class="am-panel-collapse am-collapse">' +
-        '<div class="am-panel-bd">' +
-        '<div class="am-panel am-panel-default">' +
-        '<div class="am-panel-hd">' +
-        '</div>' +
-        '</div>' +
-        '</div>' +
-        '</div>' +
-        '</div>'
-    }
-    $('.careers--vacancies').html(html)
-})
+    var page_index = 1
+    var page_size = 10
+    var type_id = 37
+    /**
+     * 获取新闻分类
+     * @type {String}
+     */
+    var url = '/news/nav'
+    var data = {}
+    // ajaxPost(url, data, function(data) {
+    //     var html = ''
+    //     var len = data.length
+    //     for (var i = 0; i < len; i++) {
+    //         html += '<div class="am-panel am-panel-default">' +
+    //         '<div class="am-panel-hd">' +
+    //         '<div class="panel-title" data-am-collapse=\'{parent: "#accordion", target: "#do-not-say-' + i + '"}\' data-time="' + data[i].time + '" data-id="#do-not-say-' + i + '">' + data[i].time + '(' + data[i].count + ')' + '</div>' +
+    //         '</div>' +
+    //         '<div id="do-not-say-' + i + '" class="am-panel-collapse am-collapse">' +
+    //         '<div class="am-panel-bd">' +
+    //         '<div class="am-panel am-panel-default">' +
+    //         '<div class="am-panel-hd">' +
+    //         '</div>' +
+    //         '</div>' +
+    //         '</div>' +
+    //         '</div>' +
+    //         '</div>'
+    //     }
+    //     $('.careers--vacancies').html(html)
+    // })
+    ajaxPost(url, data, function (data) {
+        let len = data.length;
+        let kv = {}
 
-
-/**
- * 根据发布时间查询发布文章的标题信息
- * @param  {[type]} ) {               var that [description]
- * @return {[type]}   [description]
- */
-$('.am-panel-hd .panel-title').on('click', function() {
-    var that = $(this)
-    var url = '/news/titles/get'
-    var data = {
-        "time": $(this).attr('data-time')
-    }
-    ajaxPost(url, data, function(data) {
-        var html = ''
-        var len = data.length
-        for (var i = 0; i < len; i++) {
-            html += '<div class="panel-title-child" data-id="'+  data[i].id +'">'+ data[i].title +'</div>'
+        // 计算总数
+        for (let i = 0; i < len; i++) {
+            let time = data[i].time
+            let times = time.split("-")
+            let yId = "y_"+times[0]
+            if (kv[yId] === undefined) {
+                kv[yId] = 0
+                kv[yId] += data[i].count
+            }else{
+                kv[yId] += data[i].count
+            }
         }
-        $(that.attr('data-id')).find('.am-panel-hd').html(html)
-    })
-})
 
+        for (let i = 0;i<len;i++){
+            let time = data[i].time
+            let times = time.split("-")
 
+            let year = times[0]
+            let month = times[1]
+            let count = data[i].count
 
+            let html = ''
 
-/**
- * 获取文章概要信息列表
- * @type {String}
- */
-getList()
-function getList(){
-    var url = '/article/list'
-    var data = {
-        "type_id": type_id,
-        "page": {
-            "page_index": page_index,
-            "page_size": page_size
+            let yId = "y_"+year
+
+            if($("#"+yId)[0]){
+                let mId = yId+"_"+month
+                $("#"+yId).append('<div class="l-nav-2" id="'+mId+'" onclick="event.cancelBubble = true;openNav3(\''+time+'\',\''+mId+'\')">'+month+'('+count+')<div></div></div>')
+            } else {
+                html += ' <div class="l-nav" id="'+yId+'" onclick="openNav2('+year+')">'+year+'('+kv[yId]+')</div>';
+                $("#leftNav").append(html)
+                let mId = yId+"_"+month
+                $("#"+yId).append('<div class="l-nav-2" id="'+mId+'" onclick="event.cancelBubble = true;openNav3(\''+time+'\',\''+mId+'\')">'+month+'('+count+')<div></div></div>')
+            }
+
         }
+    });
+
+    function openNav2(year){
+        if ($('#y_' + year).find("div").css("display") === "block") {
+            $('#y_'+year).find("div").css("display","none")
+            return
+        }
+        $("#leftNav").find("div").find("div").css("display", "none")
+        $('#y_'+year).find("div").css("display","block")
     }
-    ajaxPost(url, data, function(data) {
-        var html = ''
-        var list = data.list
-        var len = list.length
-        for (var i = 0; i < len; i++) {
-            html += '<div class="press-archive__inner-item" data-id="'+ list[i].id +'">' +
-                                '<a href="#" class="press-archive__inner-item-thumbnail-container" style="background-image: url(\''+list[i].preview +'\')"><div class="press-archive__inner-item-thumbnail-container-img" style="background-image: url(\''+list[i].preview +'\')"></div></a>' +
-                                '<div class="press-archive__inner-item-details">' +
-                                    '<a href="#" class="press-archive__inner-item-title">'+ list[i].title +'</a>' + 
-                                    '<div class="press-archive__inner-item-excerpt">' + list[i].summary +
-                                        '<p class="press-archive__inner-item-meta">' +
-                                            '<span class="press-archive__inner-item-date">'+ (list[i].save_time || '') +'</span> / <a href="#">作者:'+list[i].author+'</a>' +
-                                        '</p>' +
-                                    '</div>' +
-                                '</div>' +
-                            '</div>'
-        }
-        $('.press-archive__inner-lister').append(html)
-    })
-}
 
-$('.more').on('click',function(){
-    page_index++
+    function openNav3(time, mId){
+        let url = '/news/titles/get'
+        let data = {
+            "time": time
+        }
+        if ($("#" + mId).find("div").html() != "") {
+            $("#" + mId).find("div").html("")
+            return
+        }
+        $("#" + mId).siblings().find("div").html("")
+        ajaxPost(url, data, function(data) {
+             let html = ''
+             let len = data.length
+             for (let i = 0; i < len; i++) {
+                 html += '<div class="l-nav-3">'+data[i].title+'</div>'
+             }
+            $("#"+mId).find("div").html(html)
+
+        })
+    }
+
+    /**
+     * 根据发布时间查询发布文章的标题信息
+     * @param  {[type]} ) {               var that [description]
+     * @return {[type]}   [description]
+     */
+    // $('.am-panel-hd .panel-title').on('click', function() {
+    //     var that = $(this)
+    //     var url = '/news/titles/get'
+    //     var data = {
+    //         "time": $(this).attr('data-time')
+    //     }
+    //     ajaxPost(url, data, function(data) {
+    //         var html = ''
+    //         var len = data.length
+    //         for (var i = 0; i < len; i++) {
+    //             html += '<div class="panel-title-child" data-id="'+  data[i].id +'">'+ data[i].title +'</div>'
+    //         }
+    //         $(that.attr('data-id')).find('.am-panel-hd').html(html)
+    //     })
+    // })
+
+
+    /**
+     * 获取文章概要信息列表
+     * @type {String}
+     */
     getList()
-})
+
+    function getList() {
+        var url = '/article/list'
+        var data = {
+            "type_id": type_id,
+            "page": {
+                "page_index": page_index,
+                "page_size": page_size
+            }
+        }
+        ajaxPost(url, data, function (data) {
+            var html = ''
+            var list = data.list
+            var len = list.length
+            for (var i = 0; i < len; i++) {
+                html += '<div class="press-archive__inner-item" data-id="' + list[i].id + '">' +
+                    '<a href="#" class="press-archive__inner-item-thumbnail-container"><div class="press-archive__inner-item-thumbnail-container-img img_border" style="background-image: url(' + list[i].preview + ')"></div></a>' +
+                    '<div class="press-archive__inner-item-details">' +
+                    '<a href="#" class="press-archive__inner-item-title">' + list[i].title + '</a>' +
+                    '<div class="press-archive__inner-item-excerpt">' + list[i].summary +
+                    '<p class="press-archive__inner-item-meta">' +
+                    '<span class="press-archive__inner-item-date">' + (list[i].save_time || '') + '</span> / <a href="#">作者:' + list[i].author + '</a>' +
+                    '</p>' +
+                    '</div>' +
+                    '</div>' +
+                    '</div>'
+            }
+            $('.press-archive__inner-lister').append(html)
+        })
+    }
+
+    $('.more').on('click', function () {
+        page_index++
+        getList()
+    })
 
 
-$('.panel-title-child').on('click',function(){
-    window.location.href = './detail.html?id=' + $(this).attr('data-id')
-})
+    $('.panel-title-child').on('click', function () {
+        window.location.href = './detail.html?id=' + $(this).attr('data-id')
+    })
 
-$('.press-archive__inner-item').on('click',function(){
-    window.location.href = './detail.html?id=' + $(this).attr('data-id')
-})
+    $('.press-archive__inner-item').on('click', function () {
+        window.location.href = './detail.html?id=' + $(this).attr('data-id')
+    })
+
 </script>
