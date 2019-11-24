@@ -221,7 +221,7 @@
 </style>
 <script type="text/javascript">
 var page_index = 1
-var page_size = 10
+var page_size = 4
 var type_id = 0
 /**
  * 获取文章分类
@@ -237,7 +237,7 @@ ajaxPost(url, data, function(data) {
         html += '<li data-id="' + categories[i].id +'"'+'class="'+(i > 1 ? '' : 'am-active') +'"'+'><a href="javascript:;">' + categories[i].type_name + '</a></li>'
     }
     $('.am-tabs .am-tabs-nav').html(html)
-    
+
 })
 
 $('.am-tabs .am-tabs-nav').on('click', 'li', function() {
