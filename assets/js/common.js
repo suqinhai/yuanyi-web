@@ -105,6 +105,7 @@ var data = {
 }
 ajaxPost(url, data, function(data) {
     var html = ''
+    var logoHtml = ''
     var bps = data.bps
     var len = bps.length
     for (var i = 0; i < len; i++) {
@@ -114,8 +115,10 @@ ajaxPost(url, data, function(data) {
                         '<img class="am-active" alt="" src="'+ bps[i].logo+'" style="display: none;">' +
                     '</a>' +
                 '</div>'
+        logoHtml += '<li><a href="javascript:;"><img class="am-thumbnail" src="'+ bps[i].logo +'"></a></li>'
     }
     $('.customer-logo .am-g').html(html)
+    $('.am-thumbnails').html(logoHtml)
 })
 
 /**
@@ -143,8 +146,8 @@ ajaxPost(get_solution_catagory,"",function(data){
     var sulution_menu_item=""
     var footer_solution=""
     var categories=data.categories
-    for (var i = 1;i<categories.length ;i++) {
-        sulution_menu_item += '<li data-id="' + categories[i].id + '" class="menu-item"><a href="./solution.html">'+categories[i].type_name+'</a></li>'
+    for (var i = 0;i<categories.length ;i++) {
+        sulution_menu_item += '<li data-id="' + categories[i].id + '" class="menu-item"><a href="./solution.html?id='+ categories[i].id+'">'+categories[i].type_name+'</a></li>'
         footer_solution+='<li data-id="' + categories[i].id + '" class="footer_navigation--item"><a href="./solution.html" class="footer_navigation--link">' +categories[i].type_name+'</a></li>'
     }
     $('.solution-category').html(sulution_menu_item)
