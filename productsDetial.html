@@ -155,7 +155,8 @@
                                 <header class="article--header">
                                     <h2 class="article--title"><a href="#" rel="">云适配企业浏览器获首批“移动信息化可信”认证</a></h2>
                                     <ul class="article--meta">
-                                        <li class="article--meta_item">园艺用品热度Top6</li>
+                                        <li class="article--meta_item" id="topNumber">园艺用品热度Top6+</li>
+                                        <li class="article--meta_item" id="uT">update time：</li>
                                             <!-- <li class="article--meta_item"><i class="am-icon-calendar"></i>October 10, 2016</li>
                                             <li class="article--meta_item"><i class="am-icon-user"></i>by张三</li>
                                             <li class="article--meta_item"><i class="am-icon-commenting-o"></i>33评论</li> -->
@@ -267,6 +268,13 @@ ajaxPost(url, data, function(data) {
         }
         $('#pic_more').html(picMore)
         // $('.imgList').html(html)
+
+        $('#uT').html("update time:"+data.product.update_time)
+
+        if (data.product.heat_sort>0 ){
+            $('#topNumber').html("园艺用品热度Top"+data.product.heat_sort)
+        }
+
     }
 
     $('.article--meta_item span').html(data.product.heat)
