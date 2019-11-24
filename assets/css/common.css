@@ -284,9 +284,9 @@
    overflow : hidden;
    text-overflow: ellipsis;
    display: -webkit-box;
-   -webkit-line-clamp: 4;
+   -webkit-line-clamp: 3;
    -webkit-box-orient: vertical;
-   height: 8.4rem;
+   height: 6.4rem;
  }
 
  .over_title{
@@ -387,3 +387,12 @@
   background-position: center;
 }
 
+/*company style*/
+.section-company-description{
+  font-size: 20px;
+    line-height: 30px;
+    color: #9b9b9b;
+    text-align: left;
+    margin: 10px 0 0;
+    text-indent: 2rem;
+}
