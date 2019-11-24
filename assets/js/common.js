@@ -105,6 +105,7 @@ var data = {
 }
 ajaxPost(url, data, function(data) {
     var html = ''
+    var logoHtml = ''
     var bps = data.bps
     var len = bps.length
     for (var i = 0; i < len; i++) {
@@ -114,8 +115,10 @@ ajaxPost(url, data, function(data) {
                         '<img class="am-active" alt="" src="'+ bps[i].logo+'" style="display: none;">' +
                     '</a>' +
                 '</div>'
+        logoHtml += '<li><a href="javascript:;"><img class="am-thumbnail" src="'+ bps[i].logo +'"></a></li>'
     }
     $('.customer-logo .am-g').html(html)
+    $('.am-thumbnails').html(logoHtml)
 })
 
 /**
