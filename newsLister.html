@@ -164,8 +164,12 @@
                     <div class="press-archive__inner-lister">
 
                     </div>
-                    <div class="more">加载更多</div>
+                    <div class="more" style="font-family: Consolas;font-size: 2rem;font-style: italic;display: none">more</div>
                     <!-- press-archive__inner-lister end -->
+                    <!--<div style="text-align: center">-->
+                        <!--<img src="assets/images/loading.gif" style="width: 5vw; height: 5vw" id="loadPic">-->
+                        <!--<p id="loadText" style="display: none">我是有底线的</p>-->
+                    <!--</div>-->
                 </div>
                 <!-- am-u-9 end -->
             </div>
@@ -253,7 +257,7 @@
 </style>
 <script type="text/javascript">
     var page_index = 1
-    var page_size = 10
+    var page_size = 4
     var type_id = 37
     /**
      * 获取新闻分类
@@ -412,7 +416,14 @@
                     '</div>'
             }
             $('.press-archive__inner-lister').append(html)
+
+            if(data.page.total <= data.page.page_index * data.page.page_size){
+                $('.more').text("no more")
+            }else{
+                $('.more').css("display", "block")
+            }
         })
+
     }
 
     $('.more').on('click', function () {
@@ -428,5 +439,14 @@
     $('.press-archive__inner-item').on('click', function () {
         window.location.href = './detail.html?id=' + $(this).attr('data-id')
     })
+
+    // $(window).scroll(function () {
+    //     totalheight = parseFloat($(window).height()) + parseFloat($(window).scrollTop());//浏览器的高度加上滚动条的高度
+    //     if ($(document).height() <= totalheight) //当文档的高度小于或者等于总的高度的时候，开始动态加载数据
+    //     {
+    //         page_index++
+    //         getList()
+    //     }
+    // });
 
 </script>
