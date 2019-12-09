@@ -126,7 +126,7 @@ ajaxPost(url, data, function(data) {
  */
 let get_web_setting_url = '/index/Setting/get'
 ajaxPost(get_web_setting_url, "", function(data) {
-    var companyIntro='OrientalGardening" one-stop service platform'
+    var companyIntro='"Lanying" one-stop service platform'
     $("#rectangle_logo").attr('src', data.setting.rectangle_logo);
     $("#m-logo").attr('src', data.setting.rectangle_logo);
     $("#square_logo").attr('src', data.setting.square_logo);

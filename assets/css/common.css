@@ -66,6 +66,7 @@
   padding: 25px 10px;
 }
 .header-box1{
+  /* background: rgba(27, 31, 37,0.8); */
   background: rgba(0,0,0,0.8);
 }
 .second-floor{
@@ -81,16 +82,23 @@
   width: 100%;
   height: 450px;
 }
+.white{
+  background: #fff;
+}
 .h1-title{
-  font-size: 30px;
-  font-family: Times;
+  font-size: 32px;
+  line-height: 32px;
+  font-family: Title EN,Title;
   font-weight: bold;
-  padding-top: 20px;
-  padding-left: 25px;
+  padding-top: 30px;
+  /* padding-left: 25px; */
+  text-align: center;
 }
 .h2-title{
-  font-family: times;
-  padding: 0 25px;
+  font-family: Title EN,Title;
+  /* padding: 0 25px; */
+  margin: 20px 0 40px;
+  text-align: center;
 }
 .products-img{
   height: 100px;
