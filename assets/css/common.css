@@ -404,3 +404,8 @@
     margin: 10px 0 0;
     text-indent: 2rem;
 }
+.sectionTitle{
+  font-size: 50px;
+    font-weight: 300;
+    text-align: center;
+}
