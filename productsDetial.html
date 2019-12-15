@@ -443,6 +443,9 @@
     if (index > 1) {
       $('.SeeMoreMayYouLikeItem').text("no more")
     }
+    if (index > 2) {
+      return
+    }
     data2.page.page_index+=1
     ajaxPost(url, data2, function (data) {
       var html = ''
