@@ -179,7 +179,7 @@
               </div>   -->
             </div>
             <div style="margin-bottom:10px">
-              <div style="float: left;width: 1rem;height: 1rem;background-color: #333333;margin-left: 7.5vw;border-radius: 50%;display: none;"
+              <div style="float: left;width: 1rem;height: 1rem;background-color: #333333;margin-left: 5vw;border-radius: 50%;display: none;"
                 onclick="changePage(1)" id="page_1"></div>
               <div style="float: left;width: 1rem;height: 1rem;background-color: #333333;margin-left: 1rem;border-radius: 50%;display: none"
                 onclick="changePage(2)" id="page_2"></div>
@@ -248,7 +248,7 @@
               </div>
             </div>
           </div>
-          <div class="SeeMoreMayYouLikeItem">MORE</div>
+          <div class="SeeMoreMayYouLikeItem" onclick="appendHotPage()">MORE</div>
           <!-- todo -->
         </div>
         <!-- mobile body content end -->
@@ -427,4 +427,37 @@
     var id = $(this).attr('data-id')
     window.location.href = './productsDetial.html?id=' + id
   })
+
+  var index = 0
+  var data2 = {
+    "page": {
+      "page_index": page_index,
+      "page_size": page_size
+    },
+    "is_hot": true,
+    "is_index_show": false,
+    "is_new": false
+  }
+  function appendHotPage() {
+    index++
+    if (index > 1) {
+      $('.SeeMoreMayYouLikeItem').text("no more")
+    }
+    data2.page.page_index+=1
+    ajaxPost(url, data2, function (data) {
+      var html = ''
+      var ps = data.ps
+      var len = ps.length
+      for (var i = 0; i < len; i++) {
+        html += '<div class="list am-u-md-12 am-u-sm-12 pd0 product-item" data-id="' + ps[i].id + '">' +
+                '<img src="' + ps[i].cover_url + '" class="am-u-md-4 am-u-sm-4">  ' +
+                '<div class="am-u-md-8 am-u-sm-8 ProductItemTextContent">' +
+                '<div class="list-content-title">' + ps[i].name + '</div>' +
+                '<div class="list-content-content">' + ps[i].intro + '</div>' +
+                '</div></div>'
+      }
+      $('.lists').append(html)
+    })
+  }
+
 </script>
