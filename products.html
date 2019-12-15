@@ -161,7 +161,6 @@
             max-width: 1170px;
             margin: 0 auto;
             text-align: right;
-            padding-right: 10px;
         }
 
         .over_title,
@@ -182,6 +181,11 @@
                 width: 50%;
                 float: left;
                 margin-top: 20px !important;
+            }
+             .page {
+                max-width: 1170px;
+                margin: 0 auto;
+                text-align: center;
             }
         }
         </style>
@@ -284,12 +288,12 @@ var page_size = 12
 var url = '/product/category/list'
 var data = {}
 ajaxPost(url, data, function(data) {
-    var html = '<span class="fl">所属类目：</span>'
+    var html = '<span class="fl" style="margin-bottom:10px;">所属类目：</span>'
     data.categories.unshift({ id: null, name: '全部' })
     var categories = data.categories
     var len = categories.length
     for (var i = 0; i < len; i++) {
-        html += '<li class="fl padtb ' + (i > 0 ? '' : 'am-active') + '" categoryid="' + categories[i].id + '"><a href="javascript:;">' + categories[i].name + '</a></li>'
+        html += '<li style="margin-bottom:10px;" class="fl padtb ' + (i > 0 ? '' : 'am-active') + '" categoryid="' + categories[i].id + '"><a href="javascript:;">' + categories[i].name + '</a></li>'
     }
 
     $('.categories').html(html)
