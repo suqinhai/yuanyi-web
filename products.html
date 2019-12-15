@@ -150,7 +150,7 @@
 
         .o2o-content {
             padding: 10px;
-/*            overflow: hidden;
+            /*            overflow: hidden;
             text-overflow: ellipsis;
             display: -webkit-box;
             -webkit-line-clamp: 2;
@@ -158,15 +158,31 @@
         }
 
         .page {
-            width: 1170px;
+            max-width: 1170px;
             margin: 0 auto;
             text-align: right;
+            padding-right: 10px;
         }
-        [class*="am-u-"] + [class*="am-u-"]:last-child{
-          float: left !important;
+
+        .over_title,
+        .over_hide {
+            padding-left: 10px;
         }
-        .o2o-box img{
-          height: 253px !important;
+
+        [class*="am-u-"]+[class*="am-u-"]:last-child {
+            float: left !important;
+        }
+
+     /*   .o2o-box img {
+            height: 253px !important;
+        }*/
+
+        @media only screen and (max-width: 640px) {
+            .product-item {
+                width: 50%;
+                float: left;
+                margin-top: 20px !important;
+            }
         }
         </style>
         <div class="section">
@@ -231,7 +247,6 @@
                                     <div class="footer_main--column">
                                         <strong class="footer_main--column_title">solution</strong>
                                         <ul class="footer_navigation footer_solution">
-                                           
                                         </ul>
                                     </div>
                                 </div>
@@ -239,9 +254,9 @@
                                     <div class="footer_main--column">
                                         <strong class="footer_main--column_title">联系详情</strong>
                                         <ul class="footer_contact_info">
-                                          <li class="footer_contact_info--item"><i class="am-icon-phone"></i><span id="hotline">服务专线：400 069 8888</span></li>
-                                          <li class="footer_contact_info--item"><i class="am-icon-envelope-o"></i><span id="enterprise_email">forrily.com</span></li>
-                                          <li class="footer_contact_info--item"><i class="am-icon-map-marker"></i><span id="address">深圳市南山区粤海街道软件产业基地4b</span></li>
+                                            <li class="footer_contact_info--item"><i class="am-icon-phone"></i><span id="hotline">服务专线：400 069 8888</span></li>
+                                            <li class="footer_contact_info--item"><i class="am-icon-envelope-o"></i><span id="enterprise_email">forrily.com</span></li>
+                                            <li class="footer_contact_info--item"><i class="am-icon-map-marker"></i><span id="address">深圳市南山区粤海街道软件产业基地4b</span></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -252,10 +267,10 @@
             </div>
         </div>
     </div>
-        <script src="http://forrily.com/jquery-2.1.0.js" charset="utf-8"></script>
-        <script src="http://forrily.com/amazeui.js" charset="utf-8"></script>
-        <script src="assets/js/common.js" charset="utf-8"></script>
-        <script src="http://forrily.com/jq-paginator.js" charset="utf-8"></script>
+    <script src="http://forrily.com/jquery-2.1.0.js" charset="utf-8"></script>
+    <script src="http://forrily.com/amazeui.js" charset="utf-8"></script>
+    <script src="assets/js/common.js" charset="utf-8"></script>
+    <script src="http://forrily.com/jq-paginator.js" charset="utf-8"></script>
 </body>
 
 </html>
@@ -270,11 +285,11 @@ var url = '/product/category/list'
 var data = {}
 ajaxPost(url, data, function(data) {
     var html = '<span class="fl">所属类目：</span>'
-    data.categories.unshift({id:null,name:'全部'})
+    data.categories.unshift({ id: null, name: '全部' })
     var categories = data.categories
     var len = categories.length
     for (var i = 0; i < len; i++) {
-        html += '<li class="fl padtb '+ (i > 0 ? '' : 'am-active')+'" categoryid="' + categories[i].id + '"><a href="javascript:;">' + categories[i].name + '</a></li>'
+        html += '<li class="fl padtb ' + (i > 0 ? '' : 'am-active') + '" categoryid="' + categories[i].id + '"><a href="javascript:;">' + categories[i].name + '</a></li>'
     }
 
     $('.categories').html(html)
@@ -293,7 +308,7 @@ function getList(categories) {
             "page_index": page_index,
             "page_size": page_size
         },
-        "category_id": categories && categories.length ? categories[0].id :parseInt( $('.categories li.am-active').attr('categoryid')),
+        "category_id": categories && categories.length ? categories[0].id : parseInt($('.categories li.am-active').attr('categoryid')),
         "is_index_show": $('.recommend li.am-active').attr('is-active') == 'recommend' ? true : false,
         "is_new": $('.recommend li.am-active').attr('is-active') == 'newest' ? true : false,
         "is_hot": $('.recommend li.am-active').attr('is-active') == 'hot' ? true : false,
@@ -303,7 +318,7 @@ function getList(categories) {
         var ps = data.ps
         var len = ps.length
         for (var i = 0; i < len; i++) {
-            html += '<div class="am-u-md-3 product-item" data-id="'+ ps[i].id +'" style="margin-top: 30px;">' +
+            html += '<div class="am-u-md-3 product-item" data-id="' + ps[i].id + '" style="margin-top: 30px;">' +
                 '<div class="o2o-box" style="border: 1px solid #e4e4e4;padding:0">' +
                 '<img src="' + ps[i].cover_url + '" alt="" width="100%" >' +
                 '<div class="o2o-content">' +
@@ -314,7 +329,7 @@ function getList(categories) {
                 '</div>'
         }
         $('.o2o-container>.am-g').html(html)
-        if(data.page.total){
+        if (data.page.total) {
             $('#paging').jqPaginator({
                 pageSize: page_size,
                 totalCounts: data.page.total,
@@ -324,18 +339,18 @@ function getList(categories) {
                 next: '<li class="next"><a href="javascript:void(0);">下一页<i class="arrow arrow3"><\/i><\/a><\/li>',
                 last: '<li class="last"><a href="javascript:void(0);">末页<\/a><\/li>',
                 page: '<li class="page"><a href="javascript:void(0);">{{page}}<\/a><\/li>',
-                onPageChange: function(n,type) {
-                    if(type === 'init'){
+                onPageChange: function(n, type) {
+                    if (type === 'init') {
 
-                    }else{
+                    } else {
                         page_index = n
                         getList()
                     }
 
                 }
             });
-        }else{
-             $('#paging').jqPaginator('destroy');
+        } else {
+            $('#paging').jqPaginator('destroy');
         }
 
 
@@ -363,7 +378,7 @@ $('.recommend li').on('click', function() {
 })
 
 
-$('.o2o-container').on('click','.product-item',function(){
+$('.o2o-container').on('click', '.product-item', function() {
     var id = $(this).attr('data-id')
     window.location.href = './productsDetial.html?id=' + id
 })

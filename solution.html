@@ -206,24 +206,70 @@
 </html>
 <style type="text/css">
 .solution-container .am-tabs .am-tabs-nav {
-    width: 1000px;
+    max-width: 1000px;
     text-align: center;
+    white-space: nowrap;
+    overflow-x: scroll;
+}
+
+.solution-container .am-tabs .am-tabs-nav::-webkit-scrollbar {
+
+    display: none
 }
 
 .solution-container .am-tabs .am-tabs-nav li {
     display: inline-block;
     padding: 5px 20px !important;
 }
-.more{
+
+.more {
     font-size: 24px;
     text-align: center;
     cursor: pointer;
 }
-.nomore{
+
+.nomore {
     font-size: 24px;
     text-align: center;
     cursor: pointer;
     display: none;
+}
+
+.h1-title {
+    font-size: 18px;
+}
+
+.item {
+    border-bottom: 1px solid #ccc;
+}
+
+@media only screen and (max-width: 640px) {
+    .solution-container {
+        margin-top: 0px;
+    }
+
+    .h1-title {
+        padding-top: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .h2-title {
+        text-overflow: -o-ellipsis-lastline;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+        -webkit-box-orient: vertical;
+        text-align: justify;
+        margin: 0;
+    }
+
+    .itemImg {
+        height: 100px !important;
+    }
 }
 </style>
 <script type="text/javascript">
@@ -232,7 +278,7 @@ var page_size = 4
 var type_id = 0
 
 
-if(getQueryString('id')){
+if (getQueryString('id')) {
     console.log(getQueryString('id'))
     type_id = parseInt(getQueryString('id'))
 }
@@ -247,7 +293,7 @@ ajaxPost(url, data, function(data) {
     var categories = data.categories
     var len = categories.length
     for (var i = 0; i < len; i++) {
-        html += '<li data-id="' + categories[i].id +'"  class="'+ (type_id == categories[i].id ? 'am-active' : '' )+'"><a href="javascript:;">' + categories[i].type_name + '</a></li>'
+        html += '<li data-id="' + categories[i].id + '"  class="' + (type_id == categories[i].id ? 'am-active' : '') + '"><a href="javascript:;">' + categories[i].type_name + '</a></li>'
     }
     $('.am-tabs .am-tabs-nav').html(html)
 
@@ -268,7 +314,8 @@ $('.am-tabs .am-tabs-nav').on('click', 'li', function() {
  * @type {String}
  */
 getList()
-function getList(){
+
+function getList() {
     var url = '/article/list'
     var data = {
         "type_id": parseInt(type_id),
@@ -282,24 +329,19 @@ function getList(){
         var list = data.list
         var len = list.length
         for (var i = 0; i < len; i++) {
-            html += '<div class="am-u-md-12">' +
-                        '<div class="am-u-md-4">' +
-                            '<img src="'+ list[i].preview +'" alt="" style="width:310px">' +
-                        '</div>' +
-                        '<div class="am-u-md-8">' +
-                            '<dl>' +
-                                '<dt class="h1-title">'+ list[i].title +'</dt>' +
-                                '<dd class="h2-title">'+ list[i].summary +'</dd>' +
-                                '<br>' +
-                                '<dd class="h2-title godetails" data-id="'+ list[i].id +'">' +
-                                    '<a href="javascript:;">查看更多 &gt;</a>' +
-                                '</dd>' +
-                            '</dl>' +
-                        '</div>' +
-                    '</div>'
+            html += '<div class="am-u-md-12 item">' +
+                '<div style="width:30%;float:left;background-image: url(' + list[i].preview + ');background-size: contain;background-repeat: no-repeat;background-position: center;height:200px" class="itemImg">' +
+                '</div>' +
+                '<div style="width:70%;float:left;">' +
+                '<dl>' +
+                '<dt class="h1-title">' + list[i].title + '</dt>' +
+                '<dd class="h2-title">' + list[i].summary + '</dd>' +
+                '</dl>' +
+                '</div>' +
+                '</div>'
         }
         $('.am-tab-panel .am-g').append(html)
-        if(!len){
+        if (!len) {
             $('.more').hide()
             $('.nomore').show()
         }
@@ -307,14 +349,13 @@ function getList(){
 }
 
 
-$('.more').on('click',function(){
+$('.more').on('click', function() {
     page_index++
     getList()
 })
 
 
-$('.am-tab-panel .am-g').on('click','.godetails',function(){
+$('.am-tab-panel .am-g').on('click', '.godetails', function() {
     window.location.href = './detail.html?id=' + $(this).attr('data-id')
 })
-
 </script>
