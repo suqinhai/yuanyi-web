@@ -112,7 +112,7 @@ ajaxPost(url, data, function(data) {
         html += '<div class="am-u-md-2 am-u-sm-4 customer-box">' +
                     '<a href="javascript:;">' +
                         '<img class="normal-logo" src="'+ bps[i].logo+'" alt="" style="display: inline;">' +
-                        '<img class="am-active" alt="" src="'+ bps[i].logo+'" style="display: none;">' +
+                        // '<img class="am-active" alt="" src="'+ bps[i].logo+'" style="display: none;">' +
                     '</a>' +
                 '</div>'
         logoHtml += '<li><a href="javascript:;"><img class="am-thumbnail" src="'+ bps[i].logo +'"></a></li>'
