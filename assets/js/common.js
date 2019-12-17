@@ -128,7 +128,7 @@ let get_web_setting_url = '/index/Setting/get'
 ajaxPost(get_web_setting_url, "", function(data) {
     var companyIntro='"Lanying" one-stop service platform'
     $("#rectangle_logo").attr('src', data.setting.rectangle_logo);
-    $("#m-logo").attr('src', data.setting.rectangle_logo);
+    // $("#m-logo").attr('src', data.setting.rectangle_logo);
     $("#square_logo").attr('src', data.setting.square_logo);
     $("#name").text(data.setting.name)
     $("#hotline").text("服务专线: " + data.setting.hotline)

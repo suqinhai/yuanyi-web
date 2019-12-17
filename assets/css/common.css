@@ -3,7 +3,12 @@
   margin: 0;
   list-style-type:none;
 }
-
+.TopBarFixed{
+  position: fixed;
+  z-index: 1000;
+  height: 50px;
+  background: #fff;
+}
 .fy-nav .sub-menu {
   display: none;
   padding-left: 0;
