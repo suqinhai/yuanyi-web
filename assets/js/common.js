@@ -26,7 +26,7 @@
 
 
 
-var baseUrl = 'http://www.forrily.com:8089'
+var baseUrl = 'http://www.luckyagr.com:8089'
 
 function ajaxGet(url, fn) {
     $.ajax({
