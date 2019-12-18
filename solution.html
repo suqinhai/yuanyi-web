@@ -12,7 +12,12 @@
     <link rel="stylesheet" href="assets/css/common.css" />
     <link rel="stylesheet" href="http://pic.luckyagr.com/solution.min.css" />
 </head>
-
+<style type="text/css">
+     .banner {
+        display: block;
+        height: 400px;
+    }
+</style>
 <body>
     <div class="layout">
         <!--===========layout-header================-->
@@ -113,11 +118,10 @@
             <!--mobile header end-->
         </div>
         <div class="layout-container">
-            <div class="solution-page">
-                <div class="container">
-                    <h2>Solutions</h2>
-                    <p>Comprehensive Understanding of industry and various product perspective to make high quality</p>
-                    <button type="button" class="am-btn am-btn-secondary am-round">了解更多</button>
+            <div class="index-page">
+                <div data-am-widget="slider" class="am-slider am-slider-a1" data-am-slider='{&quot;directionNav&quot;:false}' style="max-height: 400px;">
+                    <ul class="am-slides">
+                    </ul>
                 </div>
             </div>
         </div>
@@ -235,9 +239,6 @@
     display: none;
 }
 
-.h1-title {
-    font-size: 18px;
-}
 
 .item {
     border-bottom: 1px solid #ccc;
@@ -253,6 +254,7 @@
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+        font-size: 18px;
     }
 
     .h2-title {
@@ -282,6 +284,34 @@ if (getQueryString('id')) {
     console.log(getQueryString('id'))
     type_id = parseInt(getQueryString('id'))
 }
+
+/**
+ * 获取banner数据
+ * @type {String}
+ */
+var url = '/index/ad/list/v2'
+var data = {
+    "page": {
+        "page_index": 1,
+        "page_size": 100,
+    },
+     "postion_id":3
+}
+ajaxPost(url, data, function(data) {
+    var html = ''
+    var ad = data.ad
+    var len = ad.length
+    for (var i = 0; i < len; i++) {
+        html += '<li>' +
+            '<a class="banner" target="_blank" href="' + ad[i].ad_link + '" style="background:url(' + ad[i].pic_url + ') center top no-repeat; background-size:cover"></a>'
+        '</li>'
+    }
+    console.log($('.am-slider .am-slides').size())
+    $('.am-slider .am-slides').html(html)
+    console.log(22)
+    $('.am-slider').flexslider();
+})
+
 /**
  * 获取文章分类
  * @type {String}
@@ -330,9 +360,9 @@ function getList() {
         var len = list.length
         for (var i = 0; i < len; i++) {
             html += '<div class="am-u-md-12 item">' +
-                '<div style="width:30%;float:left;background-image: url(' + list[i].preview + ');background-size: contain;background-repeat: no-repeat;background-position: center;height:200px" class="itemImg">' +
+                '<div style="width:30%;float:left;background-image: url(' + list[i].preview + ');background-size: contain;background-repeat: no-repeat;background-position: center;height:200px;" class="itemImg">' +
                 '</div>' +
-                '<div style="width:70%;float:left;">' +
+                '<div style="width:70%;float:left;padding-left:10px;box-sizing: border-box;">' +
                 '<dl>' +
                 '<dt class="h1-title">' + list[i].title + '</dt>' +
                 '<dd class="h2-title">' + list[i].summary + '</dd>' +
