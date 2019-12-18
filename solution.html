@@ -308,7 +308,6 @@ ajaxPost(url, data, function(data) {
     }
     console.log($('.am-slider .am-slides').size())
     $('.am-slider .am-slides').html(html)
-    console.log(22)
     $('.am-slider').flexslider();
 })
 
@@ -359,7 +358,7 @@ function getList() {
         var list = data.list
         var len = list.length
         for (var i = 0; i < len; i++) {
-            html += '<div class="am-u-md-12 item">' +
+            html += '<div class="am-u-md-12 item" data-id="'+ list[i].id +'">' +
                 '<div style="width:30%;float:left;background-image: url(' + list[i].preview + ');background-size: contain;background-repeat: no-repeat;background-position: center;height:200px;" class="itemImg">' +
                 '</div>' +
                 '<div style="width:70%;float:left;padding-left:10px;box-sizing: border-box;">' +
@@ -385,7 +384,9 @@ $('.more').on('click', function() {
 })
 
 
-$('.am-tab-panel .am-g').on('click', '.godetails', function() {
+$('.am-g').on('click', '.item', function() {
     window.location.href = './detail.html?id=' + $(this).attr('data-id')
 })
+
+
 </script>
