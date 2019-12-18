@@ -202,6 +202,17 @@
 .press-archive__inner-item-title:link, .press-archive__inner-item-title:visited {
   color: #2a2a2e;
 }
+.press-archive__inner-item-title{
+  font-family: mallory-medium,sans-serif;
+  font-size: 25px;
+  line-height: 25px;
+  -webkit-transition: all .1s ease-in-out;
+  -o-transition: all ease-in-out .1s;
+  transition: all .1s ease-in-out;
+}
+.press-archive__inner-item-title a:link{
+  color:#f05700;
+}
 .features_item img{
   width: 262px;
   height: 198px;
@@ -549,6 +560,7 @@
   background-size: cover;
   padding: 10px;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 /*company style*/

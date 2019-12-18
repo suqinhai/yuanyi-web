@@ -54,21 +54,22 @@
         font-size: 12px;
     }
 
-    .press-archive__inner-item-title {
-        font-weight: bold;
-    }
-
     .am-container {
         padding-left: 0;
         padding-right: 0;
     }
 
-    .press-archive__inner-item-thumbnail-container-img {
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
 
     @media only screen and (max-width: 640px) {
+      .press-archive__inner-item-title {
+        font-weight: bold;
+        font-family: mallory-medium,sans-serif;
+        font-size:18px;
+        line-height: 22px;
+        -webkit-transition: all .1s ease-in-out;
+        -o-transition: all ease-in-out .1s;
+        transition: all .1s ease-in-out;
+    }
         .press-archive__inner-item {
             display: block;
         }
@@ -192,7 +193,7 @@
             <div class="page-header">
                 <div class="am-container">
                     <h1 class="page-header-title">NEWS</h1>
-                    <h2>新鲜事简单报，掌握最近咨询</h2>
+                    <h2 style="color:#fff">新鲜事简单报，掌握最近咨询</h2>
                 </div>
             </div>
             <!--<div class="breadcrumb-box">-->
