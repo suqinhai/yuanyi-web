@@ -577,3 +577,23 @@
     font-weight: 300;
     text-align: center;
 }
+.CompanyProfileItem{
+  height: 100px;
+  padding: 10px 0;
+}
+.CompanyProfileItemTitle{
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 25px;
+  padding: 10px;
+
+}
+.HorizontalLine{
+  height:5px;
+  width:30px;
+  background:#383d61;
+  margin: 0 10px;
+}
+.CompanyProfileItem p{
+  padding: 0 10px;
+}
