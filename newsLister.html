@@ -2,495 +2,502 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="ie=edge" http-equiv="X-UA-Compatible">
-    <title>"Lanying" one-stop service platform</title>
-    <link href="http://pic.luckyagr.com/amazeui.css" rel="stylesheet" />
-    <link href="http://pic.luckyagr.com/common.min.css" rel="stylesheet" />
-    <link href="http://pic.luckyagr.com/index.min.css" rel="stylesheet" />
-    <link href="assets/css/common.css" rel="stylesheet" />
-    <style>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="ie=edge" http-equiv="X-UA-Compatible">
+  <title>"Lanying" one-stop service platform</title>
+  <link href="http://pic.luckyagr.com/amazeui.css" rel="stylesheet" />
+  <link href="http://pic.luckyagr.com/common.min.css" rel="stylesheet" />
+  <link href="http://pic.luckyagr.com/index.min.css" rel="stylesheet" />
+  <link href="assets/css/common.css" rel="stylesheet" />
+  <style>
     .l-nav {
-        font-family: Consolas;
-        font-size: 2.4rem;
-        cursor: pointer;
-        color: #fff;
-        border-bottom: 1px solid #16222b;
+      font-family: Consolas;
+      font-size: 2.4rem;
+      cursor: pointer;
+      color: #fff;
+      border-bottom: 1px solid #16222b;
     }
 
     .l-nav-2 {
-        font-size: 1.6rem;
-        padding-top: 1.5rem;
-        opacity: 0.85;
-        display: none;
-        background: #131e26;
+      font-size: 1.6rem;
+      padding-top: 1.5rem;
+      opacity: 0.85;
+      display: none;
+      background: #131e26;
     }
 
     .l-nav-3 {
-        font-size: 1.4rem;
-        opacity: 0.65;
-        line-height: 4rem;
-        background: #09131b;
+      font-size: 1.4rem;
+      opacity: 0.65;
+      line-height: 4rem;
+      background: #09131b;
     }
 
     .press-archive__inner-item-thumbnail-container {
-        width: 35%;
+      width: 35%;
     }
 
     .press-archive__inner-item-details {
-        width: 65%;
+      width: 65%;
     }
 
     .press-archive__inner-item-thumbnail-container-img {
-        width: 100%;
+      width: 100%;
     }
 
     .am-u-md-3 {
-        margin-bottom: 20px;
+      margin-bottom: 20px;
     }
 
     .l-nav span {
-        font-size: 12px;
+      font-size: 12px;
     }
 
     .am-container {
-        padding-left: 0;
-        padding-right: 0;
+      padding-left: 0;
+      padding-right: 0;
     }
 
 
     @media only screen and (max-width: 640px) {
       .press-archive__inner-item-title {
         font-weight: bold;
-        font-family: mallory-medium,sans-serif;
-        font-size:18px;
+        font-family: mallory-medium, sans-serif;
+        font-size: 18px;
         line-height: 22px;
         -webkit-transition: all .1s ease-in-out;
         -o-transition: all ease-in-out .1s;
         transition: all .1s ease-in-out;
+      }
+
+      .press-archive__inner-item {
+        display: block;
+      }
+
+      .press-archive__inner-item-thumbnail-container {
+        width: 100%;
+      }
+
+      .press-archive__inner-item-details {
+        width: 100%;
+      }
+
+      .three {
+        max-height: 160px;
+        overflow-y: scroll;
+      }
     }
-        .press-archive__inner-item {
-            display: block;
-        }
-
-        .press-archive__inner-item-thumbnail-container {
-            width: 100%;
-        }
-
-        .press-archive__inner-item-details {
-            width: 100%;
-        }
-
-        .three {
-            max-height: 160px;
-            overflow-y: scroll;
-        }
-    }
-    </style>
+  </style>
 </head>
 
 <body>
-    <div class="layout">
-        <!--===========layout-header================-->
-        <div class="layout-header am-hide-sm-only">
-            <div class="header-box1" data-am-sticky>
-                <!--header start-->
-                <div class="container">
-                    <div class="am-g">
-                        <div class="am-u-lg-2 am-u-sm-12">
-                            <div class="logo">
-                                <a href=""><img alt="" class="logoimg" src="assets/images/logo.png" /></a>
-                            </div>
-                        </div>
-                        <div class="am-u-md-10">
-                            <div class="clear-style">
-                                <ul class="fy-nav">
-                                    <li class=""><a href="./index.html">Home</a></li>
-                                    <li>
-                                        <a href="./products.html">Product</a>
-                                    </li>
-                                    <li><a href="./company.html">Company</a>
-                                        <!-- sub-menu start-->
-                                        <ul class="sub-menu">
-                                            <li class="menu-item"><a href="./company.html">About Lanying</a></li>
-                                            <li class="menu-item"><a href="./newsLister.html">News</a></li>
-                                            <li class="menu-item"><a href="./contactUs.html">Contact us</a></li>
-                                        </ul>
-                                        <!-- sub-menu end-->
-                                    </li>
-                                    <li>
-                                        <a href="./solution.html">Solution</a>
-                                        <!-- sub-menu start-->
-                                        <ul class="sub-menu solution-category">
-                                            <li class="menu-item"><a href="./solution.html">solution 1</a></li>
-                                            <li class="menu-item"><a href="./solution.html">solution 2</a></li>
-                                        </ul>
-                                        <!-- sub-menu end-->
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--header end-->
+  <div class="layout">
+    <!--===========layout-header================-->
+    <div class="layout-header am-hide-sm-only">
+      <div class="header-box1" data-am-sticky>
+        <!--header start-->
+        <div class="container">
+          <div class="am-g">
+            <div class="am-u-lg-2 am-u-sm-12">
+              <div class="logo">
+                <a href=""><img alt="" class="logoimg" src="assets/images/logo.png" /></a>
+              </div>
             </div>
-        </div>
-        <!--mobile header start-->
-        <div class="m-header pd0">
-            <div class="am-g am-show-sm-only TopBarFixed">
-                <div class="am-u-sm-2">
-                    <div class="menu-bars">
-                        <a data-am-offcanvas="{effect: 'push'}" href="#doc-oc-demo1"><i class="am-menu-toggle-icon am-icon-bars"></i></a>
-                        <!-- 侧边栏内容 -->
-                        <nav class="am-menu am-menu-offcanvas1" data-am-menu-offcanvas data-am-widget="menu">
-                            <a class="am-menu-toggle" href="javascript: void(0)"></a>
-                            <div class="am-offcanvas">
-                                <div class="am-offcanvas-bar">
-                                    <ul class="am-menu-nav am-avg-sm-1">
-                                        <li><a class="" href="./index.html">Home</a></li>
-                                        <li class=""><a class="" href="./products.html">Products</a></li>
-                                        <li class="am-parent">
-                                            <a class="" href="./company.html">Company</a>
-                                            <ul class="am-menu-sub am-collapse ">
-                                                <li class="">
-                                                    <a class="" href="./company.html">About Lanying</a>
-                                                </li>
-                                                <li class="">
-                                                    <a class="" href="./newsLister.html">News</a>
-                                                </li>
-                                                <li class="">
-                                                    <a class="" href="./contactUs.html">Contact us</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="am-parent">
-                                            <a class="" href="./solution.html">Solution</a>
-                                            <ul class="am-menu-sub am-collapse solution-category">
-                                                <li class="">
-                                                    <a class="" href="./solution.html">solution</a>
-                                                </li>
-                                                <li class="">
-                                                    <a class="" href="./solution.html">solution</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-                <div class="am-u-sm-5">
-                    <div class="m-logo">
-                        <a href=""><img alt="" src="assets/images/logo.png"></a>
-                    </div>
-                </div>
+            <div class="am-u-md-10">
+              <div class="clear-style">
+                <ul class="fy-nav">
+                  <li class=""><a href="./index.html">Home</a></li>
+                  <li>
+                    <a href="./products.html">Product</a>
+                  </li>
+                  <li><a href="./company.html">Company</a>
+                    <!-- sub-menu start-->
+                    <ul class="sub-menu">
+                      <li class="menu-item"><a href="./company.html">About Lanying</a></li>
+                      <li class="menu-item"><a href="./newsLister.html">News</a></li>
+                      <li class="menu-item"><a href="./contactUs.html">Contact us</a></li>
+                    </ul>
+                    <!-- sub-menu end-->
+                  </li>
+                  <li>
+                    <a href="./solution.html">Solution</a>
+                    <!-- sub-menu start-->
+                    <ul class="sub-menu solution-category">
+                      <li class="menu-item"><a href="./solution.html">solution 1</a></li>
+                      <li class="menu-item"><a href="./solution.html">solution 2</a></li>
+                    </ul>
+                    <!-- sub-menu end-->
+                  </li>
+                </ul>
+              </div>
             </div>
-            <!--mobile header end-->
+          </div>
         </div>
-        <div class="layout-container">
-            <div class="page-header">
-                <div class="am-container">
-                    <h1 class="page-header-title">NEWS</h1>
-                    <h2 style="color:#fff">新鲜事简单报，掌握最近咨询</h2>
-                </div>
-            </div>
-            <!--<div class="breadcrumb-box">-->
-            <!--<div class="am-container">-->
-            <!--<ol class="am-breadcrumb">-->
-            <!--<li><a href="../index.html">首页</a></li>-->
-            <!--<li class="am-active">新闻列表</li>-->
-            <!--</ol>-->
-            <!--</div>-->
-            <!--</div>-->
-        </div>
-        <div class="section">
-            <div class="container">
-                <div class="am-g">
-                    <div class="am-u-md-3">
-                        <div class="am-container" style="background-color: #1c2b36;" id="leftNav">
-                        </div>
-                        <!-- todo://year lister start -->
-                        <!-- ======indexof[1]====== -->
-                        <!-- year lister end -->
-                    </div>
-                    <div class="am-u-md-9">
-                        <!-- press-archive__inner-lister strat -->
-                        <div class="press-archive__inner-lister">
-                        </div>
-                        <div class="more" style="font-family: Consolas;font-size: 2rem;font-style: italic;display: none">more</div>
-                        <!-- press-archive__inner-lister end -->
-                        <!--<div style="text-align: center">-->
-                        <!--<img src="assets/images/loading.gif" style="width: 5vw; height: 5vw" id="loadPic">-->
-                        <!--<p id="loadText" style="display: none">我是有底线的</p>-->
-                        <!--</div>-->
-                    </div>
-                    <!-- am-u-9 end -->
-                </div>
-            </div>
-        </div>
-        <!--===========layout-footer================-->
-        <div class="layout-footer">
-            <div class="footer">
-                <div class="footer--bg" style="background-color:#383d61">
-                </div>
-                <div class="footer--inner">
-                    <div class="container">
-                        <div class="footer_main">
-                            <div class="am-g">
-                                <div class="am-u-md-3 ">
-                                    <div class="footer_main--column">
-                                        <strong class="footer_main--column_title" id="name">Lanying</strong>
-                                        <div class="footer_about">
-                                            <div>
-                                                <img alt="" class="footer-logo-img" id="square_logo" src="assets/images/index/f01.jpg">
-                                            </div>
-                                            <p class="footer_about--text">
-                                                这里是一段简介，需要客户提供
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="am-u-md-3 ">
-                                    <div class="footer_main--column">
-                                        <strong class="footer_main--column_title">company</strong>
-                                        <ul class="footer_navigation">
-                                            <li class="footer_navigation--item"><a class="footer_navigation--link" href="./company.html">about
-                                                    Lanying </a></li>
-                                            <li class="footer_navigation--item"><a class="footer_navigation--link" href="./newsLister.html">News</a>
-                                            </li>
-                                            <li class="footer_navigation--item"><a class="footer_navigation--link" href="./contactUs.html">contact
-                                                    us</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="am-u-md-3 ">
-                                    <div class="footer_main--column">
-                                        <strong class="footer_main--column_title">solution</strong>
-                                        <ul class="footer_navigation footer_solution">
-                                            <li class="footer_navigation--item"><a class="footer_navigation--link" href="#">Planting</a>
-                                            </li>
-                                            <li class="footer_navigation--item"><a class="footer_navigation--link" href="#">Transportantion</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="am-u-md-3 ">
-                                    <div class="footer_main--column">
-                                        <strong class="footer_main--column_title">联系详情</strong>
-                                        <ul class="footer_contact_info">
-                                            <li class="footer_contact_info--item"><i class="am-icon-phone"></i><span id="hotline">服务专线：400 069 8888</span></li>
-                                            <li class="footer_contact_info--item"><i class="am-icon-envelope-o"></i><span id="enterprise_email">luckyagr.com</span></li>
-                                            <li class="footer_contact_info--item"><i class="am-icon-map-marker"></i><span id="address">深圳市南山区粤海街道软件产业基地4b</span></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!--header end-->
+      </div>
     </div>
-    <script charset="utf-8" src="http://pic.luckyagr.com/jquery-2.1.0.js"></script>
-    <script charset="utf-8" src="http://pic.luckyagr.com/amazeui.js"></script>
-    <script charset="utf-8" src="http://pic.luckyagr.com/amui.widget.helper.js"></script>
-    <script charset="utf-8" src="assets/js/common.js"></script>
+    <!--mobile header start-->
+    <div class="m-header pd0">
+      <div class="am-g am-show-sm-only TopBarFixed">
+        <div class="am-u-sm-2">
+          <div class="menu-bars">
+            <a data-am-offcanvas="{effect: 'push'}" href="#doc-oc-demo1"><i class="am-menu-toggle-icon am-icon-bars"></i></a>
+            <!-- 侧边栏内容 -->
+            <nav class="am-menu am-menu-offcanvas1" data-am-menu-offcanvas data-am-widget="menu">
+              <a class="am-menu-toggle" href="javascript: void(0)"></a>
+              <div class="am-offcanvas">
+                <div class="am-offcanvas-bar">
+                  <ul class="am-menu-nav am-avg-sm-1">
+                    <li><a class="" href="./index.html">Home</a></li>
+                    <li class=""><a class="" href="./products.html">Products</a></li>
+                    <li class="am-parent">
+                      <a class="" href="./company.html">Company</a>
+                      <ul class="am-menu-sub am-collapse ">
+                        <li class="">
+                          <a class="" href="./company.html">About Lanying</a>
+                        </li>
+                        <li class="">
+                          <a class="" href="./newsLister.html">News</a>
+                        </li>
+                        <li class="">
+                          <a class="" href="./contactUs.html">Contact us</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="am-parent">
+                      <a class="" href="./solution.html">Solution</a>
+                      <ul class="am-menu-sub am-collapse solution-category">
+                        <li class="">
+                          <a class="" href="./solution.html">solution</a>
+                        </li>
+                        <li class="">
+                          <a class="" href="./solution.html">solution</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <div class="am-u-sm-5">
+          <div class="m-logo">
+            <a href=""><img alt="" src="assets/images/logo.png"></a>
+          </div>
+        </div>
+      </div>
+      <!--mobile header end-->
+    </div>
+    <div class="layout-container">
+      <div class="page-header">
+        <div class="am-container">
+          <h1 class="page-header-title">NEWS</h1>
+          <h2 style="color:#fff">新鲜事简单报，掌握最近咨询</h2>
+        </div>
+      </div>
+      <!--<div class="breadcrumb-box">-->
+      <!--<div class="am-container">-->
+      <!--<ol class="am-breadcrumb">-->
+      <!--<li><a href="../index.html">首页</a></li>-->
+      <!--<li class="am-active">新闻列表</li>-->
+      <!--</ol>-->
+      <!--</div>-->
+      <!--</div>-->
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="am-g">
+          <div class="am-u-md-3">
+            <div class="am-container" style="background-color: #1c2b36;" id="leftNav">
+            </div>
+            <!-- todo://year lister start -->
+            <!-- ======indexof[1]====== -->
+            <!-- year lister end -->
+          </div>
+          <div class="am-u-md-9">
+            <!-- press-archive__inner-lister strat -->
+            <div class="press-archive__inner-lister">
+            </div>
+            <div class="more" style="font-family: Consolas;font-size: 2rem;font-style: italic;display: none">more</div>
+            <!-- press-archive__inner-lister end -->
+            <!--<div style="text-align: center">-->
+            <!--<img src="assets/images/loading.gif" style="width: 5vw; height: 5vw" id="loadPic">-->
+            <!--<p id="loadText" style="display: none">我是有底线的</p>-->
+            <!--</div>-->
+          </div>
+          <!-- am-u-9 end -->
+        </div>
+      </div>
+    </div>
+    <!--===========layout-footer================-->
+    <div class="layout-footer">
+      <div class="footer">
+        <div style="background-color:#383d61" class="footer--bg"></div>
+        <div class="footer--inner">
+          <div class="container">
+            <div class="footer_main">
+              <div class="am-g">
+                <div class="am-u-md-3 ">
+                  <div class="footer_main--column">
+                    <strong class="footer_main--column_title">Contact details</strong>
+                    <ul class="footer_contact_info">
+                      <li class="footer_contact_info--item"><i class="am-icon-phone"></i><span id="hotline">服务专线：400
+                          069 8888</span></li>
+                      <li class="footer_contact_info--item"><i class="am-icon-envelope-o"></i><span id="enterprise_email">luckyagr.com</span></li>
+                      <li class="footer_contact_info--item"><i class="am-icon-map-marker"></i><span id="address">深圳市南山区粤海街道软件产业基地4b</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="am-u-md-3 ">
+                  <div class="footer_main--column">
+                    <strong class="footer_main--column_title">Company</strong>
+                    <ul class="footer_navigation">
+                      <li class="footer_navigation--item"><a href="./company.html" class="footer_navigation--link">About
+                          Lanying </a></li>
+                      <li class="footer_navigation--item"><a href="./newsLister.html" class="footer_navigation--link">News</a></li>
+                      <li class="footer_navigation--item"><a href="./contactUs.html" class="footer_navigation--link">Contact
+                          us</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="am-u-md-3 ">
+                  <div class="footer_main--column">
+                    <strong class="footer_main--column_title">Solution</strong>
+                    <ul class="footer_navigation footer_solution">
+                      <li class="footer_navigation--item"><a href="#" class="footer_navigation--link">Planting</a></li>
+                      <li class="footer_navigation--item"><a href="#" class="footer_navigation--link">Transportantion</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="am-u-md-3 ">
+                  <div class="footer_main--column">
+                    <strong class="footer_main--column_title" id="name">Lanying</strong>
+                    <div class="footer_about">
+                      <div>
+                        <img src="assets/images/index/f01.jpg" alt="" class="footer-logo-img" id="square_logo">
+                      </div>
+                      <p class="footer_about--text">
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- beian -->
+            <div class="am-g">
+              <div class="FooterLine">
+              </div>
+              <div class="Copyright">Copyright © 2019 Zhanjiang Lanying Agricultural Technology Co., Ltd All Rights
+                Reserved
+                <a href="http://www.beian.miit.gov.cn/" target="_blank">粤ICP备19156408号</a>
+              </div>
+            </div>
+            <!-- end -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script charset="utf-8" src="http://pic.luckyagr.com/jquery-2.1.0.js"></script>
+  <script charset="utf-8" src="http://pic.luckyagr.com/amazeui.js"></script>
+  <script charset="utf-8" src="http://pic.luckyagr.com/amui.widget.helper.js"></script>
+  <script charset="utf-8" src="assets/js/common.js"></script>
 </body>
 
 </html>
 <style type="text/css">
-.more {
+  .more {
     font-size: 30px;
     text-align: center;
     cursor: pointer;
-}
+  }
 </style>
 <script type="text/javascript">
-var page_index = 1
-var page_size = 4
-var type_id = 45
-/**
- * 获取新闻分类
- * @type {String}
- */
-var url = '/news/nav'
-var data = {}
-// ajaxPost(url, data, function(data) {
-//     var html = ''
-//     var len = data.length
-//     for (var i = 0; i < len; i++) {
-//         html += '<div class="am-panel am-panel-default">' +
-//         '<div class="am-panel-hd">' +
-//         '<div class="panel-title" data-am-collapse=\'{parent: "#accordion", target: "#do-not-say-' + i + '"}\' data-time="' + data[i].time + '" data-id="#do-not-say-' + i + '">' + data[i].time + '(' + data[i].count + ')' + '</div>' +
-//         '</div>' +
-//         '<div id="do-not-say-' + i + '" class="am-panel-collapse am-collapse">' +
-//         '<div class="am-panel-bd">' +
-//         '<div class="am-panel am-panel-default">' +
-//         '<div class="am-panel-hd">' +
-//         '</div>' +
-//         '</div>' +
-//         '</div>' +
-//         '</div>' +
-//         '</div>'
-//     }
-//     $('.careers--vacancies').html(html)
-// })
-ajaxPost(url, data, function(data) {
+  var page_index = 1
+  var page_size = 4
+  var type_id = 45
+  /**
+   * 获取新闻分类
+   * @type {String}
+   */
+  var url = '/news/nav'
+  var data = {}
+  // ajaxPost(url, data, function(data) {
+  //     var html = ''
+  //     var len = data.length
+  //     for (var i = 0; i < len; i++) {
+  //         html += '<div class="am-panel am-panel-default">' +
+  //         '<div class="am-panel-hd">' +
+  //         '<div class="panel-title" data-am-collapse=\'{parent: "#accordion", target: "#do-not-say-' + i + '"}\' data-time="' + data[i].time + '" data-id="#do-not-say-' + i + '">' + data[i].time + '(' + data[i].count + ')' + '</div>' +
+  //         '</div>' +
+  //         '<div id="do-not-say-' + i + '" class="am-panel-collapse am-collapse">' +
+  //         '<div class="am-panel-bd">' +
+  //         '<div class="am-panel am-panel-default">' +
+  //         '<div class="am-panel-hd">' +
+  //         '</div>' +
+  //         '</div>' +
+  //         '</div>' +
+  //         '</div>' +
+  //         '</div>'
+  //     }
+  //     $('.careers--vacancies').html(html)
+  // })
+  ajaxPost(url, data, function (data) {
     let len = data.length;
     let kv = {}
 
     // 计算总数
     for (let i = 0; i < len; i++) {
-        let time = data[i].time
-        let times = time.split("-")
-        let yId = "y_" + times[0]
-        if (kv[yId] === undefined) {
-            kv[yId] = 0
-            kv[yId] += data[i].count
-        } else {
-            kv[yId] += data[i].count
-        }
+      let time = data[i].time
+      let times = time.split("-")
+      let yId = "y_" + times[0]
+      if (kv[yId] === undefined) {
+        kv[yId] = 0
+        kv[yId] += data[i].count
+      } else {
+        kv[yId] += data[i].count
+      }
     }
 
     for (let i = 0; i < len; i++) {
-        let time = data[i].time
-        let times = time.split("-")
+      let time = data[i].time
+      let times = time.split("-")
 
-        let year = times[0]
-        let month = times[1]
-        let count = data[i].count
+      let year = times[0]
+      let month = times[1]
+      let count = data[i].count
 
-        let html = ''
+      let html = ''
 
-        let yId = "y_" + year
+      let yId = "y_" + year
 
-        if ($("#" + yId)[0]) {
-            let mId = yId + "_" + month
-            $("#" + yId).append('<div class="l-nav-2" id="' + mId + '" onclick="event.cancelBubble = true;openNav3(\'' + time + '\',\'' + mId + '\')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + month + '<span>(' + count + ')</span><div class="three"></div></div>')
-        } else {
-            html += ' <div class="l-nav" id="' + yId + '" onclick="openNav2(' + year + ')">&nbsp;&nbsp;&nbsp;' + year + '<span>(' + kv[yId] + ')</span></div>';
-            $("#leftNav").append(html)
-            let mId = yId + "_" + month
-            $("#" + yId).append('<div class="l-nav-2" id="' + mId + '" onclick="event.cancelBubble = true;openNav3(\'' + time + '\',\'' + mId + '\')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + month + '<span>(' + count + ')</span><div class="three"></div></div>')
-        }
+      if ($("#" + yId)[0]) {
+        let mId = yId + "_" + month
+        $("#" + yId).append('<div class="l-nav-2" id="' + mId + '" onclick="event.cancelBubble = true;openNav3(\'' + time + '\',\'' + mId + '\')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + month + '<span>(' + count + ')</span><div class="three"></div></div>')
+      } else {
+        html += ' <div class="l-nav" id="' + yId + '" onclick="openNav2(' + year + ')">&nbsp;&nbsp;&nbsp;' + year + '<span>(' + kv[yId] + ')</span></div>';
+        $("#leftNav").append(html)
+        let mId = yId + "_" + month
+        $("#" + yId).append('<div class="l-nav-2" id="' + mId + '" onclick="event.cancelBubble = true;openNav3(\'' + time + '\',\'' + mId + '\')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + month + '<span>(' + count + ')</span><div class="three"></div></div>')
+      }
 
     }
-});
+  });
 
-function openNav2(year) {
+  function openNav2(year) {
     if ($('#y_' + year).find("div").css("display") === "block") {
-        $('#y_' + year).find("div").css("display", "none")
-        return
+      $('#y_' + year).find("div").css("display", "none")
+      return
     }
     $("#leftNav").find("div").find("div").css("display", "none")
     $('#y_' + year).find("div").css("display", "block")
-}
+  }
 
-function openNav3(time, mId) {
+  function openNav3(time, mId) {
     let url = '/news/titles/get'
     let data = {
-        "time": time
+      "time": time
     }
     if ($("#" + mId).find("div").html() != "") {
-        $("#" + mId).find("div").html("")
-        return
+      $("#" + mId).find("div").html("")
+      return
     }
     $("#" + mId).siblings().find("div").html("")
-    ajaxPost(url, data, function(data) {
-        let html = ''
-        let len = data.length
-        for (let i = 0; i < len; i++) {
-            html += '<div class="l-nav-3" onclick="goToDetail(' + data[i].id + ')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + data[i].title + '</div>'
-        }
-        $("#" + mId).find("div").html(html)
+    ajaxPost(url, data, function (data) {
+      let html = ''
+      let len = data.length
+      for (let i = 0; i < len; i++) {
+        html += '<div class="l-nav-3" onclick="goToDetail(' + data[i].id + ')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + data[i].title + '</div>'
+      }
+      $("#" + mId).find("div").html(html)
 
     })
-}
+  }
 
-function goToDetail(id) {
+  function goToDetail(id) {
     window.location.href = './detail.html?id=' + id
-}
+  }
 
-/**
- * 根据发布时间查询发布文章的标题信息
- * @param  {[type]} ) {               var that [description]
- * @return {[type]}   [description]
- */
-// $('.am-panel-hd .panel-title').on('click', function() {
-//     var that = $(this)
-//     var url = '/news/titles/get'
-//     var data = {
-//         "time": $(this).attr('data-time')
-//     }
-//     ajaxPost(url, data, function(data) {
-//         var html = ''
-//         var len = data.length
-//         for (var i = 0; i < len; i++) {
-//             html += '<div class="panel-title-child" data-id="'+  data[i].id +'">'+ data[i].title +'</div>'
-//         }
-//         $(that.attr('data-id')).find('.am-panel-hd').html(html)
-//     })
-// })
+  /**
+   * 根据发布时间查询发布文章的标题信息
+   * @param  {[type]} ) {               var that [description]
+   * @return {[type]}   [description]
+   */
+  // $('.am-panel-hd .panel-title').on('click', function() {
+  //     var that = $(this)
+  //     var url = '/news/titles/get'
+  //     var data = {
+  //         "time": $(this).attr('data-time')
+  //     }
+  //     ajaxPost(url, data, function(data) {
+  //         var html = ''
+  //         var len = data.length
+  //         for (var i = 0; i < len; i++) {
+  //             html += '<div class="panel-title-child" data-id="'+  data[i].id +'">'+ data[i].title +'</div>'
+  //         }
+  //         $(that.attr('data-id')).find('.am-panel-hd').html(html)
+  //     })
+  // })
 
 
-/**
- * 获取文章概要信息列表
- * @type {String}
- */
-getList()
+  /**
+   * 获取文章概要信息列表
+   * @type {String}
+   */
+  getList()
 
-function getList() {
+  function getList() {
     var url = '/article/list'
     var data = {
-        "type_id": type_id,
-        "page": {
-            "page_index": page_index,
-            "page_size": page_size
-        }
+      "type_id": type_id,
+      "page": {
+        "page_index": page_index,
+        "page_size": page_size
+      }
     }
-    ajaxPost(url, data, function(data) {
-        var html = ''
-        var list = data.list
-        var len = list.length
-        for (var i = 0; i < len; i++) {
-            html += '<div class="press-archive__inner-item" data-id="' + list[i].id + '">' +
-                '<a href="#" class="press-archive__inner-item-thumbnail-container"><div class="press-archive__inner-item-thumbnail-container-img img_border" style="background-image: url(' + list[i].preview + ');"></div></a>' +
-                '<div class="press-archive__inner-item-details">' +
-                '<a href="#" class="press-archive__inner-item-title">' + list[i].title + '</a>' +
-                '<div class="press-archive__inner-item-excerpt">' + list[i].summary +
-                '<p class="press-archive__inner-item-meta">' +
-                '<span class="press-archive__inner-item-date">' + (list[i].save_time || '') + '</span> / <a href="#">作者:' + list[i].author + '</a>' +
-                '</p>' +
-                '</div>' +
-                '</div>' +
-                '</div>'
-        }
-        $('.press-archive__inner-lister').append(html)
+    ajaxPost(url, data, function (data) {
+      var html = ''
+      var list = data.list
+      var len = list.length
+      for (var i = 0; i < len; i++) {
+        html += '<div class="press-archive__inner-item" data-id="' + list[i].id + '">' +
+          '<a href="#" class="press-archive__inner-item-thumbnail-container"><div class="press-archive__inner-item-thumbnail-container-img img_border" style="background-image: url(' + list[i].preview + ');"></div></a>' +
+          '<div class="press-archive__inner-item-details">' +
+          '<a href="#" class="press-archive__inner-item-title">' + list[i].title + '</a>' +
+          '<div class="press-archive__inner-item-excerpt">' + list[i].summary +
+          '<p class="press-archive__inner-item-meta">' +
+          '<span class="press-archive__inner-item-date">' + (list[i].save_time || '') + '</span> / <a href="#">作者:' + list[i].author + '</a>' +
+          '</p>' +
+          '</div>' +
+          '</div>' +
+          '</div>'
+      }
+      $('.press-archive__inner-lister').append(html)
 
-        if (data.page.total <= data.page.page_index * data.page.page_size) {
-            $('.more').text("no more")
-        } else {
-            $('.more').css("display", "block")
-        }
+      if (data.page.total <= data.page.page_index * data.page.page_size) {
+        $('.more').text("no more")
+      } else {
+        $('.more').css("display", "block")
+      }
     })
 
-}
+  }
 
-$('.more').on('click', function() {
+  $('.more').on('click', function () {
     page_index++
     getList()
-})
+  })
 
 
-$('.panel-title-child').on('click', function() {
+  $('.panel-title-child').on('click', function () {
     window.location.href = './detail.html?id=' + $(this).attr('data-id')
-})
+  })
 
-$('.press-archive__inner-item').on('click', function() {
+  $('.press-archive__inner-item').on('click', function () {
     window.location.href = './detail.html?id=' + $(this).attr('data-id')
-})
+  })
 
 // $(window).scroll(function () {
 //     totalheight = parseFloat($(window).height()) + parseFloat($(window).scrollTop());//浏览器的高度加上滚动条的高度
