@@ -364,8 +364,7 @@
                 <img src="http://pic.luckyagr.com/images/index/f04.jpg" alt="">
                 <h3 class="features_item--title">Rich product range</h3>
                 <p class="features_item--text">
-                  With a wide range of products, we have more than 1,000 product categories, including but not limited
-                  to Lucky bamboo, Ficus and more.
+                  With a wide range of products, we have many product categories, including but not limited to lucky bamboo, banyan tree and more.
                 </p>
               </div>
             </div>
@@ -490,10 +489,10 @@
         </div>
       </div>
   </div>
-  <!-- <script src="http://pic.luckyagr.com/jquery-2.1.0.js" charset="utf-8"></script>
-  <script src="http://pic.luckyagr.com/amazeui.js" charset="utf-8"></script> -->
-  <script src="assets/js/jquery-2.1.0.js" charset="utf-8"></script>
-  <script src="assets/js/amazeui.js" charset="utf-8"></script>
+  <script src="http://pic.luckyagr.com/jquery-2.1.0.js" charset="utf-8"></script>
+  <script src="http://pic.luckyagr.com/amazeui.js" charset="utf-8"></script>
+  <!-- <script src="assets/js/jquery-2.1.0.js" charset="utf-8"></script>
+  <script src="assets/js/amazeui.js" charset="utf-8"></script> -->
   <script src="assets/js/common.js" charset="utf-8"></script>
 </body>
 
@@ -538,6 +537,7 @@
     "is_index_show":true
   }
   ajaxPost(url, data, function (data) {
+    console.log(data)
     var html = ''
     var ps = data.ps
     var len = ps.length
