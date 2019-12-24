@@ -201,10 +201,10 @@
         <div class="solution-container mt20">
           <div class="am-tabs  am-no-layout block">
             <ul class="am-tabs-nav am-cf block recommend">
-              <li class="am-active botton" is-active="default"><a href="javascript:;">默认</a></li>
-              <li class="botton" is-active="recommend"><a href="javascript:;">推荐</a></li>
-              <li class="botton" is-active="newest"><a href="javascript:;">最新</a></li>
-              <li class="botton" is-active="hot"><a href="javascript:;">热门</a></li>
+              <li class="am-active botton" is-active="default"><a href="javascript:;">All</a></li>
+              <li class="botton" is-active="recommend"><a href="javascript:;">Recommend</a></li>
+              <li class="botton" is-active="newest"><a href="javascript:;">Newest</a></li>
+              <li class="botton" is-active="hot"><a href="javascript:;">Hot</a></li>
             </ul>
           </div>
         </div>
@@ -304,8 +304,8 @@
   var url = '/product/category/list'
   var data = {}
   ajaxPost(url, data, function (data) {
-    var html = '<span class="fl" style="margin-bottom:10px;">所属类目：</span>'
-    data.categories.unshift({ id: null, name: '全部' })
+    var html = '<span class="fl" style="margin-bottom:10px;">Category：</span>'
+    data.categories.unshift({ id: null, name: 'All' })
     var categories = data.categories
     var len = categories.length
     for (var i = 0; i < len; i++) {
@@ -354,10 +354,10 @@
           pageSize: page_size,
           totalCounts: data.page.total,
           currentPage: page_index,
-          first: '<li class="first"><a href="javascript:void(0);">首页<\/a><\/li>',
-          prev: '<li class="prev"><a href="javascript:void(0);"><i class="arrow arrow2"><\/i>上一页<\/a><\/li>',
-          next: '<li class="next"><a href="javascript:void(0);">下一页<i class="arrow arrow3"><\/i><\/a><\/li>',
-          last: '<li class="last"><a href="javascript:void(0);">末页<\/a><\/li>',
+          first: '<li class="first"><a href="javascript:void(0);">First Page<\/a><\/li>',
+          prev: '<li class="prev"><a href="javascript:void(0);"><i class="arrow arrow2"><\/i>Previous Page<\/a><\/li>',
+          next: '<li class="next"><a href="javascript:void(0);">Next Page<i class="arrow arrow3"><\/i><\/a><\/li>',
+          last: '<li class="last"><a href="javascript:void(0);">Last Page<\/a><\/li>',
           page: '<li class="page"><a href="javascript:void(0);">{{page}}<\/a><\/li>',
           onPageChange: function (n, type) {
             if (type === 'init') {
