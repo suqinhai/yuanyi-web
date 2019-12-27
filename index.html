@@ -2,19 +2,19 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>"Lanying" one-stop service platform</title>
-  <link rel="stylesheet" href="http://pic.luckyagr.com/amazeui.css" />
-  <link rel="stylesheet" href="http://pic.luckyagr.com/common.min.css" />
-  <link rel="stylesheet" href="http://pic.luckyagr.com/index.min.css" />
-  <!-- <link rel="stylesheet" href="assets/css/amazeui.css" />
-  <link rel="stylesheet" href="assets/css/common.min.css" />
-  <link rel="stylesheet" href="assets/css/index.min.css"> -->
-  <link rel="stylesheet" href="assets/css/common.css" />
-  <style>
-    .over_hide{
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>"Lanying" one-stop service platform</title>
+    <link rel="stylesheet" href="http://pic.luckyagr.com/amazeui.css" />
+    <link rel="stylesheet" href="http://pic.luckyagr.com/common.min.css" />
+    <link rel="stylesheet" href="http://pic.luckyagr.com/index.min.css" />
+    <!-- <link rel="stylesheet" href="assets/css/amazeui.css" />
+  <link rel="stylesheet" href="assets/css/common.min.css" />-->
+    <link rel="stylesheet" href="assets/css/swiper.min.css">
+    <link rel="stylesheet" href="assets/css/common.css" />
+    <style>
+        .over_hide{
             overflow : hidden;
             text-overflow: ellipsis;
             display: -webkit-box;
@@ -36,524 +36,561 @@
         background-size: 1920px auto;
     }
 
+
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+        overflow: visible;
+    }
+    .pc-recommend .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    .mobile-recommend .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        width: 80%;
+
+        /* Center slide text vertically */
+        /*display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;*/
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+    .swiper-button-next  {
+        background-image: url(./assets/images/arrow-right.svg);
+        right: -100px;
+        left: auto;
+        width:80px;
+         height: 80px;
+         background-size: 60px 60px;
+         border-radius: 50%;
+         border: 2px solid #ccc;
+         background-position: center center;
+    }
+
+    .swiper-button-prev{
+        
+        background-image: url(./assets/images/arrow-lift.svg);
+        right: auto;
+        left: -100px;
+        width:80px;
+         height: 80px;
+         background-size: 60px 60px;
+         border-radius: 50%;
+         border: 2px solid #ccc;
+         background-position: center center;
+    }
+    .index-container .service_item {
+        box-shadow: 5px 5px 10px #fff;
+    }
     </style>
 </head>
 
 <body>
-  <div class="layout">
-    <!--===========layout-header================-->
-    <div class="layout-header am-hide-sm-only">
-      <div class="header-box1" data-am-sticky>
-        <!--header start-->
-        <div class="container">
-          <div class="am-g">
-            <div class="am-u-lg-2 am-u-sm-12">
-              <div class="logo">
-                <a href=""><img id="rectangle_logo" src="assets/images/logo.png" alt="" class="logoimg" /></a>
-              </div>
-            </div>
-            <div class="am-u-md-10">
-              <div class="clear-style">
-                <ul class="fy-nav">
-                  <li class=""><a href="./index.html">Home</a></li>
-                  <li>
-                    <a href="./products.html">Product</a>
-                  </li>
-                  <li><a href="./company.html">Company</a>
-                    <!-- sub-menu start-->
-                    <ul class="sub-menu">
-                      <li class="menu-item"><a href="./company.html">About Lanying</a></li>
-                      <li class="menu-item"><a href="./newsLister.html">News</a></li>
-                      <li class="menu-item"><a href="./contactUs.html">Contact us</a></li>
-                    </ul>
-                    <!-- sub-menu end-->
-                  </li>
-                  <li>
-                    <a href="./solution.html">Solution</a>
-                    <!-- sub-menu start-->
-                    <ul class="sub-menu solution-category">
-                      <li class="menu-item"><a href="./solution.html">solution 1</a></li>
-                      <li class="menu-item"><a href="./solution.html">solution 2</a></li>
-                    </ul>
-                    <!-- sub-menu end-->
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--header end-->
-      </div>
-    </div>
-    <!--mobile header start-->
-    <div class="m-header pd0">
-      <div class="am-g am-show-sm-only TopBarFixed">
-        <div class="am-u-sm-2">
-          <div class="menu-bars">
-            <a href="#doc-oc-demo1" data-am-offcanvas="{effect: 'push'}"><i class="am-menu-toggle-icon am-icon-bars"></i></a>
-            <!-- 侧边栏内容 -->
-            <nav data-am-widget="menu" class="am-menu am-menu-offcanvas1" data-am-menu-offcanvas>
-              <a href="javascript: void(0)" class="am-menu-toggle"></a>
-              <div class="am-offcanvas">
-                <div class="am-offcanvas-bar">
-                  <ul class="am-menu-nav am-avg-sm-1">
-                    <li><a href="./index.html" class="">Home</a></li>
-                    <li class=""><a href="./products.html" class="">Products</a></li>
-                    <li class="am-parent">
-                      <a href="./company.html" class="">Company</a>
-                      <ul class="am-menu-sub am-collapse ">
-                        <li class="">
-                          <a href="./company.html" class="">About Lanying</a>
-                        </li>
-                        <li class="">
-                          <a href="./newsLister.html" class="">News</a>
-                        </li>
-                        <li class="">
-                          <a href="./contactUs.html" class="">Contact us</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="am-parent">
-                      <a href="./solution.html" class="">Solution</a>
-                      <ul class="am-menu-sub am-collapse solution-category">
-                        <li class="">
-                          <a href="./solution.html" class="">solution</a>
-                        </li>
-                        <li class="">
-                          <a href="./solution.html" class="">solution</a>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </nav>
-          </div>
-        </div>
-        <div class="am-u-sm-5">
-          <div class="m-logo">
-            <a href=""><img id="m-logo" src="http://pic.luckyagr.com/m-logo.png" alt=""></a>
-          </div>
-        </div>
-      </div>
-      <!--mobile header end-->
-    </div>
-    <!--===========layout-container================-->
-    <div class="layout-container">
-      <div class="index-page">
-        <div data-am-widget="slider" class="am-slider am-slider-a1" data-am-slider='{&quot;directionNav&quot;:false}'
-          style="max-height: 400px;">
-          <ul class="am-slides">
-          </ul>
-        </div>
-      </div>
-    </div>
-    <!--promo_detailed start-->
-    <div class="promo_detailed" style="background:#fff">
-      <div class="promo_detailed-container" >
-        <div class="container">
-          <div class="am-g">
-            <div class="h1-title">
-              "Lanying" one-stop service platform
-            </div>
-            <div class="h2-title">
-              Integrating bonsai management, bonsai planting and supply chain logistics
-            </div>
-            <div class="am-u-md-6">
-              <div class="second-floor-img" style="background-image: url('assets/images/promo_detailed_bg.jpg');background-size: cover">
-                <div class="promo_detailed--cta">
-                  <div class="promo_detailed--cta_wrap">
-                    <div class="promo_detailed--cta_text">
-                      "Lanying" one-stop service platform provides you with a wealth of product display, cultivation
-                      techniques and precise business docking
+    <div class="layout">
+        <!--===========layout-header================-->
+        <div class="layout-header am-hide-sm-only">
+            <div class="header-box1" data-am-sticky>
+                <!--header start-->
+                <div class="container">
+                    <div class="am-g">
+                        <div class="am-u-lg-2 am-u-sm-12">
+                            <div class="logo">
+                                <a href=""><img id="rectangle_logo" src="assets/images/logo.png" alt="" class="logoimg" /></a>
+                            </div>
+                        </div>
+                        <div class="am-u-md-10">
+                            <div class="clear-style">
+                                <ul class="fy-nav">
+                                    <li class=""><a href="./index.html">Home</a></li>
+                                    <li>
+                                        <a href="./products.html">Product</a>
+                                    </li>
+                                    <li><a href="./company.html">Company</a>
+                                        <!-- sub-menu start-->
+                                        <ul class="sub-menu">
+                                            <li class="menu-item"><a href="./company.html">About Lanying</a></li>
+                                            <li class="menu-item"><a href="./newsLister.html">News</a></li>
+                                            <li class="menu-item"><a href="./contactUs.html">Contact us</a></li>
+                                        </ul>
+                                        <!-- sub-menu end-->
+                                    </li>
+                                    <li>
+                                        <a href="./solution.html">Solution</a>
+                                        <!-- sub-menu start-->
+                                        <ul class="sub-menu solution-category">
+                                            <li class="menu-item"><a href="./solution.html">solution 1</a></li>
+                                            <li class="menu-item"><a href="./solution.html">solution 2</a></li>
+                                        </ul>
+                                        <!-- sub-menu end-->
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <!-- <div class="pro_detailed--cta_text">
+                </div>
+                <!--header end-->
+            </div>
+        </div>
+        <!--mobile header start-->
+        <div class="m-header pd0">
+            <div class="am-g am-show-sm-only TopBarFixed">
+                <div class="am-u-sm-2">
+                    <div class="menu-bars">
+                        <a href="#doc-oc-demo1" data-am-offcanvas="{effect: 'push'}"><i class="am-menu-toggle-icon am-icon-bars"></i></a>
+                        <!-- 侧边栏内容 -->
+                        <nav data-am-widget="menu" class="am-menu am-menu-offcanvas1" data-am-menu-offcanvas>
+                            <a href="javascript: void(0)" class="am-menu-toggle"></a>
+                            <div class="am-offcanvas">
+                                <div class="am-offcanvas-bar">
+                                    <ul class="am-menu-nav am-avg-sm-1">
+                                        <li><a href="./index.html" class="">Home</a></li>
+                                        <li class=""><a href="./products.html" class="">Products</a></li>
+                                        <li class="am-parent">
+                                            <a href="./company.html" class="">Company</a>
+                                            <ul class="am-menu-sub am-collapse ">
+                                                <li class="">
+                                                    <a href="./company.html" class="">About Lanying</a>
+                                                </li>
+                                                <li class="">
+                                                    <a href="./newsLister.html" class="">News</a>
+                                                </li>
+                                                <li class="">
+                                                    <a href="./contactUs.html" class="">Contact us</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="am-parent">
+                                            <a href="./solution.html" class="">Solution</a>
+                                            <ul class="am-menu-sub am-collapse solution-category">
+                                                <li class="">
+                                                    <a href="./solution.html" class="">solution</a>
+                                                </li>
+                                                <li class="">
+                                                    <a href="./solution.html" class="">solution</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <div class="am-u-sm-5">
+                    <div class="m-logo">
+                        <a href=""><img id="m-logo" src="http://pic.luckyagr.com/m-logo.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <!--mobile header end-->
+        </div>
+        <!--===========layout-container================-->
+        <div class="layout-container">
+            <div class="index-page">
+                <div data-am-widget="slider" class="am-slider am-slider-a1" data-am-slider='{&quot;directionNav&quot;:false}' style="max-height: 400px;">
+                    <ul class="am-slides">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--promo_detailed start-->
+        <div class="promo_detailed" style="background:#fff">
+            <div class="promo_detailed-container">
+                <div class="container">
+                    <div class="am-g">
+                        <div class="h1-title">
+                            "Lanying" one-stop service platform
+                        </div>
+                        <div class="h2-title">
+                            Integrating bonsai management, bonsai planting and supply chain logistics
+                        </div>
+                        <div class="am-u-md-6">
+                            <div class="second-floor-img" style="background-image: url('assets/images/promo_detailed_bg.jpg');background-size: cover">
+                                <div class="promo_detailed--cta">
+                                    <div class="promo_detailed--cta_wrap">
+                                        <div class="promo_detailed--cta_text">
+                                            "Lanying" one-stop service platform provides you with a wealth of product display, cultivation
+                                            techniques and precise business docking
+                                        </div>
+                                        <!-- <div class="pro_detailed--cta_text">
                                           <img src="assets/images/indexpic1.png" alt="" style="position:absolute">
                                         </div> -->
-                    <div class="promo_detailed--cta_footer">
-                      <button type="button" class="am-btn am-btn-danger"> <a href="./contactUs.html" style="color: #fafafa;">MORE&nbsp;&nbsp;>></a></button>
+                                        <div class="promo_detailed--cta_footer">
+                                            <button type="button" class="am-btn am-btn-danger"> <a href="./contactUs.html" style="color: #fafafa;">MORE&nbsp;&nbsp;>></a></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="am-u-md-6">
+                            <ul class="promo_detailed--list">
+                                <li class="promo_detailed--list_item">
+                                    <span class="promo_detailed--list_item_icon">
+                                        <i class="am-icon-diamond"></i>
+                                    </span>
+                                    <dl>
+                                        <dt>Multi-level product management</dt>
+                                        <!-- 多层次产品管理 -->
+                                        <dd>
+                                            Support users' online screening and view, and synchronize the latest product information in real
+                                            time, which is convenient for users to purchase and view.
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li class="promo_detailed--list_item">
+                                    <span class="promo_detailed--list_item_icon">
+                                        <i class="am-icon-dollar" style="margin-left: 15px;"></i>
+                                    </span>
+                                    <dl>
+                                        <dt>Fast business docking</dt>
+                                        <!-- 快捷的商务对接 -->
+                                        <dd>
+                                            Provide accurate docking windows to bridge the gap between cooperation and win-win.
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li class="promo_detailed--list_item">
+                                    <span class="promo_detailed--list_item_icon">
+                                        <i class="am-icon-bank" style="margin-left: 10px;"></i>
+                                    </span>
+                                    <dl>
+                                        <dt>Professional cultivation tutorial</dt>
+                                        <!-- 专业的培育教程 -->
+                                        <dd>
+                                            Rich product cultivation tutorials make it easy for users to apply in the enterprise.
+                                        </dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </div>
             </div>
-            <div class="am-u-md-6">
-              <ul class="promo_detailed--list">
-                <li class="promo_detailed--list_item">
-                  <span class="promo_detailed--list_item_icon">
-                    <i class="am-icon-diamond"></i>
-                  </span>
-                  <dl>
-                    <dt>Multi-level product management</dt>
-                    <!-- 多层次产品管理 -->
-                    <dd>
-                      Support users' online screening and view, and synchronize the latest product information in real
-                      time, which is convenient for users to purchase and view.
-                    </dd>
-                  </dl>
-                </li>
-                <li class="promo_detailed--list_item">
-                  <span class="promo_detailed--list_item_icon">
-                    <i class="am-icon-dollar" style="margin-left: 15px;"></i>
-                  </span>
-                  <dl>
-                    <dt>Fast business docking</dt>
-                    <!-- 快捷的商务对接 -->
-                    <dd>
-                      Provide accurate docking windows to bridge the gap between cooperation and win-win.
-                    </dd>
-                  </dl>
-                </li>
-                <li class="promo_detailed--list_item">
-                  <span class="promo_detailed--list_item_icon">
-                    <i class="am-icon-bank" style="margin-left: 10px;"></i>
-                  </span>
-                  <dl>
-                    <dt>Professional cultivation tutorial</dt>
-                    <!-- 专业的培育教程 -->
-                    <dd>
-                      Rich product cultivation tutorials make it easy for users to apply in the enterprise.
-                    </dd>
-                  </dl>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- <div class="second-floor" style="background-image: url('assets/images/index/promo_detailed_bg.jpg');">
+            <!-- <div class="second-floor" style="background-image: url('assets/images/index/promo_detailed_bg.jpg');">
   </div>
 -->
-    </div>
-    <!--promo_detailed end-->
-    <!-- third floor -->
-    <div class="section" style="border-bottom: 1px solid #e9e9e9;background: #fafafa">
-      <div class="container">
-        <div class="h1-title">
-          Featured products
         </div>
-        <div class="h2-title">
-          Simple, efficient, trusted and reliable marketing cloud platform
-        </div>
-        <!--index-container start-->
-        <div class="index-container am-hide-sm-only" style="margin-top:0">
-          <div class="am-g products-recommend">
-            <!-- todo 首页产品推荐四个，在这里遍历 -->
-            <div class="am-u-md-3">
-              <div class="service_item">
-                <!-- 产品介绍概览图 -->
-                <img src="http://pic.luckyagr.com/%E7%94%BB%E6%9D%BF%201.png" alt="" class="products-img">
-                <h3 class="service_item--title">Lucky bamboo</h3>
-                <div class="service_item--text">
-                  <p>
-                    This is the introduction of some products, it can introduce a lot of amount of data, then the
-                    length of the inspection according to the screen size of the display.
-                  </p>
+        <!--promo_detailed end-->
+        <!-- third floor -->
+        <div class="section" style="border-bottom: 1px solid #e9e9e9;background: #fafafa">
+            <div class="container">
+                <div class="h1-title">
+                    Featured products
                 </div>
-                <footer class="service_item--footer"><a href="#" class="link -blue_light">Learn More>></a></footer>
-              </div>
-            </div>
-            <div class="am-u-md-3">
-              <div class="service_item">
-                <!-- 产品介绍概览图 -->
-                <img src="http://pic.luckyagr.com/%E7%94%BB%E6%9D%BF%201.png" alt="" class="products-img">
-                <h3 class="service_item--title">Lucky bamboo</h3>
-                <div class="service_item--text">
-                  <p>
-                    This is the introduction of some products, it can introduce a lot of amount of data, then the
-                    length of the inspection according to the screen size of the display.
-                  </p>
+                <div class="h2-title">
+                    Simple, efficient, trusted and reliable marketing cloud platform
                 </div>
-                <footer class="service_item--footer"><a href="#" class="link -blue_light">Learn More>></a></footer>
-              </div>
-            </div>
-            <div class="am-u-md-3">
-              <div class="service_item">
-                <!-- 产品介绍概览图 -->
-                <img src="http://pic.luckyagr.com/%E7%94%BB%E6%9D%BF%201.png" alt="" class="products-img">
-                <h3 class="service_item--title">Lucky bamboo</h3>
-                <div class="service_item--text">
-                  <p>
-                    This is the introduction of some products, it can introduce a lot of amount of data, then the
-                    length of the inspection according to the screen size of the display.
-                  </p>
-                </div>
-                <footer class="service_item--footer"><a href="#" class="link -blue_light">Learn More>></a></footer>
-              </div>
-            </div>
-            <div class="am-u-md-3">
-              <div class="service_item">
-                <!-- 产品介绍概览图 -->
-                <img src="http://pic.luckyagr.com/%E7%94%BB%E6%9D%BF%201.png" alt="" class="products-img">
-                <h3 class="service_item--title">Lucky bamboo</h3>
-                <div class="service_item--text">
-                  <p>
-                    This is the introduction of some products, it can introduce a lot of amount of data, then the
-                    length of the inspection according to the screen size of the display.
-                  </p>
-                </div>
-                <footer class="service_item--footer"><a href="#" class="link -blue_light">Learn More>></a></footer>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--index-container end-->
-                <!--mobile-index-container start-->
-                <div class="index-container am-show-sm-only" style="margin-top:0">
-                  <div class="am-g products-recommend">
-                    <!-- todo 首页产品推荐四个，在这里遍历 -->
-                    <div class="am-u-md-3">
-                      <div class="service_item">
-                        <!-- 产品介绍概览图 -->
-                        <img src="http://pic.luckyagr.com/%E7%94%BB%E6%9D%BF%201.png" alt="" class="products-img">
-                        <h3 class="service_item--title">Lucky bamboo</h3>
-                        <div class="service_item--text">
-                          <p>
-                            This is the introduction of some products, it can introduce a lot of amount of data, then the
-                            length of the inspection according to the screen size of the display.
-                          </p>
+                <!--index-container start-->
+                <div class="index-container am-hide-sm-only" style="margin-top:0">
+                    <div class="am-g products-recommend">
+                        <!-- todo 首页产品推荐四个，在这里遍历 -->
+                        <div class="swiper-container pc-recommend">
+                            <div class="swiper-wrapper">
+                            </div>
+                            <!-- Add Pagination -->
+                            <!--                 <div class="swiper-pagination"></div> -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
                         </div>
-                        <footer class="service_item--footer"><a href="#" class="link -blue_light">Learn More>></a></footer>
-                      </div>
                     </div>
-                  </div>
                 </div>
                 <!--index-container end-->
-      </div>
-    </div>
-    <div class="section">
-      <div class="container">
-        <div class="h1-title">
-          What can Lanying do？
-        </div>
-        <div class="h2-title">
-          Provide professional guidance and quality products
-        </div>
-        <!--index-container start-->
-        <div class="index-container">
-          <div class="am-g">
-            <div class="am-u-md-3">
-              <div class="features_item">
-                <img src="http://pic.luckyagr.com/images/index/f01.jpg" alt="">
-                <h3 class="features_item--title">Powerful & professional team support</h3>
-                <p class="features_item--text">
-                  we hava Powerful & professional team support
-                </p>
-              </div>
-            </div>
-            <div class="am-u-md-3">
-              <div class="features_item">
-                <img src="http://pic.luckyagr.com/images/index/f02.jpg" alt="">
-                <h3 class="features_item--title">Professional cultivation guidance</h3>
-                <p class="features_item--text">
-                  We provide professional training to help your products quickly adapt to the impact of the new
-                  environment.
-                </p>
-              </div>
-            </div>
-            <div class="am-u-md-3">
-              <div class="features_item">
-                <img src="http://pic.luckyagr.com/images/index/f03.jpg" alt="">
-                <h3 class="features_item--title">Improve supply chain logistics</h3>
-                <p class="features_item--text">
-                  Sound supply chain logistics to protect your products all the way.
-              </div>
-            </div>
-            <div class="am-u-md-3">
-              <div class="features_item">
-                <img src="http://pic.luckyagr.com/images/index/f04.jpg" alt="">
-                <h3 class="features_item--title">Rich product range</h3>
-                <p class="features_item--text">
-                  With a wide range of products, we have many product categories, including but not limited to lucky bamboo, banyan tree and more.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="index-more" style="border-bottom: 1px solid #888;">
-            <a href="./company.html">
-            <button type="button" class="am-btn am-btn-secondary">MORE&nbsp;&nbsp;>></button></a>
-          </div>
-        </div>
-        <!--index-container end-->
-      </div>
-    </div>
-    <!--customer-logo start-->
-    <div class="customer-logo">
-      <div class="container">
-        <div class="h1-title">
-            Working With
-        </div>
-        <div class="am-g">
-        </div>
-      </div>
-    </div>
-    <!--customer-logo end-->
-    <div class="section promo_banner-container">
-      <!--index-container start-->
-      <div class="promo_banner-box">
-        <div class="container">
-          <h2 class="promo_banner--title">Join Us</h2>
-          <p class="promo_banner--text">
-            Zhanjiang Lanying science agriculture Ltd, located in Zhanjiang, Guangdong, China, is a professional
-            production of
-            lucky bamboo and money tree with import and export right of private enterprises. With more than 20 years of
-            lucky
-            bamboo production and processing history, lanyin has rich experience in production ,technology and
-            equipment
-            strength and owns a large bamboo plantation.
-            <br>
-            Our products are sold throughout the country and the Unit States, Netherlands, Germany, Japan and other
-            more than
-            30 countries and regions. Due to our professional technology of cultivating and design, our first class
-            equipment
-            and price, we have won a good reputation in lucky bamboo industry and have established a long-term good
-            partnership
-            with our customer in the world.
-            <br>
-            We have always pursued keep improving good service. We sincerely hope that we can build up a long-time and
-            good
-            business relation with you on mutual benefit.
-            <footer class="promo_banner--footer">
-              <button type="button" class="am-btn am-btn-secondary"><a href="./contactUs.html" style="color: #fafafa;">Go>></a></button>
-            </footer>
-        </div>
-      </div>
-      <!--index-container end-->
-    </div>
-    <!--===========layout-footer================-->
-    <div class="layout-footer">
-        <div class="footer">
-          <div style="background-color:#383d61" class="footer--bg"></div>
-          <div class="footer--inner">
-            <div class="container">
-              <div class="footer_main">
-                <div class="am-g">
-                  <div class="am-u-md-3 ">
-                    <div class="footer_main--column">
-                      <strong class="footer_main--column_title">Contact details</strong>
-                      <ul class="footer_contact_info">
-                        <li class="footer_contact_info--item"><i class="am-icon-phone"></i><span id="hotline">服务专线：400
-                            069 8888</span></li>
-                        <li class="footer_contact_info--item"><i class="am-icon-envelope-o"></i><span id="enterprise_email">luckyagr.com</span></li>
-                        <li class="footer_contact_info--item"><i class="am-icon-map-marker"></i><span id="address">深圳市南山区粤海街道软件产业基地4b</span></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="am-u-md-3 ">
-                    <div class="footer_main--column">
-                      <strong class="footer_main--column_title">Company</strong>
-                      <ul class="footer_navigation">
-                        <li class="footer_navigation--item"><a href="./company.html" class="footer_navigation--link">About
-                            Lanying </a></li>
-                        <li class="footer_navigation--item"><a href="./newsLister.html" class="footer_navigation--link">News</a></li>
-                        <li class="footer_navigation--item"><a href="./contactUs.html" class="footer_navigation--link">Contact
-                            us</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="am-u-md-3 ">
-                    <div class="footer_main--column">
-                      <strong class="footer_main--column_title">Solution</strong>
-                      <ul class="footer_navigation footer_solution">
-                        <li class="footer_navigation--item"><a href="#" class="footer_navigation--link">Planting</a></li>
-                        <li class="footer_navigation--item"><a href="#" class="footer_navigation--link">Transportantion</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="am-u-md-3 ">
-                    <div class="footer_main--column">
-                      <strong class="footer_main--column_title" id="name">Lanying</strong>
-                      <div class="footer_about">
-                        <div>
-                          <img src="assets/images/index/f01.jpg" alt="" class="footer-logo-img" id="square_logo">
+                <!--mobile-index-container start-->
+                <div class="index-container am-show-sm-only" style="margin-top:0">
+                    <div class="am-g products-recommend">
+                        <div class="swiper-container  mobile-recommend">
+                            <div class="swiper-wrapper">
+                            </div>
+                            <!-- Add Pagination -->
+                            <!--                 <div class="swiper-pagination"></div> -->
                         </div>
-                        <p class="footer_about--text">
-                        </p>
-                      </div>
                     </div>
-                  </div>
                 </div>
-              </div>
-              <!-- beian -->
-              <div class="am-g">
-                <div class="FooterLine">
-                </div>
-                <div class="Copyright">Copyright © 2019 Zhanjiang Lanying Agricultural Technology Co., Ltd All Rights
-                  Reserved
-                  <a href="http://www.beian.miit.gov.cn/" target="_blank">粤ICP备19156408号</a>
-                </div>
-              </div>
-              <!-- end -->
+                <!--index-container end-->
             </div>
-          </div>
         </div>
-      </div>
-  </div>
-  <script src="http://pic.luckyagr.com/jquery-2.1.0.js" charset="utf-8"></script>
-  <script src="http://pic.luckyagr.com/amazeui.js" charset="utf-8"></script>
-  <!-- <script src="assets/js/jquery-2.1.0.js" charset="utf-8"></script>
+        <div class="section">
+            <div class="container">
+                <div class="h1-title">
+                    What can Lanying do？
+                </div>
+                <div class="h2-title">
+                    Provide professional guidance and quality products
+                </div>
+                <!--index-container start-->
+                <div class="index-container">
+                    <div class="am-g">
+                        <div class="am-u-md-3">
+                            <div class="features_item">
+                                <img src="http://pic.luckyagr.com/images/index/f01.jpg" alt="">
+                                <h3 class="features_item--title">Powerful & professional team support</h3>
+                                <p class="features_item--text">
+                                    we hava Powerful & professional team support
+                                </p>
+                            </div>
+                        </div>
+                        <div class="am-u-md-3">
+                            <div class="features_item">
+                                <img src="http://pic.luckyagr.com/images/index/f02.jpg" alt="">
+                                <h3 class="features_item--title">Professional cultivation guidance</h3>
+                                <p class="features_item--text">
+                                    We provide professional training to help your products quickly adapt to the impact of the new
+                                    environment.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="am-u-md-3">
+                            <div class="features_item">
+                                <img src="http://pic.luckyagr.com/images/index/f03.jpg" alt="">
+                                <h3 class="features_item--title">Improve supply chain logistics</h3>
+                                <p class="features_item--text">
+                                    Sound supply chain logistics to protect your products all the way.
+                            </div>
+                        </div>
+                        <div class="am-u-md-3">
+                            <div class="features_item">
+                                <img src="http://pic.luckyagr.com/images/index/f04.jpg" alt="">
+                                <h3 class="features_item--title">Rich product range</h3>
+                                <p class="features_item--text">
+                                    With a wide range of products, we have many product categories, including but not limited to lucky bamboo, banyan tree and more.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="index-more" style="border-bottom: 1px solid #888;">
+                        <a href="./company.html">
+                            <button type="button" class="am-btn am-btn-secondary">MORE&nbsp;&nbsp;>></button></a>
+                    </div>
+                </div>
+                <!--index-container end-->
+            </div>
+        </div>
+        <!--customer-logo start-->
+        <div class="customer-logo">
+            <div class="container">
+                <div class="h1-title">
+                    Working With
+                </div>
+                <div class="am-g">
+                </div>
+            </div>
+        </div>
+        <!--customer-logo end-->
+        <div class="section promo_banner-container">
+            <!--index-container start-->
+            <div class="promo_banner-box">
+                <div class="container">
+                    <h2 class="promo_banner--title">Join Us</h2>
+                    <p class="promo_banner--text">
+                        Zhanjiang Lanying science agriculture Ltd, located in Zhanjiang, Guangdong, China, is a professional
+                        production of
+                        lucky bamboo and money tree with import and export right of private enterprises. With more than 20 years of
+                        lucky
+                        bamboo production and processing history, lanyin has rich experience in production ,technology and
+                        equipment
+                        strength and owns a large bamboo plantation.
+                        <br>
+                        Our products are sold throughout the country and the Unit States, Netherlands, Germany, Japan and other
+                        more than
+                        30 countries and regions. Due to our professional technology of cultivating and design, our first class
+                        equipment
+                        and price, we have won a good reputation in lucky bamboo industry and have established a long-term good
+                        partnership
+                        with our customer in the world.
+                        <br>
+                        We have always pursued keep improving good service. We sincerely hope that we can build up a long-time and
+                        good
+                        business relation with you on mutual benefit.
+                        <footer class="promo_banner--footer">
+                            <button type="button" class="am-btn am-btn-secondary"><a href="./contactUs.html" style="color: #fafafa;">Go>></a></button>
+                        </footer>
+                </div>
+            </div>
+            <!--index-container end-->
+        </div>
+        <!--===========layout-footer================-->
+        <div class="layout-footer">
+            <div class="footer">
+                <div style="background-color:#383d61" class="footer--bg"></div>
+                <div class="footer--inner">
+                    <div class="container">
+                        <div class="footer_main">
+                            <div class="am-g">
+                                <div class="am-u-md-3 ">
+                                    <div class="footer_main--column">
+                                        <strong class="footer_main--column_title">Contact details</strong>
+                                        <ul class="footer_contact_info">
+                                            <li class="footer_contact_info--item"><i class="am-icon-phone"></i><span id="hotline">服务专线：400
+                                                    069 8888</span></li>
+                                            <li class="footer_contact_info--item"><i class="am-icon-envelope-o"></i><span id="enterprise_email">luckyagr.com</span></li>
+                                            <li class="footer_contact_info--item"><i class="am-icon-map-marker"></i><span id="address">深圳市南山区粤海街道软件产业基地4b</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="am-u-md-3 ">
+                                    <div class="footer_main--column">
+                                        <strong class="footer_main--column_title">Company</strong>
+                                        <ul class="footer_navigation">
+                                            <li class="footer_navigation--item"><a href="./company.html" class="footer_navigation--link">About
+                                                    Lanying </a></li>
+                                            <li class="footer_navigation--item"><a href="./newsLister.html" class="footer_navigation--link">News</a></li>
+                                            <li class="footer_navigation--item"><a href="./contactUs.html" class="footer_navigation--link">Contact
+                                                    us</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="am-u-md-3 ">
+                                    <div class="footer_main--column">
+                                        <strong class="footer_main--column_title">Solution</strong>
+                                        <ul class="footer_navigation footer_solution">
+                                            <li class="footer_navigation--item"><a href="#" class="footer_navigation--link">Planting</a></li>
+                                            <li class="footer_navigation--item"><a href="#" class="footer_navigation--link">Transportantion</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="am-u-md-3 ">
+                                    <div class="footer_main--column">
+                                        <strong class="footer_main--column_title" id="name">Lanying</strong>
+                                        <div class="footer_about">
+                                            <div>
+                                                <img src="assets/images/index/f01.jpg" alt="" class="footer-logo-img" id="square_logo">
+                                            </div>
+                                            <p class="footer_about--text">
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- beian -->
+                        <div class="am-g">
+                            <div class="FooterLine">
+                            </div>
+                            <div class="Copyright">Copyright © 2019 Zhanjiang Lanying Agricultural Technology Co., Ltd All Rights
+                                Reserved
+                                <a href="http://www.beian.miit.gov.cn/" target="_blank">粤ICP备19156408号</a>
+                            </div>
+                        </div>
+                        <!-- end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="http://pic.luckyagr.com/jquery-2.1.0.js" charset="utf-8"></script>
+    <script src="http://pic.luckyagr.com/amazeui.js" charset="utf-8"></script>
+    <script src="assets/js/swiper.min.js" charset="utf-8"></script>
+    <!-- <script src="assets/js/jquery-2.1.0.js" charset="utf-8"></script>
   <script src="assets/js/amazeui.js" charset="utf-8"></script> -->
-  <script src="assets/js/common.js" charset="utf-8"></script>
+    <script src="assets/js/common.js" charset="utf-8"></script>
 </body>
 
 </html>
-
 <script type="text/javascript">
-  /**
-   * 获取banner数据
-   * @type {String}
-   */
-  var url = '/index/ad/list'
-  var data = {
+/**
+ * 获取banner数据
+ * @type {String}
+ */
+var url = '/index/ad/list'
+var data = {
     "page": {
-      "page_index": 1,
-      "page_size": 100
+        "page_index": 1,
+        "page_size": 100
     }
-  }
-  ajaxPost(url, data, function (data) {
+}
+ajaxPost(url, data, function(data) {
     var html = ''
     var ad = data.ad
     var len = ad.length
     for (var i = 0; i < len; i++) {
-      html += '<li>' +
-        '<a class="banner" target="_blank" href="' + ad[i].ad_link + '" style="background:url(' + ad[i].pic_url + ') center top no-repeat; background-size:cover"></a>'
-      '</li>'
+        html += '<li>' +
+            '<a class="banner" target="_blank" href="' + ad[i].ad_link + '" style="background:url(' + ad[i].pic_url + ') center top no-repeat; background-size:cover"></a>'
+        '</li>'
     }
-    
+
     $('.am-slider > .am-slides').html(html)
     $('.am-slider').flexslider();
-  })
+})
 
-  /**
-   * 获取推荐商品
-   * @type {String}
-   */
-  var url = '/product/list'
-  var data = {
+/**
+ * 获取推荐商品
+ * @type {String}
+ */
+var url = '/product/list'
+var data = {
     "page": {
-      "page_index": 1,
-      "page_size": 4
+        "page_index": 1,
+        "page_size": 4
     },
-    "is_index_show":true
-  }
-  ajaxPost(url, data, function (data) {
+    "is_index_show": true
+}
+ajaxPost(url, data, function(data) {
     console.log(data)
     var html = ''
     var ps = data.ps
     var len = ps.length
     for (var i = 0; i < len; i++) {
-      html += '<div class="am-u-md-3">' +
-        '<div class="service_item">' +
-        '<img src="' + ps[i].cover_url + '" alt="" class="products-img">' +
-        '<h3 class="service_item--title over_title" title="' + ps[i].name + '">' + ps[i].name + '</h3>' +
-        '<div class="service_item--text over_hide">' +
-        '<p>' + ps[i].intro + '</p>' +
-        '</div>' +
-        ' <footer class="service_item--footer"><a href="./productsDetial.html?id=' + ps[i].id + '" class="link -blue_light">Learn More&gt;&gt;</a></footer>' +
-        '</div>' +
-        '</div>'
+        html += '<div class="swiper-slide">' +
+            '<div class="service_item">' +
+            '<img src="' + ps[i].cover_url + '" alt="" class="products-img">' +
+            '<h3 class="service_item--title over_title" title="' + ps[i].name + '">' + ps[i].name + '</h3>' +
+            '<div class="service_item--text over_hide">' +
+            '<p>' + ps[i].intro + '</p>' +
+            '</div>' +
+            ' <footer class="service_item--footer"><a href="./productsDetial.html?id=' + ps[i].id + '" class="link -blue_light">Learn More&gt;&gt;</a></footer>' +
+            '</div>' +
+            '</div>'
     }
-    $('.index-container .products-recommend').html(html)
-  })
+    
 
+        $('.index-container .products-recommend .pc-recommend .swiper-wrapper').html(html)
+        var swiper = new Swiper('.swiper-container', {
+          pagination: '.swiper-pagination',
+          slidesPerView: 4,
+          paginationClickable: true,
+          spaceBetween: 30,
+          pagination: '.swiper-pagination',
+          paginationClickable: '.swiper-pagination',
+          nextButton: '.swiper-button-next',
+          prevButton: '.swiper-button-prev',
+      });
+
+      $('.index-container .products-recommend .mobile-recommend .swiper-wrapper').html(html)
+      var swiper = new Swiper('.swiper-container', {
+          pagination: '.swiper-pagination',
+          slidesPerView: 'auto',
+          paginationClickable: true,
+          spaceBetween: 30
+      });
+
+    
+})
 </script>
