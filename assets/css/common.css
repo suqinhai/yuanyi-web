@@ -91,6 +91,10 @@
 .customerLogo{
   padding: 20px 0;
 }
+.MiorIntro{
+  padding: 10px;
+  height: 200px;
+}
 /* end */
 .TopBarFixed{
   position: fixed;
@@ -302,6 +306,7 @@
 .press-archive__inner-item-title a:link{
   color:#f05700;
 }
+
 .features_item img{
   width: 262px;
   height: 198px;
@@ -547,6 +552,23 @@
     font-style: italic;
     display: block;text-align: center;
     margin: 10px;
+  }
+  .features_item{
+    padding: 10px;
+  }
+  .features_item img{
+    width: 100%;
+  }
+  .index-container .features_item--title{
+    text-align: center;
+  }
+  .MiorIntro{
+    padding: 10px;
+width: 50%;
+height: auto;
+  }
+  .EventPanelLink{
+    display: none;
   }
 }
 .img_border{
