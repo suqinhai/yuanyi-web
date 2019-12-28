@@ -12,11 +12,19 @@
   <link rel="stylesheet" href="assets/css/common.css" />
   <link rel="stylesheet" href="http://pic.luckyagr.com/contact.min.css" />
   <style type="text/css">
-    @media screen and (max-width: 650px) {
+    @media screen and (max-width: 640px) {
       #allmap{width: 100vw;height: 40vh;overflow: hidden;margin:0.5vw;font-family:"微软雅黑";}
     }
-    @media screen and (min-width : 650px) {
-      #allmap{width: 41vw;height: 65vh;overflow: hidden;margin:0;font-family:"微软雅黑";}
+    @media screen and (min-width : 641px) {
+      #allmap{height: 65vh;overflow: hidden;margin:0;font-family:"微软雅黑";}
+    }
+    .contact_itemIcon{
+      height: 60px;
+      line-height: 60px;
+      margin: 0 auto;
+      position: absolute;
+      top: 0;
+      left: 0;
     }
   </style>
   <!-- 百度地图 -->
@@ -225,7 +233,7 @@
             <ul class="contact-left">
               <li class="contact-box-item">
                 <div class="contact_item">
-                  <i class="contact_item--icon am-icon-phone"></i>
+                  <img src="http://pic.luckyagr.com/phone.svg" alt="" srcset="" class="contact_itemIcon"> 
                   <h3 class="contact_item--title">Call Us</h3>
                   <p class="contact_item--text" id="callUs">
                     联系电话： <strong>400-069-8888</strong>,
@@ -235,7 +243,7 @@
               </li>
               <li class="contact-item">
                 <div class="contact_item">
-                  <i class="contact_item--icon am-icon-envelope-o"></i>
+                  <img src="http://pic.luckyagr.com/email.svg" alt="" srcset="" class="contact_itemIcon">
                   <h3 class="contact_item--title">Send Message</h3>
                   <p class="contact_item--text" id="sendMessage">
                     service@email.com, <br>期待您的来信...
@@ -244,7 +252,7 @@
               </li>
               <li class="contact-item">
                 <div class="contact_item">
-                  <i class="contact_item--icon am-icon-map-marker"></i>
+                  <img src="http://pic.luckyagr.com/address.svg" alt="" srcset="" class="contact_itemIcon">
                   <h3 class="contact_item--title">Visit Us</h3>
                   <p class="contact_item--text" id="visitUS">
                     深圳市南山区粤海街道软件产业基地4b
