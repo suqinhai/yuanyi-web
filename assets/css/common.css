@@ -80,9 +80,9 @@
   font-weight: 400;
 }
 .EventPanelCellDesc{
-  font-size: 14px;
+  font-size: 24px;
   line-height: 24px;
-  color: #666;
+  color: #00a4FF;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -569,6 +569,9 @@ height: auto;
   }
   .EventPanelLink{
     display: none;
+  }
+  .MariginTop40{
+    margin-top: 40px;
   }
 }
 .img_border{
