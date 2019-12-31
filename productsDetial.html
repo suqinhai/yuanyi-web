@@ -15,7 +15,6 @@
   <link rel="stylesheet" href="assets/css/common.min.css" />
   <link rel="stylesheet" href="assets/css/index1.0.0.min.css" />
   <link rel="stylesheet" href="assets/css/news.min.css" /> -->
-  <link rel="stylesheet" href="assets/css/common.css" />
 
 </head>
 
@@ -112,7 +111,7 @@
         </div>
         <div class="am-u-sm-5">
           <div class="m-logo">
-            <a href=""><img src="assets/images/logo.png" alt=""></a>
+            <a href=""><img src="http://pic.luckyagr.com/m-logo.png" alt=""></a>
           </div>
         </div>
       </div>
@@ -198,8 +197,8 @@
                 <div class="ArticleMeteTitle ArticleMeteTitleBorderBottom">
                   Braided Pineapple Lucky Bamboo（幸运竹）</div>
                 <ul class="ArticleMete">
-                  <li class="ArticleMeteItem" id="topNumber">园艺用品热度Top6+</li>
-                  <li class="ArticleMeteItem" id="uT">create time：</li>
+                  <li class="ArticleMeteItem" id="topNumber">Hot：Top6+</li>
+                  <li class="ArticleMeteItem" id="uT">Create time：</li>
                   <!-- <li class="article--meta_item"><i class="am-icon-calendar"></i>October 10, 2016</li>
                             <li class="article--meta_item"><i class="am-icon-user"></i>by张三</li>
                             <li class="article--meta_item"><i class="am-icon-commenting-o"></i>33评论</li>
@@ -225,8 +224,8 @@
               <div class="ArticleMeteTitle ArticleMeteTitleBorderBottom">
                 Braided Pineapple Lucky Bamboo（幸运竹）</div>
               <ul class="ArticleMete">
-                <li class="ArticleMeteItem" id="topNumber">园艺用品热度Top6+</li>
-                <li class="ArticleMeteItem" id="uT">create time：</li>
+                <li class="ArticleMeteItem" id="MtopNumber">Hot：Top6+</li>
+                <li class="ArticleMeteItem" id="MuT">Create time：</li>
               </ul>
             </header>
             <div class="ArticleMeteContent">
@@ -369,13 +368,15 @@
       var UTCTimeFormat = new Date(+new Date(UTCTime) + 8 * 3600 * 1000).toISOString().replace(/T/g, ' ').replace(/\.[\d]{3}Z/, '')
       //转换时间格式end
       $('#uT').html("update time：" + UTCTimeFormat)
-
+      $('#MuT').html("update time：" + UTCTimeFormat)
       if (data.product.heat_sort > 0) {
-        $('#topNumber').html("园艺用品热度Top" + data.product.heat_sort)
+        $('#topNumber').html("Hot:Top" + data.product.heat_sort)
+        $('#MtopNumber').html("Hot:Top" + data.product.heat_sort)
+
       }
     }
 
-    $('.ArticleMeteItem span').html(data.product.heat)
+    $('.ArticleMeteItem > span').html(data.product.heat)
     $('.ArticleMeteTitle').html(data.product.name)
     $('.ArticleMeteContent').html(data.product.intro)
   })
