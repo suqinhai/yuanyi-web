@@ -13,8 +13,135 @@
   <link rel="stylesheet" href="http://pic.luckyagr.com/about.min.css" />
   <link rel="stylesheet" href="http://pic.luckyagr.com/solution-1.1.0.min.css" />
   <link rel="stylesheet" href="http://pic.luckyagr.com/product-1.1.0.min.css">
+  <link rel="stylesheet" href="http://pic.luckyagr.com/swiper.min.css">
 </head>
+<style>
+    .over_hide{
+      overflow : hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            height: 9.8rem;} 
+        /* .over_title{
+            overflow : hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            height: 4rem;
+        */
+    .banner {
+        display: block;
+        height: 400px;
+        background-size: 1920px auto;
+    }
 
+
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+    .pc-recommend .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;        
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    .mobile-recommend .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        width: 80%;
+
+        /* Center slide text vertically */
+        /*display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;*/
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+    .swiper-button-next  {
+        background-image: url(./assets/images/arrow-right.svg);
+        right: -100px;
+        left: auto;
+        width:50px;
+         height: 50px;
+         background-size: 30px 30px;
+         border-radius: 50%;
+         border: 2px solid #ccc;
+         background-position: center center;
+         display: none;
+    }
+
+    .swiper-button-prev{
+        
+        background-image: url(./assets/images/arrow-lift.svg);
+        right: auto;
+        left: -100px;
+        width:50px;
+         height: 50px;
+         background-size: 30px 30px;
+         border-radius: 50%;
+         border: 2px solid #ccc;
+         background-position: center center;
+         display: none;
+    }
+    .index-container .service_item {
+        width: 100%;
+        margin-top: 0;
+        box-shadow: 5px 5px 10px #fff;
+        padding:0;
+    }
+    .products-recommend{
+      position: relative;
+    }
+    .products-img{
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      position: relative;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 180px;
+      transform:translate(0,0);
+    }
+    .index-container .service_item{
+      padding-bottom: 0px;
+    }
+    .index-container .service_item .service_item--title{
+      margin: 15px 0;
+    }
+
+    .promo_detailed:hover .swiper-button-disabled{
+      display: block;
+    }
+    .promo_detailed{
+      min-height: 0;
+    }
+    </style>
 <body>
   <div class="layout">
     <!--===========layout-header================-->
@@ -243,6 +370,55 @@
         </div>
       </div>
     </div>
+
+
+    <!--promo_detailed end-->
+    <!-- third floor -->
+    <div class="section promo_detailed" style="border-bottom: 1px solid #e9e9e9;background: #fafafa">
+      <div class="container">        
+        <!--index-container start-->
+        <div class="index-container am-hide-sm-only" style="margin-top:0">
+          <div class="am-g products-recommend">
+            <!-- todo 首页产品推荐四个，在这里遍历 -->
+            <div class="swiper-container pc-recommend">
+              <div class="swiper-wrapper">
+                <div class="service_item">
+                  <!-- 产品介绍概览图 -->
+                  <img src="http://pic.luckyagr.com/%E7%94%BB%E6%9D%BF%201.png" alt="" class="products-img">
+                  <h3 class="service_item--title">Lucky bamboo</h3>
+                  <div class="service_item--text">
+                    <p>
+                      This is the introduction of some products, it can introduce a lot of amount of data, then the
+                      length of the inspection according to the screen size of the display.
+                    </p>
+                  </div>
+                  <footer class="service_item--footer"><a href="#" class="link -blue_light">Learn More>></a></footer>
+                </div>
+              </div>
+              <!-- Add Pagination -->
+              <!-- <div class="swiper-pagination"></div> -->
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+
+        <!--index-container end-->
+        <!--mobile-index-container start-->
+        <div class="index-container am-show-sm-only" style="margin-top:0">
+          <div class="am-g products-recommend">
+            <div class="swiper-container  mobile-recommend">
+              <div class="swiper-wrapper">
+              </div>
+              <!-- Add Pagination -->
+              <!--                 <div class="swiper-pagination"></div> -->
+            </div>
+          </div>
+        </div>
+        <!--index-container end-->
+      </div>
+    </div>
+
     <!-- company events end -->
     <!-- <div class="section">
       <div class="product1-show-container">
@@ -358,6 +534,58 @@
   <script src="http://pic.luckyagr.com/jquery-2.1.0.js" charset="utf-8"></script>
   <script src="http://pic.luckyagr.com/amazeui.js" charset="utf-8"></script>
   <script src="assets/js/common.js" charset="utf-8"></script>
+  <script src="http://pic.luckyagr.com/swiper.min.js" charset="utf-8"></script>
 </body>
 
 </html>
+
+<script type="text/javascript">
+   /**
+   * 获取推荐商品
+   * @type {String}
+   */
+  var url = '/index/ad/list/v2'
+  var data = {
+    "page": {
+      "page_index": 1,
+      "page_size": 10
+    },
+    "postion_id":5
+  }
+  ajaxPost(url, data, function (data) {
+    var html = ''
+    var ps = data.ad
+    var len = ps.length
+    for (var i = 0; i < len; i++) {
+      html += '<div class="swiper-slide">' +
+                '<div class="service_item">' +
+                  '<img src="' + ps[i].pic_url + '" alt="" class="products-img">' +
+                  '<h3 class="service_item--title over_title" title="' + ps[i].slogan + '">' + ps[i].slogan + '</h3>' +
+                '</div>' +
+              '</div>'
+    }
+
+
+    $('.index-container .products-recommend .pc-recommend .swiper-wrapper').html(html)
+    var swiper = new Swiper('.pc-recommend', {
+      pagination: '.swiper-pagination',
+      slidesPerView: 4,
+      paginationClickable: true,
+      spaceBetween: 30,
+      pagination: '.swiper-pagination',
+      paginationClickable: '.swiper-pagination',
+      nextButton: '.swiper-button-next',
+      prevButton: '.swiper-button-prev',
+    });
+
+    $('.index-container .products-recommend .mobile-recommend .swiper-wrapper').html(html)
+    var swiper = new Swiper('.mobile-recommend', {
+      pagination: '.swiper-pagination',
+      slidesPerView: 'auto',
+      paginationClickable: true,
+      spaceBetween: 30
+    });
+
+
+  })
+</script>
