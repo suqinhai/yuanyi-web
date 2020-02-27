@@ -13,25 +13,36 @@
   <style>
     .l-nav {
       font-family: Consolas;
-      font-size: 2.4rem;
+      font-size: 4rem;
       cursor: pointer;
-      color: #fff;
-      border-bottom: 1px solid #16222b;
+      /* color: #fff; */
+      /* border-bottom: 1px solid #16222b; */
+    }
+    
+    .l-nav span {
+      font-size: 4rem;
     }
 
     .l-nav-2 {
-      font-size: 1.6rem;
+      font-size: 2rem;
       padding-top: 1.5rem;
       opacity: 0.85;
       display: none;
-      background: #131e26;
+      /* background: #131e26; */
+    }
+    .l-nav-2 span{
+      font-size: 2rem;
     }
 
     .l-nav-3 {
       font-size: 1.4rem;
       opacity: 0.65;
-      line-height: 4rem;
-      background: #09131b;
+      margin-top: 10px;
+      /* background: #09131b; */
+ 
+    }
+    .l-nav-3:hover{
+      text-decoration: underline;
     }
 
     .press-archive__inner-item-thumbnail-container {
@@ -50,9 +61,6 @@
       margin-bottom: 20px;
     }
 
-    .l-nav span {
-      font-size: 12px;
-    }
 
     .am-container {
       padding-left: 0;
@@ -191,7 +199,7 @@
       <!--mobile header end-->
     </div>
     <div class="layout-container">
-      <div class="page-header">
+      <div class="page-header" style="padding: 0;">
         <div class="am-container">
           <h1 class="page-header-title">NEWS</h1>
           <h2 style="color:#fff">Keep up to date with the latest news          </h2>
@@ -210,7 +218,8 @@
       <div class="container">
         <div class="am-g">
           <div class="am-u-md-3">
-            <div class="am-container" style="background-color: #1c2b36;" id="leftNav">
+            <!-- <div class="am-container" style="background-color: #1c2b36;" id="leftNav"> -->
+              <div class="am-container"  id="leftNav">
             </div>
             <!-- todo://year lister start -->
             <!-- ======indexof[1]====== -->
@@ -375,12 +384,12 @@
 
       if ($("#" + yId)[0]) {
         let mId = yId + "_" + month
-        $("#" + yId).append('<div class="l-nav-2" id="' + mId + '" onclick="event.cancelBubble = true;openNav3(\'' + time + '\',\'' + mId + '\')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + month + '<span>(' + count + ')</span><div class="three"></div></div>')
+        $("#" + yId).append('<div class="l-nav-2" id="' + mId + '" onclick="event.cancelBubble = true;openNav3(\'' + time + '\',\'' + mId + '\')">' + month + '<span>(' + count + ')</span><div class="three"></div></div>')
       } else {
-        html += ' <div class="l-nav" id="' + yId + '" onclick="openNav2(' + year + ')">&nbsp;&nbsp;&nbsp;' + year + '<span>(' + kv[yId] + ')</span></div>';
+        html += ' <div class="l-nav" id="' + yId + '" onclick="openNav2(' + year + ')">' + year + '<span>(' + kv[yId] + ')</span></div>';
         $("#leftNav").append(html)
         let mId = yId + "_" + month
-        $("#" + yId).append('<div class="l-nav-2" id="' + mId + '" onclick="event.cancelBubble = true;openNav3(\'' + time + '\',\'' + mId + '\')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + month + '<span>(' + count + ')</span><div class="three"></div></div>')
+        $("#" + yId).append('<div class="l-nav-2" id="' + mId + '" onclick="event.cancelBubble = true;openNav3(\'' + time + '\',\'' + mId + '\')">' + month + '<span>(' + count + ')</span><div class="three"></div></div>')
       }
 
     }
@@ -409,7 +418,7 @@
       let html = ''
       let len = data.length
       for (let i = 0; i < len; i++) {
-        html += '<div class="l-nav-3" onclick="goToDetail(' + data[i].id + ')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + data[i].title + '</div>'
+        html += '<div class="l-nav-3" onclick="goToDetail(' + data[i].id + ')">' + data[i].title + '</div>'
       }
       $("#" + mId).find("div").html(html)
 
@@ -468,7 +477,7 @@
           '<a href="#" class="press-archive__inner-item-title">' + list[i].title + '</a>' +
           '<div class="press-archive__inner-item-excerpt">' + list[i].summary +
           '<p class="press-archive__inner-item-meta">' +
-          '<span class="press-archive__inner-item-date">' + (list[i].save_time || '') + '</span> / <a href="#">作者:' + list[i].author + '</a>' +
+          '<span class="press-archive__inner-item-date">' + (list[i].save_time || '') + '</span> / <a href="#">' + list[i].author + '</a>' +
           '</p>' +
           '</div>' +
           '</div>' +
